@@ -1,5 +1,6 @@
 @import "variables";
 
+
 *{padding: 0; margin: 0; outline: none}
 ul{list-style-type: none}
 a{text-decoration: none; -webkit-transition: .35s;
@@ -25,6 +26,7 @@ html, body{
 a{
 	color: $primary-color;
 }
+
 input{
 	background: none;
 	padding: $inputpadding;
@@ -35,7 +37,9 @@ input{
 
 .container{
 	width: 100%;
-	max-width:  1170px;
+	max-width:  1200px;
+	padding: 0 15px;
+	box-sizing: border-box;
 	margin: 0 auto;
 	position: relative;
 	&:after{
@@ -73,106 +77,148 @@ input{
 
 
 /* ==========HEADER============ */
-@import "header";
+header{
+	background-color: #f0f0f0;
+}
 
-/* ==========main-1============ */
+.header{
+	&-top{
+		border-bottom: 1px solid #d6d6d6;
 
-.main-1{
-	
-	&__body{
-		
+
+		&__phone{
+			padding: 19px 0;
+			width: 210px;
+			text-align: center;
+			border-right: 1px solid #d6d6d6;
+			float: left;
+			height: 53px;
+			box-sizing: border-box;
+
+			span{
+				padding: 0 20px;
+			}
+
+			.img1{
+				position: relative;
+				top: 2px;
+			}
+
+		}
+
+		&__time{
+			float: left;
+			padding: 20px 0;
+			padding-left: 30px;
+			height: 53px;
+			box-sizing: border-box;
+
+			.img1{
+				padding-right: 20px;
+				position: relative;
+				top: 2px;
+			}
+			span{
+				padding-right: 18px;
+			}
+		}
+
+		&__nav{
+			float: left;
+			height: 53px;
+			box-sizing: border-box;
+		}
+	}
+
+	padding-top: 22px;
+
+	&__logo{
+		float: left;
 	}
 }
 
+.nav{
+	text-transform: uppercase;
+	padding: 20px 0;
+	border-right: 1px solid #d6d6d6;
+	padding-right: 10px;
 
-/* ==========main-2============ */
 
-.main-2{
-	
-	&__body{
-		
+	&__item{
+		padding: 0 8px;
+		display: inline-block;
+	}
+
+	&__list{
+		margin-left: -10px;
+	}
+
+	&__link{
+
+		&:hover{
+			font-weight: bold;
+		}
 	}
 }
 
-/* ==========main-3============ */
-.main-3{
-	
-	&__body{
-		
+.main-search{
+	background-color: #FFF;
+	width: 65%;
+	float: left;
+	margin: 0 30px;
+	height: 55px;
+
+	&__sel{
+		display: inline-block;
+		width: 125px;
 	}
 }
 
-/* ==========main-4============ */
-.main-4{
-	
-	&__body{
-		
-	}	
-}
+.jq-selectbox{
 
-/* ==========main-5============ */
-.main-5{
-	
-	&__body{
-		
-	}	
-}
+	&__select{
+		background-image: none;
+		border: none;
+		box-shadow: none;
+		height: 55px;
+		padding-right: 35px;
 
-/* ==========main-6============ */
-.main-6{
-	
-	&__body{
-		
-	}	
-}
+		&-text{
+			overflow: visible;
+			white-space: normal;
+			width: 70px !important;
+			height: 100%;
+			line-height: 56px;
+			text-transform: uppercase;
+			font-weight: bold;
+			font-size: 12px;
+		}
+	}
 
-/* ==========main-7============ */
-.main-7{
-	
-	&__body{
-		
-	}	
-}
+	&__trigger{
+		border: none;
+	}
 
-/* ==========main-8============ */
-.main-8{
-	
-	&__body{
-		
+	&__trigger-arrow{
+		display: none;
+	}
+
+	&__trigger{
+		background-image: url("../img/list-arr.png");
+		background-position: center;
+		background-repeat: no-repeat;
 	}
 }
-
-/* ==========main-9============ */
-.main-9{
 	
-	&__body{
-		
-	}	
-}
 
-/* ==========main-10============ */
-.main-10{
-	
-	&__body{
-		
-	}	
-}
 
-/* ==========main-11============ */
-.main-11{
-	
-	&__body{
-		
-	}	
-}
-
-/* ==========main-12============ */
-.main-12{
-	
-	&__body{
-		
-	}	
-}
 
 /* ==========FOOTER============ */
-@import "footer";
+footer{
+
+}
+
+.footer{
+			
+}
+

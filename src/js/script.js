@@ -41,7 +41,7 @@ $('.autoplay').slick({
 
 $(document).ready(function() {
 
-
+$('.main-search__select').styler();
 
 /*================modal=====================*/
 	
