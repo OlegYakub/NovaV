@@ -1,0 +1,178 @@
+@import "variables";
+
+*{padding: 0; margin: 0; outline: none}
+ul{list-style-type: none}
+a{text-decoration: none; -webkit-transition: .35s;
+-moz-transition: .35s;
+-ms-transition: .35s;
+-o-transition: .35s;
+transition: .35s;}
+button{
+	-webkit-transition: .35s;
+	-moz-transition: .35s;
+	-ms-transition: .35s;
+	-o-transition: .35s;
+	transition: .35s;
+}
+
+html, body{
+	font-family: $font-stack;
+	font-size: $primary-fz;
+	color: $primary-color;
+	line-height: $primary-l-heigth;
+}
+
+a{
+	color: $primary-color;
+}
+input{
+	background: none;
+	padding: $inputpadding;
+	border: $inputborder;
+	border-radius: $inputradius;
+}
+
+
+.container{
+	width: 100%;
+	max-width:  1170px;
+	margin: 0 auto;
+	position: relative;
+	&:after{
+			content: "";
+			clear: both;
+			display: block;
+		}
+}
+
+.btn{
+	text-align: center;
+	font-size: $btn-font-size;
+	color: $btn-color;
+	width: $btn-width;
+	display: block;
+	border-radius: $btn-radius;
+	padding: $btn-pd;
+	background-color: $btn-bgc;
+	border: $btn-border;
+	cursor: pointer;
+	text-transform: $btn-text-transf;
+	&:hover{
+		background-color: $btn-bgc-h;
+		color: $btn-color-h;
+	}
+}
+
+.title{
+	text-align: center;
+	text-transform: uppercase;
+	font-size: $title-font-size;
+	color: $title-color;
+
+}
+
+
+/* ==========HEADER============ */
+@import "header";
+
+/* ==========main-1============ */
+
+.main-1{
+	
+	&__body{
+		
+	}
+}
+
+
+/* ==========main-2============ */
+
+.main-2{
+	
+	&__body{
+		
+	}
+}
+
+/* ==========main-3============ */
+.main-3{
+	
+	&__body{
+		
+	}
+}
+
+/* ==========main-4============ */
+.main-4{
+	
+	&__body{
+		
+	}	
+}
+
+/* ==========main-5============ */
+.main-5{
+	
+	&__body{
+		
+	}	
+}
+
+/* ==========main-6============ */
+.main-6{
+	
+	&__body{
+		
+	}	
+}
+
+/* ==========main-7============ */
+.main-7{
+	
+	&__body{
+		
+	}	
+}
+
+/* ==========main-8============ */
+.main-8{
+	
+	&__body{
+		
+	}
+}
+
+/* ==========main-9============ */
+.main-9{
+	
+	&__body{
+		
+	}	
+}
+
+/* ==========main-10============ */
+.main-10{
+	
+	&__body{
+		
+	}	
+}
+
+/* ==========main-11============ */
+.main-11{
+	
+	&__body{
+		
+	}	
+}
+
+/* ==========main-12============ */
+.main-12{
+	
+	&__body{
+		
+	}	
+}
+
+/* ==========FOOTER============ */
+@import "footer";

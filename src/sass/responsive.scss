@@ -1,0 +1,109 @@
+@import "responsive_960";
+@import "responsive_743";
+/* ===================================320=============================== */
+
+
+
+@media screen and (max-width: 743px){
+	.container{
+		max-width:  460px;
+		padding: 0 20px;
+	}
+
+	html, body{
+		font-size: $primary-fz-mob;
+		line-height: $primary-l-heigth-mob;
+	}
+
+	.btn{
+		padding: $btn-pd-mob;
+		font-size: $btn-font-size-mob;
+	}
+
+	.title{
+		font-size: $title-font-size-mob;
+	}
+
+/* ==========HEADER============ */
+	header{
+		
+	}
+
+	.header{
+
+	}
+	
+
+/* ==========main-1============ */
+
+	.main-1{
+
+	}
+
+
+/* ==========main-2============ */
+
+	.main-2{
+		
+	}
+
+/* ==========main-3============ */
+	.main-3{
+
+	}
+
+/* ==========main-4============ */
+	.main-4{
+			
+	}
+
+/* ==========main-5============ */
+	.main-5{
+			
+	}
+
+/* ==========main-6============ */
+	.main-6{
+			
+	}
+
+/* ==========main-7============ */
+	.main-7{
+			
+	}
+
+/* ==========main-8============ */
+	.main-8{
+		
+	}
+
+/* ==========main-9============ */
+	.main-9{
+			
+	}
+
+/* ==========main-10============ */
+	.main-10{
+			
+	}
+
+/* ==========main-11============ */
+	.main-11{
+			
+	}
+
+/* ==========main-12============ */
+	.main-12{
+			
+	}
+
+/* ==========FOOTER============ */
+	footer{
+
+	}
+
+	.footer{
+			
+	}
+
+}	

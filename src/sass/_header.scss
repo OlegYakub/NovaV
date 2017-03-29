@@ -1,0 +1,32 @@
+
+header{
+
+}
+
+.header{
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+	
+}
+	
+.nav{
+	
+	&__list{
+		display: -webkit-flex;
+		display: flex;
+		-webkit-box-pack: justify;
+		-webkit-justify-content: space-between;
+		justify-content: space-between;
+	}
+
+	&__item{
+		
+	}
+
+	&__link{
+		
+	}
+}
