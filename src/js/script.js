@@ -50,6 +50,9 @@ $('.main-search__select').styler();
 		  fadeDuration: 250,
 		  fadeDelay: 0.80
 		});
-	})
-	
+	});
+
+
+
+
 });
