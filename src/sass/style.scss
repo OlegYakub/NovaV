@@ -1,6 +1,7 @@
 @import "variables";
 
 @import "header";
+@import "basket";
 @import "footer";
 
 *{padding: 0; margin: 0; outline: none}
@@ -26,6 +27,7 @@ html, body{
 	font-size: $primary-fz;
 	color: $primary-color;
 	line-height: $primary-l-heigth;
+	background-color: #f0f0f0;
 }
 
 a{
@@ -147,6 +149,10 @@ input{
 /* =============steps============ */
 
 .steps{
+
+	&__wrapper{
+		background-color: #FFF;
+	}
 
 	&__subtitle{
 		font-family: "ProximaNovaLight";
@@ -1015,6 +1021,7 @@ input{
 }
 
 .m-overwv{
+	background-color: #FFF;
 	.title{
 		padding: 30px 0 45px;
 	}
