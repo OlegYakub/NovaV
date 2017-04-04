@@ -1,5 +1,7 @@
 @import "variables";
 
+@import "header";
+@import "footer";
 
 *{padding: 0; margin: 0; outline: none}
 ul{list-style-type: none}
@@ -77,6 +79,38 @@ input{
 	color: $title-color;
 	font-family: "ProximaNovaLight";
 
+	&--long{
+		text-align: center;
+		text-transform: uppercase;
+		font-size: $title-font-size;
+		color: $title-color;
+		font-family: "ProximaNovaLight";
+		position: relative;
+		&:hover{
+			color: #7fabc6;
+		}
+		
+		&:before{
+				position: absolute;
+	    	content: '';
+	    	height: 1px;
+	    	top: 20px;
+				background-color: $lightgrey ;
+				width: 440px ;
+				left: -0 ;
+			}
+
+			&:after{
+				position: absolute;
+    		content: '';
+    		height: 1px;
+    		top: 20px;
+    		left: 63%;
+				background-color: $lightgrey ;
+				width: 315px ;
+			}
+		}
+
 	span{
 			position: relative;
 			&:before{
@@ -102,325 +136,13 @@ input{
 	
 }
 
-
-/* ==========HEADER============ */
-header{
-	background-color: #f0f0f0;
+.p{
+	line-height: 1.286;
+	margin-bottom: 15px;
 }
 
-.header{
-	padding-bottom: 120px;
-	background-image: url("../img/wave.png");
-	background-position:0 bottom ;
-	background-repeat: no-repeat;
-	background-repeat-x:repeat;
-	&-top{
-		border-bottom: 1px solid #d6d6d6;
-
-		&__phone{
-			padding: 19px 0;
-			width: 210px;
-			text-align: center;
-			border-right: 1px solid #d6d6d6;
-			float: right;
-			height: 53px;
-			box-sizing: border-box;
-			border-left: 1px solid #d6d6d6;
-
-			span{
-				padding: 0 20px;
-			}
-
-			.img1{
-				position: relative;
-				top: 2px;
-			}
-
-		}
-
-		&__time{
-			float: right;
-			padding: 20px 0;
-			padding-left: 30px;
-			height: 53px;
-			box-sizing: border-box;
-
-			.img1{
-				padding-right: 20px;
-				position: relative;
-				top: 2px;
-			}
-			span{
-				padding-right: 18px;
-			}
-		}
-
-		&__nav{
-			float: left;
-			height: 53px;
-			box-sizing: border-box;
-		}
-	}
-
-	padding-top: 22px;
-
-	&__logo{
-		float: left;
-	}
-
-	&__icons{
-		margin-top: 9px;
-		float: left;
-		height: 55px;
-		display: -webkit-flex;
-		display: flex;
 
 
-		a{
-			
-			padding-top: 10px;
-			position: relative;
-			height: 30px;
-		}
-	}
-
-	&__shop{
-		margin-left: 20px;
-		padding-left: 10px;
-		.header__numb{
-			background-color: #cc232a;
-		}
-		
-	}
-
-	&__balance{
-		padding-top: 12px;
-		padding-left: 10px;
-		.header__numb{
-			background-color: #74a3c1;
-		}
-	}
-
-	&__numb{
-		position: absolute;
-		width: 25px;
-		height: 25px;
-		border-radius: 25px;
-		display: table-cell;
-		line-height: 25px;
-		
-		color: #fff;
-		text-align: center;
-		right: -10px;
-		top: -2px;
-	}
-
-	&__bot{
-		margin-top: 49px;
-		height: 40px;
-		line-height: 40px;
-		text-transform: uppercase;
-		font-weight: bold;
-		display: -webkit-flex;
-		display: flex;
-		-webkit-box-pack: justify;
-		-webkit-justify-content: space-between;
-		justify-content: space-between;
-
-		a{
-			&:hover{
-				color: #000;
-			}
-		}
-	}
-
-	&__cartr{
-		display: block;
-		width: 144px;
-		text-align: center;
-		height: 100%;
-		border-right: 1px solid #cdcdcd;
-	}
-
-	&__water{
-		flex-grow: 1;
-
-		padding-left: 29px;
-		padding-right: 20px;
-		display: -webkit-flex;
-		display: flex;
-		justify-content: space-around;
-		border-right: 1px solid #cdcdcd;
-
-		li{
-			display: inline-block
-		}
-	}
-
-	&__filters{
-		flex-grow: 3;
-		display: -webkit-flex;
-		border-right: 1px solid #cdcdcd;
-		display: flex;
-		justify-content: space-around;
-		padding: 0 20px;
-	}
-
-	&__acc{
-		width: 140px;
-		text-align: center;
-		color: #cc232a;
-
-		&:hover{
-			color: #cc232a !important;
-			opacity: .5;			
-		}
-	}
-	
-}
-
-.nav{
-	text-transform: uppercase;
-	padding: 20px 0;
-	
-	padding-right: 10px;
-
-
-	&__item{
-		padding: 0 8px;
-		display: inline-block;
-	}
-
-	&__list{
-		margin-left: -10px;
-	}
-
-	&__link{
-
-		&:hover{
-			font-weight: bold;
-		}
-	}
-}
-
-.main-search{
-	background-color: #FFF;
-	width: 65%;
-	float: left;
-	margin: 0 30px;
-	margin-left: 50px;
-	height: 55px;
-	margin-top: 9px;
-	box-shadow: 0px 0px 20px 2px rgba(0,0,0,0.15);
-
-	&__sel{
-		display: inline-block;
-		width: 125px;
-	}
-
-	&__input{
-		display: inline-block;
-		width: 75%;
-
-		input{
-			display: block;
-			width: 100%;
-			position: relative;
-			top: 2px;
-		}
-	}
-
-	&__btn{
-		position: absolute;	
-		right: 0;
-		top: 0;
-		height: 44px;
-		margin: 6px 0;
-
-		border-left: 1px solid #e7e7e7;
-
-
-		button{
-			display: block;
-			padding: 15px 20px;
-			border: none;
-			background-color: transparent;
-			cursor: pointer;
-		}
-	}
-
-	form{
-		position: relative;
-	}
-}
-
-.jq-selectbox{
-
-	&__select{
-		background-image: none;
-		border: none;
-		box-shadow: none;
-		height: 55px;
-		padding-right: 35px;
-
-		&-text{
-			overflow: visible;
-			white-space: normal;
-			width: 73px !important;
-			height: 100%;
-			line-height: 56px;
-			text-transform: uppercase;
-			font-weight: bold;
-			font-size: 12px;
-			color: #5f5f5f;
-			font-family: "ProximaNovaBlack";
-		}
-
-		&:hover{
-			background-image: none;
-		}
-
-		&:active{
-			box-shadow: none;
-			background-color: transparent;
-		}
-	}
-
-	&__trigger{
-		border: none;
-		width: 45px;
-	}
-
-	&__trigger-arrow{
-		display: none;
-	}
-
-	&__trigger{
-		background-image: url("../img/list-arr.png");
-		background-position: center;
-		background-repeat: no-repeat;
-	}
-
-	&.focused{
-
-
-		.jq-selectbox__select{
-			border: none;
-		}
-	}
-
-	li{
-		color: #5f5f5f;
-		&:hover{
-			background-color: transparent;
-			color: #5f5f5f;
-		}
-
-		&.selected{
-			opacity: 0.8;
-		}
-	}
-}
 	
 /* =============steps============ */
 
@@ -1028,12 +750,45 @@ header{
 		font-size: 14px;
 		display: block;
 		border: 2px solid #e8e8e8;
+		display: -webkit-flex;
+		display: flex;
+		flex-direction: column;
+		-webkit-box-pack: justify;
+		-webkit-justify-content: space-between;
+		justify-content: space-between;
+		margin-bottom: 85px;
+		//cursor: pointer;
+		&:hover{
+			z-index: 3;
+			box-shadow: 0px 4px 30px -1px rgba(0, 0, 0, 0.25);
+			.m-recomend__basket{
+				a{
+					background-color: #d1383e;
+					background-image: url("../img/shopping-cart-white.svg");
+					background-repeat: no-repeat;
+					background-position: center;
+					background-size: 59%;
+					animation-name: shop;
+					animation-duration: 1s;
+					animation-iteration-count: infinite;
+				}
+				
+			}
+		}
+	}
 
+	&__body{
+		display: -webkit-flex;
+		display: flex;
 	}
 
 	&__pict{
 		text-align: center;
 		padding-bottom: 45px;
+
+		img{
+			width: 90%;
+		}
 	}
 
 	&__name{
@@ -1042,8 +797,12 @@ header{
 
 	&__code{
 		font-size: 10px;
-		text-decoration: underline;
+		//text-decoration: underline;
 		padding: 10px 0 16px;
+	}
+
+	&__cont{
+		flex-grow: 1;
 	}
 
 	&__price{
@@ -1071,15 +830,297 @@ header{
 		justify-content: space-between;
 	}
 
+	&__basket{
+		a{
+			display:block;
+			width: 37px;
+			height: 37px;
+			text-align: center;
+			border-radius: 30px;
+			background-image: url("../img/shopping-cart.svg");
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: 80%;
+
+
+		}
+	}
+
 	
 }
 
-/* ==========FOOTER============ */
-footer{
+@keyframes  shop{
+	0%{
+		transform: scale(1);
+	}
+
+	50%{
+		transform: scale(1.1);
+	}
+
+	100%{
+		transform: scale(1);
+	}
+}
+
+
+/* =================shares================ */
+
+
+.shares{
+	background-color: #f0f0f0;
+	padding-bottom: 85px;
+
+	.title{
+		padding-bottom: 30px;
+	}
+
+	&__card{
+		float: left;
+		width: 50%;
+		background-color: #FFF;
+		box-sizing: border-box;
+		margin-bottom: 5px;
+		height: 266px;	
+		border: 1px solid #e8e8e8;
+		font-family: "ProximaNovaLight";
+
+		&:hover{
+			box-shadow: 0px 1px 10px 0px rgba(0, 0, 2, 0.1);
+			.shares__link{
+				opacity: 1;
+			}
+		}
+	}
+
+	&__img{
+		width: 280px;
+		width: 47%;
+		text-align: center;
+		display: inline-flex;
+		-webkit-align-items: center;
+		align-items: center;
+		-webkit-box-pack: justify;
+		-webkit-justify-content: center;
+		justify-content: center;
+		vertical-align: middle;
+		border-right: 1px solid #e8e8e8;
+		height: 100%;
+		img{
+			//max-width: 90%;
+		}
+
+	}
+
+
+	&__cont{
+		padding-left: 25px;
+		position: relative;
+		padding-right: 25px;
+		display: inline-block;
+		vertical-align: top;
+		width: 294px;
+		width: 52%;
+		box-sizing: border-box;
+	}
+
+	&__date{
+		background-color: #7fabc6;
+		color: #fff;
+		position: absolute;
+		padding: 7px 10px;
+		left: 30;
+		top: -5px;
+
+	}
+
+	&__name{
+		padding-top: 35px;
+		font-size: 14px;
+		font-family: "ProximaNovaBold";
+		padding-bottom: 15px;
+	}
+
+	&__desc{
+		padding-bottom: 25px;
+		font-size: 14px;
+		height: 93px;
+	}
+
+	&__link{
+		opacity: 0;
+		background-color: #d1383e;
+		position: absolute;
+	  right: -9px;
+	  transition: 0.3s;
+    bottom: -6px;
+    text-transform: uppercase;
+
+		a{
+			color: #fff;
+			display: block;
+			padding: 7px 10px;
+		}
+	}
+
+	&__time{
+		color: #898989;
+		opacity: 0.5;
+	}
+}
+
+.maker-sl{
+
+	&--cli{
+		padding-top: 50px;
+		.maker-sl__item{
+			border: none;
+		}
+	}
+
+	background-color: #f0f0f0;
+	padding-bottom: 40px;
+
+	.title--long{
+		padding-bottom: 65px;
+	}
+
+	&__item{
+		padding: 0 15px;
+		text-align: center;
+		display: table-cell;
+		height: 100px;
+		border: 1px solid #e8e8e8;
+		box-sizing: border-box;
+		line-height: 100px;
+		margin: 0 15px;
+		img{
+			vertical-align: middle;
+			display: inline;
+
+		}
+	}
+
+	&__arrs{
+		position: absolute;
+		right: 0;
+		top: -4px;
+
+		button{
+			padding: 0 15px;
+		}
+	}
+
 
 }
 
-.footer{
+.m-overwv{
+	.title{
+		padding: 30px 0 45px;
+	}
+
+	&__col{
+		border-left: 1px solid #d0d0d0;
+		width: 50%;
+		box-sizing: border-box;
+		float: left;
+		margin-bottom: 20px;
+	}
+
+	&__item{
+		padding-left: 30px;
+		border-left: 3px solid transparent;
+		padding-bottom: 15px;
+		margin-bottom: 30px;
+		padding-right: 20px;
+		&:hover{	
+			border-left: 3px solid #d1383e;
+		}
+
+		&:last-child{
+			margin-bottom: 10px;
+		}
+	}
+
+	&__name{
+		font-family: "ProximaNovaBold";
+		font-size: 16px;
+		text-transform: uppercase;
+		padding-bottom: 10px;
+
+		&:hover{
+			a{
+
+				color: #7fabc6;
+			}
+		}
+	}
+
+	&__desc{
+		font-family: "ProximaNovaLight";
+		font-size: 14px;
+		padding-bottom: 5px;
+		height: 42px;
+	}
+
+	&__read{
+		font-family: "ProximaNovaBold";
+		text-transform: uppercase;
+
+		a{
 			
+			color: #7fabc6;
+		}
+	}
 }
+
+.m-bottom{
+	font-family: "ProximaNovaLight";
+	padding-top: 80px;
+	background-color: #f0f0f0;
+	font-size: 14px;
+	padding-bottom: 70px;
+
+	.title{
+		padding-bottom: 30px;
+	}
+
+	&__pict{
+		padding-right: 30px;
+		width: 370px;
+		text-align: center;
+
+		img{
+			-min-width: 100%;
+		}
+	}
+
+	&__cont{
+		display: -webkit-flex;
+		display: flex;
+	}
+
+	&__right{
+		//flex-grow: 1;
+	}
+
+	&__list{
+		color: #74a3c1;
+		padding-left: 20px;
+		list-style-type: disc ;
+		padding-bottom: 20px;
+
+		span{
+			color: $primary-color;
+		}
+	}
+
+	&__title{
+		font-size: 16px;
+		color: #74a3c1;
+		padding-bottom: 20px;
+	}
+}
+
+
 

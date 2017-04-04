@@ -1,29 +1,24 @@
 
 /*==============slick=============*/
 
-$('.autoplay').slick({
-  slidesToShow: 3,
+$('.maker-sl__slider').slick({
+  slidesToShow: 6,
   slidesToScroll: 1,
-  autoplay: true,
-  autoplaySpeed: 2000,
-  dots: true,
+  autoplay: false,
+/*  autoplaySpeed: 2000,*/
+  dots: false,
   infinite: true,
-  arrows: false,
+  arrows: true,
+  prevArrow: '.maker-sl__left',
+  nextArrow: '.maker-sl__right',
   responsive: [
     {
-      breakpoint: 1024,
+      breakpoint: 960,
       settings: {
-        slidesToShow: 3,
-        slidesToScroll: 3,
+        slidesToShow: 4,
+        slidesToScroll: 1,
         infinite: true,
         dots: true
-      }
-    },
-    {
-      breakpoint: 600,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2
       }
     },
     {
@@ -40,8 +35,41 @@ $('.autoplay').slick({
 });
 
 $(document).ready(function() {
-
 $('.main-search__select').styler();
+
+
+function truncate(str, maxlength){
+  var l = str.length;
+
+  //console.log(l);
+  if( l > maxlength){
+    str = str.slice(0, maxlength - 3) + "...";
+    return str;
+    
+  }else{
+    return str;
+    
+  }
+}
+
+$('.shares__desc').each(function(i, el){
+  var r = $(el).text();
+  $(el).text(truncate(r, 178));
+})
+
+$('.m-overwv__desc').each(function(i, el){
+  var r = $(el).text();
+  $(el).text(truncate(r, 132));
+})
+
+
+
+/*===============slimScroll=====================*/
+
+ $('.main-search__drop--wrapper').slimScroll({
+        height: '450px'
+});
+
 
 /*================modal=====================*/
 	
