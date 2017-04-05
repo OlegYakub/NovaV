@@ -22,10 +22,36 @@ $('.maker-sl__slider').slick({
       }
     },
     {
-      breakpoint: 480,
+      breakpoint: 744,
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+});
+
+$('.together').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  autoplay: false,
+/*  autoplaySpeed: 2000,*/
+  dots: true,
+  infinite: false,
+  arrows: true,
+  prevArrow: '.maker-sl__left',
+  nextArrow: '.maker-sl__right',
+  responsive: [
+    
+    {
+      breakpoint: 744,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: false
       }
     }
     // You can unslick at a given breakpoint now by adding:

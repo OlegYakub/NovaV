@@ -41,6 +41,48 @@ input{
 	border-radius: $inputradius;
 }
 
+.btn--blue{
+	text-transform: uppercase;
+	text-align: center;
+	color: #fff;
+	border-radius: 2px;
+	background-color: #7fabc6;
+
+	&:hover{
+		background-color: #80b8db;
+		box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.1);
+
+	}
+}
+
+.pict-box{
+		display: -webkit-flex;
+		display: flex;
+		-webkit-box-pack: justify;
+		-webkit-justify-content: center;
+		justify-content: center;
+		-webkit-align-items: center;
+		align-items: center;
+	img{
+		max-width: 100%;
+		max-height: 100%;
+		width: auto;
+		height: auto;
+	}
+}
+
+.btn--red{
+	text-transform: uppercase;
+	text-align: center;
+	color: #fff;
+	border-radius: 2px;
+	background-color: #d1383e;
+
+	&:hover{
+			background-color: #fa594f
+	}
+}
+
 
 .container{
 	width: 100%;
@@ -143,7 +185,69 @@ input{
 	margin-bottom: 15px;
 }
 
+.good-title{
+	&__code{
+		font-size: 10px;
+		text-decoration: underline;
+		font-family: "ProximaNovaLight";
+	}
 
+	&__name{
+		font-size: 24px;
+    font-family: "ProximaNovaBold";
+	}
+
+	&__desc{
+		font-family: "ProximaNovaLight";
+		font-size: 14px;
+	}
+}
+
+.primal-price{
+	font-family: "ProximaNovaBold";
+	font-size: 24px;
+	span{
+		font-family: "ProximaNovaLight";
+		font-size: 14px;
+	}
+}
+
+
+.slick{
+	&-disabled{
+		opacity: .3;
+	}
+
+	&-dots{
+		bottom: 5px;
+		li{ 
+			button{
+				width: 10px;
+				height: 10px;
+				&:before{
+					width: 10px;
+					height: 10px;
+					content: '';
+					background-color: #c5c5c5;
+					border-radius: 10px;
+					opacity: 1;
+				}
+			}
+
+			&.slick-active{
+				button{
+					&:before{
+						background-color: $bluestyle;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+/* ====================MAIN======================= */
 
 	
 /* =============steps============ */
@@ -332,7 +436,9 @@ input{
 
 		button{
 			padding: 15px;
-			font-size: 14px;
+			font-size: 16px;
+			font-family: "ProximaNovaBold";
+			color: #8e8e8e;
 		}
 	}
 
@@ -912,6 +1018,7 @@ input{
 		vertical-align: middle;
 		border-right: 1px solid #e8e8e8;
 		height: 100%;
+		overflow: hidden;
 		img{
 			//max-width: 90%;
 		}

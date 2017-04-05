@@ -238,7 +238,7 @@ header{
 	}
 
 	&__link{
-
+		//font-family: "ProximaNovaRegular";
 		&:hover{
 			font-weight: bold;
 		}
@@ -451,8 +451,12 @@ header{
 		text-transform: uppercase;
 		font-family: "ProximaNovaLight";
 		color: #fff;
-		background-color: #fa594f;
 		font-size: 18px;
+		background-color: #d1383e;
+
+		&:hover{
+			background-color: #fa594f
+		}
 
 	}
 
