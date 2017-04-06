@@ -1,0 +1,100 @@
+
+.list{
+	.title{
+		text-align: left;
+		padding-left: 32px;
+	}
+
+	&__area{
+		display: -webkit-flex;
+		display: flex;
+	}
+
+	&__desc{
+		width: 70%;
+		padding-left: 32px;
+	}
+
+	&__head{
+		background-color: #FFF;
+		text-transform: uppercase;
+		font-size: 12px;
+		padding: 0 13px;
+		border: 2px solid $lightgrey;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-box-pack: justify;
+		-webkit-justify-content: space-between;
+		justify-content: space-between;
+	}
+
+	&__filt{
+		position: relative;
+		.list__switch{
+			padding-right: 12px;
+		}
+	}
+
+	&__switch{
+		display: inline-block;
+		padding: 15px 0;
+		img{
+			padding-left: 5px;
+			transition: 0.3s;
+		}
+
+		&--active{
+			//border-color: #e8e8e8 !important;
+			img{
+				transform: rotate(180deg) translateX(-3px);
+			}
+		}
+
+		&--pdl{
+			padding-left: 68px;
+			&:hover{
+				color: $bluestyle;
+			}
+		}
+
+		&--list{
+			border-right: 2px solid transparent;
+		}
+	}
+
+	&__view{
+		.list__switch{
+			padding-left: 25px;
+
+			&:hover{
+				color: $bluestyle;
+			}
+		}
+	}
+
+	&__option{
+		display: none;
+		position: absolute;
+		z-index: 4;
+		background-color: #FFF;
+		top: 46px;
+		left: -14px;
+    padding: 0px 16px;
+		padding-right: 30px;
+		border: 2px solid $lightgrey; 
+		border-top: none;
+		a{
+			display: block;
+			padding-bottom: 15px;
+			position: relative;
+			left: -3px;
+			transition: 0s;
+		}
+	}
+
+	&__box{
+		padding-top: 15px;
+	}
+
+
+}

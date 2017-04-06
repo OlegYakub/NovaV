@@ -85,6 +85,18 @@ $('#close-phones').click(function(e){
   $('.phones').hide();
 });
 
+$('#list-top-filter').click(function(e){
+  e.preventDefault();
+  $('.list__option').toggle();
+  $("#list-top-filter").toggleClass('list__switch--active');
+});
+
+$('.list__option a').click(function(e){
+  e.preventDefault();
+   $('.list__option').hide();
+   $("#list-top-filter").removeClass('list__switch--active');
+   
+})
 
 function truncate(str, maxlength){
   var l = str.length;
@@ -107,6 +119,10 @@ $('.m-overwv__desc').each(function(i, el){
   var r = $(el).text();
   $(el).text(truncate(r, 132));
 });
+
+$(' .rate_row ').starwarsjs();
+
+
 
 
 
