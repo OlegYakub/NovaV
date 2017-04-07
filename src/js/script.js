@@ -28,9 +28,6 @@ $('.maker-sl__slider').slick({
         slidesToScroll: 1
       }
     }
-    // You can unslick at a given breakpoint now by adding:
-    // settings: "unslick"
-    // instead of a settings object
   ]
 });
 
@@ -54,26 +51,81 @@ $('.together').slick({
         dots: false
       }
     }
-    // You can unslick at a given breakpoint now by adding:
-    // settings: "unslick"
-    // instead of a settings object
   ]
 });
 
 $(document).ready(function() {
 
+$('.filter__box').each(function(i, el){
+  var btn = $(el).find("a.filter__title");
+  var drop = $(el).find(".filter__drop");
+  $(btn).click(function(e){
+    e.preventDefault();
+    $(drop).animate({ height: "toggle"}, 300);
+  })
+});
+
+
+/*=========================filter range==============*/
+
+  $(".filter__range").slider({
+      min: 0,
+      max: 1000,
+      values: [0,1000],
+      range: true,
+      stop: function(event, ui) {
+          $(".filter__inputs input#minCost").val($(".filter__range").slider("values",0));
+          $('.filter__range--text1').text($(".filter__range").slider("values",0));
+          $(".filter__inputs input#maxCost").val($(".filter__range").slider("values",1));
+          $('.filter__range--text2').text($(".filter__range").slider("values",1));
+      },
+
+      slide: function(event, ui){
+          $(".filter__inputs input#minCost").val($(".filter__range").slider("values",0));
+          $('.filter__range--text1').text($(".filter__range").slider("values",0));
+          $(".filter__inputs input#maxCost").val($(".filter__range").slider("values",1));
+          $('.filter__range--text2').text($(".filter__range").slider("values",1));
+      }
+      
+  });
+
+  $('.filter__range--text1').text($(".filter__inputs input#minCost").val());
+  $('.filter__range--text2').text($(".filter__inputs input#maxCost").val());
+
+  $(" input#minCost").change(function(){
+      console.log(1);
+      var value1=$(".filter__inputs input#minCost").val();
+      var value2=$(".filter__inputs input#maxCost").val();
+      $('.filter__range--text1').text($(".filter__inputs input#minCost").val());
+      $('.filter__range--text2').text($(".filter__inputs input#maxCost").val());
+      if(parseInt(value1) > parseInt(value2)){
+          value1 = value2;
+          $(".filter__inputs input#minCost").val(value1);
+      }
+      $(".filter__range").slider("values",0,value1);    
+  });
+   
+  $("input#maxCost").change(function(){
+      var value1=$(".filter__inputs input#minCost").val();
+      var value2=$(".filter__inputs input#maxCost").val();
+      $('.filter__range--text1').text($(".filter__inputs input#minCost").val());
+      $('.filter__range--text2').text($(".filter__inputs input#maxCost").val());
+      if (value2 > 1000) { value2 = 1000; $(".filter__inputs input#maxCost").val(1000)}
+   
+      if(parseInt(value1) > parseInt(value2)){
+          value2 = value1;
+          $(".filter__inputs input#maxCost").val(value2);
+      }
+      $(".filter__range").slider("values",1,value2);
+  });
+
+
+/*======================================================*/
+
 $('.main-search__select').click(function(e){
   e.preventDefault();
   $('#category-list').toggle();
 })
-
-/*$('.header__shop, .trash-modal').hover(function(){
-  $('.trash-modal').toggle();
-});*/
-
-/*$('.header__balance, .balance-modal').hover(function(){
-  $('.balance-modal').toggle();
-});*/
 
 $('#open-phones').click(function(){
   $('.phones').show();
@@ -96,7 +148,10 @@ $('.list__option a').click(function(e){
    $('.list__option').hide();
    $("#list-top-filter").removeClass('list__switch--active');
    
-})
+});
+
+/*==========================truncate============================*/
+
 
 function truncate(str, maxlength){
   var l = str.length;
