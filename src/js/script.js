@@ -119,7 +119,11 @@ $('.filter__box').each(function(i, el){
       $(".filter__range").slider("values",1,value2);
   });
 
-
+  $('.list__paginator').pagination({
+        items: 100,
+        itemsOnPage: 10,
+        cssStyle: 'light-theme'
+    });
 /*======================================================*/
 
 $('.main-search__select').click(function(e){

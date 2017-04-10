@@ -1,6 +1,7 @@
+@import "variables";
 
 .good-v{
-		width: 300px;
+		width: 301px;
 		background-color: #FFF;
 		padding: 40px 0 20px;
 		position: relative;
@@ -141,7 +142,7 @@
 
 @media screen and (max-width: 1170px){
 	.good-v{
-		width: 315px;
+		width: 33.33%;
 	}
 }
 
