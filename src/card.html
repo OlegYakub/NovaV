@@ -8,10 +8,14 @@
 	<link rel="canonical" href="" /> 
 	<meta name="description" content="">
 	<meta name="keywords" content="">
-	<title>Главная</title>
+	<title>card</title>
 	<link rel="stylesheet" href="css/fonts.css">
 	<link rel="stylesheet" href="css/slick-theme.css">
+	<link rel="stylesheet" href="css/jquery.fancybox.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/slick.css">
+	<link rel="stylesheet" href="css/starwars.css">
+	<link rel="stylesheet" href="css/simplePagination.css">
 	<link rel="stylesheet" href="css/jquery.formstyler.css">
 
 	<link rel="stylesheet" href="css/style.css">
@@ -112,7 +116,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="header   header--bg">
+		<div class="header">
 			<div class="container">
 				<div class="header__logo">
 					<a href="index.html">
@@ -1063,1148 +1067,209 @@
 					</a>
 				</div>
 			</div>
-		</div>
-		
+		</div>	
 	</header>
-	<div class="steps__wrapper">
-		<div class="container">
-			<section class="steps">
-				<div class="title">
-					<span>5 простых шагов</span>	
-				</div>
-				<p class="steps__subtitle">
-					подбора фильтров для воды
-				</p>
-
-				<div class="steps__body">
-					<div class="steps__left">
-						<img src="img/glass-w.png" alt="" class="steps__glass">
-						<div class="steps__levels  level">
-							<ul class="level__list">
-								<li  class="level__item">
-									<a href="">цена</a>
-								</li>
-								<li class="level__item">
-									<a href="">степень очитски</a>
-								</li>
-								<li class="level__item">
-									<a href="">тип картриджа</a>
-								</li>
-								<li class="level__item">
-									<a href="">вода</a>
-								</li>
-								<li class="level__item  level__item--active">
-									<a href="">количество</a>
-								</li>
-							</ul>
-							<img src="img/water-layer.png" alt=""
-							class="level__water-layer">
+	<div class="container  container--nonpd">
+		<section class="breadcrumbs">
+			<ul class="breadcrumbs__list">
+				<li class="breadcrumbs__item">
+					<a href="">Главаня</a>
+				</li>
+				<li class="breadcrumbs__item">
+					<a href=""> Для дома</a>
+				</li>
+				<li class="breadcrumbs__item">
+					<a href="">Каталог</a>
+				</li>
+				<li class="breadcrumbs__item">
+					<a >Фильтры обратного осмоса</a>
+				</li>
+			</ul>
+		</section>
+		<section class="c-main1">
+			<div class="card">
+				<div class="card__left">
+					<div class="card__slider-for">
+						<div class="">
+							<a class="pict-box" href="img/good1.jpg" data-fancybox="group">
+								<img src="/img/good1.jpg" alt="">
+							</a>	
 						</div>
-					</div>
-					<div class="steps__content">
-						<div class="step1 steps__right" id="step1">
-							<div class="steps__line">
-								<div class="steps__line2">
-									<div class="steps__line3">
-										<div class="steps__line4">
-										
-										</div>
-									</div>
-								</div>
-							</div>
-							<p class="steps__title">
-								Сколько человек у вас в семье?
-							</p>
-							<div class="  steps__box">
-								<div class="step1__top">
-									<a href="" class="step1__item  steps--active">
-										2 человека
-									</a>
-									<a href="" class="step1__item">
-										3 человека
-									</a>
-									<a href="" class="step1__item">
-										4 человека
-									</a>
-								</div>
-								<div class="step1__bot  ">
-									<div class="step1__input">
-										<button class="step1__prev">-</button>
-										<input type="text" value="0">
-										<button class="step1__next">+</button>
-
-									</div>
-									<div class="step1__text">
-										человек
-									</div>
-								</div>
-							</div>
-
+						<div class="">
+							<a class="pict-box" href="img/good2.jpg" data-fancybox="group">
+								<img src="/img/good2.jpg" alt="">
+							</a>	
 						</div>
-						<div class="step2 steps__right" id="step2">
-							<div class="steps__line">
-								<div class="steps__line2">
-									<div class="steps__line3">
-										<div class="steps__line4">
-										
-										</div>
-									</div>
-								</div>
-							</div>
-							<p class="steps__title">
-								для какой воды?
-							</p>
-							<div class="  steps__box">
-								<div class="steps__col">
-									<p>
-										питьевой
-									</p>
-									<p class="steps__desc">
-										Употребление, приготовление пищи
-									</p>
-								</div>
-								<div class="steps__col  steps--active">
-									<p>
-										бытовой
-									</p>
-									<p class="steps__desc">
-										Сантехника, бытовая техника
-									</p>
-								</div>
-							</div>
-
+						<div class="">
+							<a  class="pict-box" href="img/good1.jpg" data-fancybox="group">
+								<img src="/img/good1.jpg" alt="">
+							</a>	
 						</div>
-						<div class="step2 steps__right" id="step3">
-							<div class="steps__line">
-								<div class="steps__line2">
-									<div class="steps__line3">
-										<div class="steps__line4">
-										
-										</div>
-									</div>
-								</div>
-							</div>
-							<p class="steps__title">
-								какой тип картриджа?
-							</p>
-							<div class="  steps__box">
-								<div class="steps__col">
-									<p>
-										универсальный
-									</p>
-									<p class="steps__desc">
-										Подходят фильтрующие засыпки разных производителей Низкая цена Более трудоемкая замена картриджа
-									</p>
-								</div>
-								<div class="steps__col  steps--active">
-									<p>
-										легкосьемный
-									</p>
-									<p class="steps__desc">
-										Смена картриджа с колбой. Простота замены Подходят только фирменные картриджи Более высокая цена.
-									</p>
-								</div>
-							</div>
-
+						<div class="">
+							<a class="pict-box" href="img/good2.jpg" data-fancybox="group">
+								<img src="/img/good2.jpg" alt="">
+							</a>	
 						</div>
-						<div class="step2 steps__right" id="step4">
-							<div class="steps__line">
-								<div class="steps__line2">
-									<div class="steps__line3">
-										<div class="steps__line4">
-										
-										</div>
-									</div>
-								</div>
-							</div>
-							<p class="steps__title">
-								степень очистки
-							</p>
-							<div class="  steps__box">
-								<div class="steps__col">
-									<p>
-										От булыжников
-									</p>
-									<p class="steps__desc">
-										Топ класс
-									</p>
-								</div>
-								<div class="steps__col  steps--active">
-									<p>
-										От щебня
-									</p>
-									<p class="steps__desc">
-										Премиум класс
-									</p>
-								</div>
-								<div class="steps__col  steps--active">
-									<p>
-										От песка
-									</p>
-									<p class="steps__desc">
-										цена-качество
-									</p>
-								</div>
-								<div class="steps__col  steps--active">
-									<p>
-										от молекул
-									</p>
-									<p class="steps__desc">
-										недорого
-									</p>
-								</div>
-							</div>
-
+						<div class="">
+							<a class="pict-box" href="img/good1.jpg" data-fancybox="group">
+								<img src="/img/good1.jpg" alt="">
+							</a>	
 						</div>
-						<div class="step2 steps__right" id="step5">
-							<div class="steps__line">
-								<div class="steps__line2">
-									<div class="steps__line3">
-										<div class="steps__line4">
-										
-										</div>
-									</div>
-								</div>
-							</div>
-							<p class="steps__title">
-								степень очистки
-							</p>
-							<div class="  steps__box">
-								<div class="steps__col">
-									<p>
-										14 900 - 19 000
-									</p>
-									<p class="steps__desc">
-										Топ класс
-									</p>
-								</div>
-								<div class="steps__col  steps--active">
-									<p>
-										14 900 - 19 000
-									</p>
-									<p class="steps__desc">
-										Премиум класс
-									</p>
-								</div>
-								<div class="steps__col ">
-									<p>
-										14 900 - 19 000
-									</p>
-									<p class="steps__desc">
-										цена-качество
-									</p>
-								</div>
-								<div class="steps__col ">
-									<p>
-										14 900 - 19 000as
-									</p>
-									<p class="steps__desc">
-										недорого
-									</p>
-								</div>
-							</div>
-
+						<div class="">
+							<a class="pict-box" href="img/good2.jpg" data-fancybox="group">
+								<img src="/img/good2.jpg" alt="">
+							</a>	
 						</div>
-						<a href="" class="steps__btn" >
-							Далее
-						</a>
 
 					</div>
-
-
-					
-				</div>
-			</section>
-			<section class="m-search">
-				<p class="title">
-					<span>Подберите фильтр для себя</span>
-				</p>
-
-				
-					<div class="m-search__parametrs">
-						<div class="m-search__title">
-							Выберите параметры:
+					<div class="card__slider-nav">
+						<div>
+							<img src="img/good1.jpg" alt="">
 						</div>
-						<ul class="m-search__list">
-							<li class="m-search__item">
-								<a href="" class="m-search__link">
-									производитель
-									<img src="img/list-arr.png" alt="">
-								</a>
-								
-							</li>
-							<li class="m-search__item">
-								<a href="" class="m-search__link">
-									стиль крана
-									<img src="img/list-arr.png" alt="">
-								</a>
-
-							</li>
-							<li class="m-search__item">
-								<a href="" class="m-search__link">
-									размеры
-									<img src="img/list-arr.png" alt="">
-								</a>
-							</li>
-							<li class="m-search__item">
-								<a href="" class="m-search__link">
-									этапы очистки
-									<img src="img/list-arr.png" alt="">
-								</a>
-							</li>
-							<li class="m-search__item">
-								<a href="" class="m-search__link">
-									класс фильтра
-									<img src="img/list-arr.png" alt="">
-								</a>
-							</li>
-							<li class="m-search__item">
-								<a href="" class="m-search__link">
-									тип колб 
-									<img src="img/list-arr.png" alt="">
-								</a>
-							</li>
-							<li class="m-search__item">
-								<a href="" class="m-search__link">
-									размещение
-									<img src="img/list-arr.png" alt="">
-								</a>
-							</li>
-							<li class="m-search__item">
-								<a href="" class="m-search__link">
-									этапы очистки
-									<img src="img/list-arr.png" alt="">
-								</a>
-							</li>
-							<li class="m-search__item">
-								<a href="" class="m-search__link">
-									размеры
-									<img src="img/list-arr.png" alt="">
-								</a>
-							</li>
-							<li class="m-search__item">
-								<a href="" class="m-search__link">
-									размещение
-									<img src="img/list-arr.png" alt="">
-								</a>
-							</li>
-							<div class="m-search-sub">
-								<div class="m-search-sub__top">
-									<div  href="" class="m-search-sub__name" >
-										<span >размеры</span>
-										<img src="img/list-arr.png" alt="">
-									</div>
+						<div>
+							<img src="img/good2.jpg" alt="">
+						</div>
+						<div>
+							<img src="img/good1.jpg" alt="">
+						</div>
+						<div>
+							<img src="img/good2.jpg" alt="">
+						</div>
+						<div>
+							<img src="img/good1.jpg" alt="">
+						</div>
+						<div>
+							<img src="img/good2.jpg" alt="">
+						</div>
+					</div>
+				</div>
+				<div class="card__right">
+					<div class="card__head">
+						<div class="good-status  good-status--ok">
+							В наличии 
+							<img src="img/status-good.png" alt="">
+						</div>
+						<div class="good-status  good-status--no">
+							Под заказ 
+							<img src="img/status-good.png" alt="">
+						</div>
+						<div class="good-title">
+							<p class="good-title__code">
+								<a href="">Код 03-39-11s</a>
+							</p>
+							<div class="good-title__name">
+								Bluefilters New Line RO-9PAF
+							</div>
+							<div class="good-title__desc">
+								Фильтр обратного осмоса
+							</div>
+						</div>
+						<div class="card__review">
+							<div class="review">
+								<div class="rate_row">
+									<span class="rate_star" data-value="1"></span> <!-- Single Star -->
+									<span class="rate_star" data-value="2"></span>
+									<span class="rate_star" data-value="3"></span>
+									<span class="rate_star" data-value="4"></span>
+									<span class="rate_star" data-value="5"></span>
+									<input type="hidden" class="get_star" value="">
+								</div> 
+								<div class="review__link">
+									<a href="#">Отзывы</a>
+									<span class="review__number">
+										17
+									</span>
 								</div>
-								<ul class="m-search-sub__list">
-									<li class="m-search-sub__item">
-										<div href="" class="m-search-sub__link">
-											Украина
-											<a href="">
-												<img src="img/close-small.svg" alt="">
-											</a>
-										</div>
-									</li>
-									<li class="m-search-sub__item">
-										<div href="" class="m-search-sub__link">
-											Украина
-											<a href="">
-												<img src="img/close-small.svg" alt="">
-											</a>
-										</div>
-									</li>
-									<li class="m-search-sub__item">
-										<div href="" class="m-search-sub__link">
-											Украина
-											<a href="">
-												<img src="img/close-small.svg" alt="">
-											</a>
-										</div>
-									</li>
-									<li class="m-search-sub__item">
-										<div href="" class="m-search-sub__link">
-											Украина
-											<a href="">
-												<img src="img/close-small.svg" alt="">
-											</a>
-										</div>
-									</li>
-									<li class="m-search-sub__item">
-										<div href="" class="m-search-sub__link">
-											Украина
-											<a href="">
-												<img src="img/close-small.svg" alt="">
-											</a>
-										</div>
-									</li>
-									<li class="m-search-sub__item">
-										<div href="" class="m-search-sub__link">
-											Украина
-											<a href="">
-												<img src="img/close-small.svg" alt="">
-											</a>
-										</div>
-									</li>
-									<li class="m-search-sub__item">
-										<div href="" class="m-search-sub__link">
-											Украина
-											<a href="">
-												<img src="img/close-small.svg" alt="">
-											</a>
-										</div>
-									</li>
-									<li class="m-search-sub__item">
-										<div href="" class="m-search-sub__link">
-											Украина
-											<a href="">
-												<img src="img/close-small.svg" alt="">
-											</a>
-										</div>
-									</li>
-									<li class="m-search-sub__item">
-										<div href="" class="m-search-sub__link  m-search-sub__link--chosen">
-											Украина
-											<a href="">
-												<img src="img/close-small.svg" alt="">
-											</a>
-										</div>
-									</li>
-									<li class="m-search-sub__item">
-										<div href="" class="m-search-sub__link">
-											Украина
-											<a href="">
-												<img src="img/close-small.svg" alt="">
-											</a>
-										</div>
-									</li>
-									
-								</ul>
-								
 							</div>
 							
-						</ul>
-						
-					</div>
-
-					<div class="m-search-chos">
-						<div class="m-search__title">
-								Вы выбрали:
-
-								<button>
-									Очистить все
-									<img src="img/close-grey.svg" alt="">
-								</button>
 						</div>
-
-						<div class="m-search-chos__content">
-							<ul class="m-search-chos__list">
-								<li class="m-search-chos__item">
-									<a href="" class="m-search-chos__link">
-										германия
-										<img src="img/close.svg" alt="">
-									</a>
+					</div>
+					<div class="card__middle">
+						<div class="card__content">
+							<div class="card__title">
+								Основные характеристики
+							</div>
+							<ul class="card__charact">
+								<li>
+									<div class="card__option">
+										Производитель
+									</div>
+									<div class="card__param">
+										<a href="">
+											Leader (USA, Poland)
+										</a>
+									</div>
 								</li>
-								<li class="m-search-chos__item">
-									<a href="" class="m-search-chos__link">
-										Проточный
-										<img src="img/close.svg" alt="">
-									</a>
+								<li>
+									<div class="card__option">
+										Тип фильтрации
+									</div>
+									<div class="card__param">
+											Обратный осмос
+									</div>
 								</li>
-								<li class="m-search-chos__item">
-									<a href="" class="m-search-chos__link">
-										Обратный осмос
-										<img src="img/close.svg" alt="">
-									</a>
+								<li>
+									<div class="card__option">
+										Размещение
+									</div>
+									<div class="card__param">
+											Под мойкой	
+									</div>
 								</li>
-								<li class="m-search-chos__item">
-									<a href="" class="m-search-chos__link">
-										германия
-										<img src="img/close.svg" alt="">
-									</a>
+								<li>
+									<div class="card__option">
+										Кол-во этапов очистки
+									</div>
+									<div class="card__param">
+											5
+									</div>
 								</li>
-								<li class="m-search-chos__item">
-									<a href="" class="m-search-chos__link">
-										Премиум класс
-										<img src="img/close.svg" alt="">
-									</a>
-								</li>
-								<li class="m-search-chos__item">
-									<a href="" class="m-search-chos__link">
-										германия
-										<img src="img/close.svg" alt="">
-									</a>
-								</li>
-								<li class="m-search-chos__item">
-									<a href="" class="m-search-chos__link">
-										Проточный
-										<img src="img/close.svg" alt="">
-									</a>
-								</li>
-								<li class="m-search-chos__item">
-									<a href="" class="m-search-chos__link">
-										Обратный осмос
-										<img src="img/close.svg" alt="">
-									</a>
-								</li>
-								<li class="m-search-chos__item">
-									<a href="" class="m-search-chos__link">
-										германия
-										<img src="img/close.svg" alt="">
-									</a>
-								</li>
-								<li class="m-search-chos__item">
-									<a href="" class="m-search-chos__link">
-										Премиум класс
-										<img src="img/close.svg" alt="">
-									</a>
-								</li>
-								<li class="m-search-chos__item">
-									<a href="" class="m-search-chos__link">
-										германия
-										<img src="img/close.svg" alt="">
-									</a>
-								</li>
-								<li class="m-search-chos__item">
-									<a href="" class="m-search-chos__link">
-										Проточный
-										<img src="img/close.svg" alt="">
-									</a>
-								</li>
-								<li class="m-search-chos__item">
-									<a href="" class="m-search-chos__link">
-										Обратный осмос
-										<img src="img/close.svg" alt="">
-									</a>
-								</li>
-								<li class="m-search-chos__item">
-									<a href="" class="m-search-chos__link">
-										германия
-										<img src="img/close.svg" alt="">
-									</a>
-								</li>
-								<li class="m-search-chos__item">
-									<a href="" class="m-search-chos__link">
-										Премиум класс
-										<img src="img/close.svg" alt="">
-									</a>
-								</li>
-								<a href="" class="m-search-chos__btn btn--red ">
-									подобрать фильтр
-								</a>
 							</ul>
 						</div>
 					</div>
-				
-			</section>
-
-		</div>
+					<div class="card__foot">
+						<div class="card__fl">
+							<div class="card__garanty">
+								<div class="guarantee﻿-link">
+									Гарантия 5 лет
+								</div>				
+							</div>
+							<div class="card__links">
+								<a href="#" class="card__one">
+									Купить в один клик
+								</a>
+								<div class="compare">
+									<a href="" class="compare__add">
+										в сравнение
+										<img src="img/balance.svg" alt="" width="20px" height="16px">
+									</a>
+									<a href="" class="compare__open">
+										сравнить
+										<img src="img/balance-blue.svg" alt="" width="20px" height="16px">
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="card__fl  card__fl--buy">
+							<p class="good-v__price">
+								15770 
+								<span class="good-v__price--font">
+									грн
+								</span>
+								<span class="good-v__price--old">
+									6770
+								</span>
+							</p>
+							<a href="#" class="btn--red">
+								купить
+								<img src="img/shopping-cart-white.svg" alt="">
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 	</div>
-	<section class="m-reasons">
-		<div class="container">
-			<p class="title">	
-				<span>четыре причины купить у нас
-				</span>
-			</p>
-		</div>
-		<div class="m-reasons__img">
-			
-		</div>
-		<div class="container">
-		<ul class="m-reasons__body">
-			<li class="m-reasons__item  m-reasons__item--1">
-			<span>Мы</span> являемся <span>производителями</span>
-				а также <span>поставщиками</span> продукции
-			</li>
-			<li class="m-reasons__item  m-reasons__item--2">
-				Склад с <span>широким</span> выбором продукции
-			</li>
-			<li class="m-reasons__item  m-reasons__item--2">
-				<span>Свой</span> отдел сервиса и монтажа
-			</li>
-			<li class="m-reasons__item  m-reasons__item--4">
-				Бесплатная <span>доставка</span> и монтаж
-			</li>
-		</ul>
-
-		<div class="m-reasons__banner">
-			<a href="">
-				<img src="img/rec-banner.jpg" alt="">
-			</a>
-		</div>
-		</div>
-
-	</section>
-
-	<section class="m-recomend">
-		<div class="container">
-			<p class="title">
-				<span>
-					рекомендуемые товары
-				</span>
-			</p>
-			<div class="m-recomend__body">
-				<div class="m-recomend__card">
-					<div class="m-recomend__pict">
-						<img src="img/good1.jpg" alt="">
-					</div>
-					<div class="m-recomend__cont">
-						<p class="m-recomend__name">
-							<a href="">
-								Bluefilters New Line RO-9PAF
-							</a>
-							
-						</p>
-						<p class="m-recomend__desc">
-							Фильтр обратного осмоса
-						</p>
-						<p class="m-recomend__code">
-						<a href="">
-							Код 03-39-11s
-						</a>
-							
-						</p>
-					</div>
-					<div class="m-recomend__foot">
-						<p class="m-recomend__price">
-							5770 
-							<span class="m-recomend__price--font">
-								грн
-							</span>
-							<span 
-							class="m-recomend__price--old">
-								6770
-							</span>
-						</p>
-						<p class="m-recomend__basket">
-
-							<a href="#">
-								
-							</a>
-						</p>
-					</div>
-
-				</div>
-				<div class="m-recomend__card">
-					<div class="m-recomend__pict">
-						<img src="img/good1.jpg" alt="">
-					</div>
-					<div class="m-recomend__cont">
-						<p class="m-recomend__name">
-							<a href="">
-								Bluefilters New Line RO-9PAF
-							</a>
-							
-						</p>
-						<p class="m-recomend__desc">
-							Фильтр обратного осмоса
-						</p>
-						<p class="m-recomend__code">
-						<a href="">
-							Код 03-39-11s
-						</a>
-							
-						</p>
-					</div>
-					<div class="m-recomend__foot">
-						<p class="m-recomend__price">
-							5770 
-							<span class="m-recomend__price--font">
-								грн
-							</span>
-							<span 
-							class="m-recomend__price--old">
-								6770
-							</span>
-						</p>
-						<p class="m-recomend__basket">
-
-							<a href="#">
-								
-							</a>
-						</p>
-					</div>
-
-				</div>
-				<div class="m-recomend__card">
-					<div class="m-recomend__pict">
-						<img src="img/good1.jpg" alt="">
-					</div>
-					<div class="m-recomend__cont">
-						<p class="m-recomend__name">
-							<a href="">
-								Bluefilters New Line RO-9PAF
-							</a>
-							
-						</p>
-						<p class="m-recomend__desc">
-							Фильтр обратного осмоса
-							Фильтр обратного осмоса
-							Фильтр обратного осмоса
-							Фильтр обратного осмоса
-							Фильтр обратного осмоса
-						</p>
-						<p class="m-recomend__code">
-						<a href="">
-							Код 03-39-11s
-						</a>
-							
-						</p>
-					</div>
-					<div class="m-recomend__foot">
-						<p class="m-recomend__price">
-							5770 
-							<span class="m-recomend__price--font">
-								грн
-							</span>
-							<span 
-							class="m-recomend__price--old">
-								6770
-							</span>
-						</p>
-						<p class="m-recomend__basket">
-
-							<a href="#">
-								
-							</a>
-						</p>
-					</div>
-
-				</div>
-				<div class="m-recomend__card">
-					<div class="m-recomend__pict">
-						<img src="img/good1.jpg" alt="">
-					</div>
-					<div class="m-recomend__cont">
-						<p class="m-recomend__name">
-							<a href="">
-								Bluefilters New Line RO-9PAF
-							</a>
-							
-						</p>
-						<p class="m-recomend__desc">
-							Фильтр обратного осмоса
-						</p>
-						<p class="m-recomend__code">
-						<a href="">
-							Код 03-39-11s
-						</a>
-							
-						</p>
-					</div>
-					<div class="m-recomend__foot">
-						<p class="m-recomend__price">
-							5770 
-							<span class="m-recomend__price--font">
-								грн
-							</span>
-							<span 
-							class="m-recomend__price--old">
-								6770
-							</span>
-						</p>
-						<p class="m-recomend__basket">
-
-							<a href="#">
-								
-							</a>
-						</p>
-					</div>
-
-				</div>
-				
-				
-				
-			</div>
-		</div>
-	</section>
-	<section class="shares">
-		<div class="container">
-			<p class="title">
-				<span>
-					акции
-				</span>
-			</p>
-
-			<div class="shares__body">
-				<div class="shares__card">
-					<div class="shares__img">
-						<img src="img/shares-img.jpg" alt="">
-					</div>
-					<div class="shares__cont">
-						<div class="shares__date">
-							10.05.17
-						</div>
-						<div class="shares__name">
-							<a href="#">
-								С 9 октября Новая Вода запускает большую распродажу фирменных фильров
-							</a>
-						</div>
-						<div class="shares__desc">
-							Гарантийное(Новая Вода,TGI) и послегарантийное обслуживание всех систем обратного осмоса с заменой всех фильтров и мебраны в системе обратного осмоса. Профилактика и гарантийное(Новая Вода,TGI) и послегарантийное обслуживание всех 
-
-
-						</div>
-						<div class="shares__time">
-							Акция длится с 12.04.17 по 12.05.17
-						</div>
-						<div class="shares__link">
-							<a href="#">
-								Подробнее
-							</a>
-						</div>
-					</div>
-				</div>
-				<div class="shares__card">
-					<div class="shares__img">
-						<img src="img/shares-img.jpg" alt="">
-					</div>
-					<div class="shares__cont">
-						<div class="shares__date">
-							10.05.17
-						</div>
-						<div class="shares__name">
-							<a href="#">
-								С 9 октября Новая Вода запускает большую распродажу фирменных фильров
-							</a>
-						</div>
-						<div class="shares__desc">
-							Гарантийное(Новая Вода,TGI) и послегарантийное обслуживание всех систем обратного						</div>
-						<div class="shares__time">
-							Акция длится с 12.04.17 по 12.05.17
-						</div>
-						<div class="shares__link">
-							<a href="#">
-								Подробнее
-							</a>
-						</div>
-					</div>
-				</div>
-				<div class="shares__card">
-					<div class="shares__img">
-						<img src="img/good2.jpg" alt="">
-					</div>
-					<div class="shares__cont">
-						<div class="shares__date">
-							10.05.17
-						</div>
-						<div class="shares__name">
-							<a href="#">
-								С 9 октября Новая Вода запускает большую распродажу фирменных фильров
-							</a>
-						</div>
-						<div class="shares__desc">
-							Гарантийное(Новая Вода,TGI) и послегарантийное обслуживание всех систем обратного осмоса с заменой всех фильтров и мебраны в системе обратного осмоса. Профилактика и... 
-						</div>
-						<div class="shares__time">
-							Акция длится с 12.04.17 по 12.05.17
-						</div>
-						<div class="shares__link">
-							<a href="#">
-								Подробнее
-							</a>
-						</div>
-					</div>
-				</div>
-				<div class="shares__card">
-					<div class="shares__img">
-						<img src="img/good1.jpg" alt="">
-					</div>
-					<div class="shares__cont">
-						<div class="shares__date">
-							10.05.17
-						</div>
-						<div class="shares__name">
-							<a href="#">
-								С 9 октября Новая Вода запускает большую распродажу фирменных фильров
-							</a>
-						</div>
-						<div class="shares__desc">
-							Гарантийное(Новая Вода,TGI) и послегарантийное обслуживание всех систем обратного осмоса с заменой всех фильтров и мебраны в системе обратного осмоса. Профилактика и... 
-						</div>
-						<div class="shares__time">
-							Акция длится с 12.04.17 по 12.05.17
-						</div>
-						<div class="shares__link">
-							<a href="#">
-								Подробнее
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section class="maker-sl">
-		<div class="container">
-			<div class="  title--long">
-				
-					Производители
-				<div class="maker-sl__arrs">
-					<button class="maker-sl__left">
-						<img src="img/arrLeft.png" alt="">
-					</button>
-					<button class="maker-sl__right">
-						<img src="img/arrRight.png" alt="">
-					</button>
-				</div>
-			</div>
-			<div class="maker-sl__slider">
-				<div class="maker-sl__item">
-					<img src="img/manuf1.png" alt="">
-				</div>
-				<div class="maker-sl__item">
-					<img src="img/manuf2.png" alt="">
-				</div>
-				<div class="maker-sl__item">
-					<img src="img/manuf3.png" alt="">
-				</div>
-				<div class="maker-sl__item">
-					<img src="img/manuf4.png" alt="">
-				</div>
-				<div class="maker-sl__item">
-					<img src="img/manuf5.png" alt="">
-				</div>
-				<div class="maker-sl__item">
-					<img src="img/manuf6.png" alt="">
-				</div>
-				<div class="maker-sl__item">
-					<img src="img/manuf1.png" alt="">
-				</div>
-				<div class="maker-sl__item">
-					<img src="img/manuf2.png" alt="">
-				</div>
-				<div class="maker-sl__item">
-					<img src="img/manuf3.png" alt="">
-				</div>
-				<div class="maker-sl__item">
-					<img src="img/manuf4.png" alt="">
-				</div>
-				<div class="maker-sl__item">
-					<img src="img/manuf5.png" alt="">
-				</div>
-				<div class="maker-sl__item">
-					<img src="img/manuf6.png" alt="">
-				</div>
-			
-			</div>
-		</div>
-	</section>
-	<section class="m-overwv">
-		<div class="container">
-			<p class="title">
-				<span>Обзоры</span>
-			</p>
-			<div class="m-overwv__body">
-				<div class="m-overwv__col">
-					<div class="m-overwv__item">
-						<p class="m-overwv__name">
-							<a href="">Мембранный или проточный – какой фильтр выбрать? </a>
-							
-						</p>
-						<p class="m-overwv__desc">
-							Мембранный или проточный – какой фильтр выбрать? Сравниваем Наша Вода Родниковая Вода 3 и Leader Standart UF5 Пить чистую воду, Мембранный или 
-						</p>
-						<p class="m-overwv__read">
-							<a href="">читать</a>
-						</p>
-					</div>
-					<div class="m-overwv__item">
-						<p class="m-overwv__name">
-							<a href="">Мембранный или проточный – какой фильтр выбрать? </a>
-							
-						</p>
-						<p class="m-overwv__desc">
-							Мембранный или проточный – какой фильтр выбрать? Сравниваем Наша Вода Родниковая Вода 3 и Leader Standart UF5 Пить чистую воду, Мембранный или 
-						</p>
-						<p class="m-overwv__read">
-							<a href="">читать</a>
-						</p>
-					</div>
-					<div class="m-overwv__item">
-						<p class="m-overwv__name">
-							<a href="">Мембранный или проточный – какой фильтр выбрать? </a>
-							
-						</p>
-						<p class="m-overwv__desc">
-							Мембранный или проточный – какой фильтр выбрать? Сравниваем Наша Вода Родниковая Вода 3 и Leader Standart UF5 Пить чистую воду, Мембранный или 
-						</p>
-						<p class="m-overwv__read">
-							<a href="">читать</a>
-						</p>
-					</div>
-					<div class="m-overwv__item">
-						<p class="m-overwv__name">
-							<a href="">Мембранный или проточный – какой фильтр выбрать? </a>
-							
-						</p>
-						<p class="m-overwv__desc">
-							Мембранный или проточный – какой фильтр выбрать? Сравниваем Наша Вода Родниковая Вода 3 и Leader Standart UF5 Пить чистую воду, Мембранный или 
-						</p>
-						<p class="m-overwv__read">
-							<a href="">читать</a>
-						</p>
-					</div>
-
-				</div>
-				<div class="m-overwv__col">
-					<div class="m-overwv__item">
-						<p class="m-overwv__name">
-							<a href="">Мембранный или проточный – какой фильтр выбрать? </a>
-							
-						</p>
-						<p class="m-overwv__desc">
-							Мембранный или проточный – какой фильтр выбрать? Сравниваем Наша Вода Родниковая Вода 3 и Leader 
-						</p>
-						<p class="m-overwv__read">
-							<a href="">читать</a>
-						</p>
-					</div>
-					<div class="m-overwv__item">
-						<p class="m-overwv__name">
-							<a href="">Мембранный или проточный – какой фильтр выбрать? </a>
-							
-						</p>
-						<p class="m-overwv__desc">
-							Мембранный или проточный – какой фильтр выбрать? Сравниваем Наша Вода Родниковая Вода 3 и Leader Standart UF5 Пить чистую воду, Мембранный или Мембранный или проточный – какой фильтр выбрать? Сравниваем Наша Вода Родниковая Вода 3 и Leader Standart UF5 Пить чистую воду, Мембранный или 
-						</p>
-						<p class="m-overwv__read">
-							<a href="">читать</a>
-						</p>
-					</div>
-					<div class="m-overwv__item">
-						<p class="m-overwv__name">
-							<a href="">Мембранный или проточный – какой фильтр выбрать? </a>
-							
-						</p>
-						<p class="m-overwv__desc">
-							Мембранный или проточный – какой фильтр выбрать? Сравниваем Наша Вода Родниковая Вода 3 и Leader Standart UF5 Пить чистую воду, Мембранный или 
-						</p>
-						<p class="m-overwv__read">
-							<a href="">читать</a>
-						</p>
-					</div>
-					<div class="m-overwv__item">
-						<p class="m-overwv__name">
-							<a href="">Мембранный или проточный – какой фильтр выбрать? </a>
-							
-						</p>
-						<p class="m-overwv__desc">
-							Мембранный или проточный – какой фильтр выбрать? Сравниваем Наша Вода Родниковая Вода 3 и Leader Standart UF5 Пить чистую воду, Мембранный или 
-						</p>
-						<p class="m-overwv__read">
-							<a href="">читать</a>
-						</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section class="maker-sl   maker-sl--cli">
-		<div class="container">
-			<div class="  title--long">
-				
-					Наши клиенты
-				<div class="maker-sl__arrs">
-					<button class="maker-sl__left">
-						<img src="img/arrLeft.png" alt="">
-					</button>
-					<button class="maker-sl__right">
-						<img src="img/arrRight.png" alt="">
-					</button>
-				</div>
-			</div>
-			<div class="maker-sl__slider">
-				<div class="maker-sl__item">
-					<img src="img/cli1.png" alt="">
-				</div>
-				<div class="maker-sl__item">
-					<img src="img/cli2.png" alt="">
-				</div>
-				<div class="maker-sl__item">
-					<img src="img/cli3.png" alt="">
-				</div>
-				<div class="maker-sl__item">
-					<img src="img/cli4.png" alt="">
-				</div>
-				<div class="maker-sl__item">
-					<img src="img/cli5.png" alt="">
-				</div>
-				<div class="maker-sl__item">
-					<img src="img/cli6.png" alt="">
-				</div>
-				<div class="maker-sl__item">
-					<img src="img/cli1.png" alt="">
-				</div>
-				<div class="maker-sl__item">
-					<img src="img/cli2.png" alt="">
-				</div>
-				<div class="maker-sl__item">
-					<img src="img/cli3.png" alt="">
-				</div>
-				<div class="maker-sl__item">
-					<img src="img/cli5.png" alt="">
-				</div>
-				<div class="maker-sl__item">
-					<img src="img/cli4.png" alt="">
-				</div>
-				<div class="maker-sl__item">
-					<img src="img/cli6.png" alt="">
-				</div>
-			
-			</div>
-		</div>
-	</section>
-	<section class="m-bottom">
-		<div class="container">
-			<p class="title">
-				<span>интернет магазин фильтров для воды</span>
-			</p>
-			<div class="m-bottom__body">
-				<div class="m-bottom__cont">
-					<div class="m-bottom__pict">
-						<img src="img/m-bot-img.jpg" alt="">
-					</div>
-					<div class="m-bottom__right">
-						<p class="p">
-							Официальный сайт "Новая Вода" — системы обратного осмоса, системы умягчения воды, фильтры для квартиры, фильтры для дома, загородного дома, дачи, промышленные фильтры, для ресторанов, кафе, магазинов.  Гарантия качества от официального представителя торговой марки.
-
-						</p>
-						<p class="p">
-							Вода — это жизнь, а высочайшее качество воды — это результат грамотного выбора системы её комплексной очистки. Подобрать фильтр для воды задача не из простых, но наш многолетний опыт и самосовершенствование позволяют 
-						</p>
-						<ul class="m-bottom__list">
-							<li>
-								<span>
-									Механические
-								</span>
-							</li>
-							<li>
-								<span>
-									Органические
-								</span>
-							</li>
-							<li>
-								<span>
-									Химические и другие.
-								</span>
-							</li>
-						</ul>
-						<p class="p">
-							Официальный сайт "Новая Вода" — системы обратного осмоса, системы умягчения воды, фильтры для квартиры, фильтры для дома, загородного дома, дачи, промышленные фильтры, для ресторанов, кафе, магазинов.  Гарантия качества от официального представителя торговой марки.
-
-						</p>
-						<p class="m-bottom__title">
-							Купить фильтр для воды – сделать выбор в пользу здоровья
-						</p>
-					</div>
-					
-				</div>
-				<p class="p">
-					Официальный сайт "Новая Вода" — системы обратного осмоса, системы умягчения воды, фильтры для квартиры, фильтры для дома, загородного дома, дачи, промышленные фильтры, для ресторанов, кафе, магазинов.  Гарантия качества от официального представителя торговой марки. Вода — это жизнь, а высочайшее качество воды — это результат грамотного выбора системы её комплексной очистки. Подобрать фильтр для воды задача не из простых, но наш многолетний опыт и самосовершенствование позволяют всегда 
-				</p>
-			</div>
-		</div>
-	</section>
 	<footer>
 		<div class="container">
 			<div class="footer">
@@ -2364,6 +1429,7 @@
 	</footer>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/jquery-ui.js"></script> 
+	<script src="js/jquery.fancybox.min.js"></script>
 	<script src="js/jquery.modal.min.js"></script>
 	<script src="js/jquery.simplePagination.js"></script>
 	<script src="js/starwars.js"></script>

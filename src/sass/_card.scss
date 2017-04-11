@@ -1,0 +1,146 @@
+/* ====================CARD-PAGE============== */
+
+.c-main1{
+
+}
+
+/* ====================card============== */
+
+.card{
+	width: 900px;
+	display: -webkit-flex;
+	display: flex;
+	background-color: #FFF;
+	border: $bd2;
+	box-sizing: border-box;
+	&__left{
+		width: 383px;
+		border-right: $bd;
+	}
+
+	&__right{
+		width: 513px;
+	}
+
+	&__head{
+		border-bottom: $bd;
+		position: relative;
+		padding: 20px 15px 20px 30px;
+	}
+
+	&__middle{
+		padding: 20px 15px 20px 30px;
+		border-bottom: $bd;
+	}
+
+	&__foot{
+		padding: 15px 15px 20px 30px;
+		position: relative;
+	}
+
+	&__review{
+		padding-top: 13px;
+		width: 169px;
+	}
+
+	&__title{
+		font-family: "ProximaNovaBold";
+		font-size: 14px;
+	}
+
+	&__charact{
+		padding-top: 10px;
+		font-size: 14px;
+		li{
+			width: 75%;
+			padding-bottom: 2px;
+			&:after{
+					content: "";
+					clear: both;
+					display: block;
+			}
+		}
+
+		a{
+			text-decoration: underline;
+			color: $bluestyle; 
+			display: block;
+		}
+	}
+
+	&__option{
+		width: 50%;
+		float: left;
+		color: #929292;
+		box-sizing: border-box;
+		padding-right: 10px;
+	}
+
+	&__param{
+		width: 50%;
+		float: left;
+		color: #333333;
+	}
+
+	&__fl{
+		display: -webkit-flex;
+		display: flex;
+		-webkit-box-pack: justify;
+		-webkit-justify-content: space-between;
+		justify-content: space-between;
+		-webkit-align-items: center;
+		align-items: center;
+
+		&--buy{
+			padding-top: 10px;
+		}
+	}
+
+	&__links{
+		display: -webkit-flex;
+		display: flex;
+		-webkit-align-items: center;
+		align-items: center;
+	}
+
+	&__one{
+		padding-right: 15px;
+		text-decoration: underline;
+	}
+
+	.good-status{
+		top: auto;
+		bottom: 20px;
+	}
+
+	.btn--red{
+		font-size: 18px;
+    width: 153px;
+    height: 37px;
+    display: block;
+    line-height: 37px;
+
+    img{
+    	vertical-align: middle;
+	    width: 18px;
+	    height: 20px;
+	    position: relative;
+	    top: -1px;	
+    }
+	}
+
+	.good-v__price{
+		font-size: 30px;
+	}
+
+	&__slider-nav{
+		.slick{
+
+			&-slide{
+				img{
+					width: 100%;
+				}
+			}
+		}
+	}
+}

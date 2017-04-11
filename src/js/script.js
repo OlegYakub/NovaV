@@ -53,6 +53,24 @@ $('.together').slick({
     }
   ]
 });
+$('.card__slider-for').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  fade: true,
+  asNavFor: '.card__slider-nav'
+});
+
+$('.card__slider-nav').slick({
+  slidesToShow: 4,
+  slidesToScroll: 1,
+   asNavFor: '.card__slider-for',
+  autoplay: false,
+/*  autoplaySpeed: 2000,*/
+  dots: false,
+  infinite: true,
+  arrows: false,
+});
 
 $(document).ready(function() {
 
@@ -64,6 +82,8 @@ $('.filter__box').each(function(i, el){
     $(drop).animate({ height: "toggle"}, 300);
   })
 });
+
+/*$('.card__slider-for').fancybox();*/
 
 
 /*=========================filter range==============*/
