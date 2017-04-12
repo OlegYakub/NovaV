@@ -1,16 +1,15 @@
 
 /*==============slick=============*/
 
-$('.maker-sl__slider').slick({
+$('#maker-slider').slick({
   slidesToShow: 6,
   slidesToScroll: 1,
   autoplay: false,
-/*  autoplaySpeed: 2000,*/
   dots: false,
   infinite: true,
   arrows: true,
-  prevArrow: '.maker-sl__left',
-  nextArrow: '.maker-sl__right',
+  prevArrow: '#maker-left-arr',
+  nextArrow: '#maker-right-arr',
   responsive: [
     {
       breakpoint: 960,
@@ -31,11 +30,73 @@ $('.maker-sl__slider').slick({
   ]
 });
 
+$('#client-slider').slick({
+  slidesToShow: 6,
+  slidesToScroll: 1,
+  autoplay: false,
+  dots: false,
+  infinite: true,
+  arrows: true,
+  prevArrow: '#client-left-arr',
+  nextArrow: '#client-right-arr',
+  responsive: [
+    {
+      breakpoint: 960,
+      settings: {
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 744,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
+});
+
+$('.c-main2__slider').slick({
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  autoplay: false,
+  dots: false,
+  infinite: false,
+  arrows: true,
+  prevArrow: '#c-main2-left-arr',
+  nextArrow: '#c-main2-right-arr',
+  responsive: [
+    {
+      breakpoint: 1170,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+      }
+    },
+    {
+      breakpoint: 960,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+      }
+    },
+    {
+      breakpoint: 744,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
+});
+
 $('.together').slick({
   slidesToShow: 1,
   slidesToScroll: 1,
   autoplay: false,
-/*  autoplaySpeed: 2000,*/
   dots: true,
   infinite: false,
   arrows: true,
@@ -64,12 +125,21 @@ $('.card__slider-for').slick({
 $('.card__slider-nav').slick({
   slidesToShow: 4,
   slidesToScroll: 1,
-   asNavFor: '.card__slider-for',
+  asNavFor: '.card__slider-for',
   autoplay: false,
-/*  autoplaySpeed: 2000,*/
   dots: false,
   infinite: true,
   arrows: false,
+});
+
+
+
+ $('.card__slider-nav').on('click', '.slick-slide', function (e) {
+    e.stopPropagation();
+    var index = $(this).data("slick-index");
+    if ($('.slick-slider').slick('slickCurrentSlide') !== index) {
+      $('.slick-slider').slick('slickGoTo', index);
+    }
 });
 
 $(document).ready(function() {
@@ -202,7 +272,9 @@ $('.m-overwv__desc').each(function(i, el){
 $(' .rate_row ').starwarsjs();
 
 
+/*==================tabs======================*/
 
+$( ".c-tabs" ).tabs();
 
 
 

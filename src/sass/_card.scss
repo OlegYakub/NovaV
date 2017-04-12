@@ -1,9 +1,111 @@
 /* ====================CARD-PAGE============== */
 
 .c-main1{
+	display: -webkit-flex;
+	display: flex;
+	&__right{
+		width: 300px;
+		.clauses{
+			margin-left: 30px;
+			padding-top: 30px;
+		}
+	}
 
+	&__reason{
+		.clauses{
+			padding-bottom: 5px;
+			border-bottom: $bd;
+		}
+	}
+
+	&__delivery{
+		.clauses{
+			&__text{
+				span{
+					color: $primary-color;
+				}
+			}
+		}
+	}
+
+	&__title{
+		font-family: "ProximaNovaBold";
+		font-size: 14px;
+		margin-left: 30px;
+		padding-top: 20px;
+	}
 }
 
+.c-main2{
+	padding-bottom: 30px;
+	&__title{
+		font-size: 18px;
+		padding-top: 25px;
+		position: relative;
+		padding-bottom: 20px;
+		padding-left: 15px;
+
+		.maker-sl__arrs{
+			top: 27px;
+		}
+	}
+
+	&__slide{
+		background-color: #FFF;
+		border: $bd2;
+		display: -webkit-flex;
+		display: flex;
+		
+
+
+		&:hover{
+			z-index: 5;
+			box-shadow: 0px 4px 20px 0px rgba(0, 0, 2, 0.25);
+		}
+	}
+
+	&__slider{
+		.slick-track{
+			display: -webkit-flex;
+			display: flex;
+		}
+
+		.slick-slide{
+			height: auto;
+			display: -webkit-flex;
+			display: flex;
+			flex-direction: column;
+			-webkit-box-pack: justify;
+			-webkit-justify-content: space-between;
+			justify-content: space-between;
+		}
+	}
+
+	&__bot{
+		display: -webkit-flex;
+		display: flex;
+		-webkit-box-pack: justify;
+		-webkit-justify-content: space-between;
+		justify-content: space-between;
+		-webkit-align-items: center;
+		align-items: center;
+		padding: 0 15px;
+		padding-bottom: 15px;
+	}
+}
+
+.c-main3{
+	display: -webkit-flex;
+	display: flex;
+
+	&__left{
+		width: 50%;
+	}
+
+	&__right{
+		width: 50%;
+	}
+}
 /* ====================card============== */
 
 .card{
@@ -31,6 +133,7 @@
 	&__middle{
 		padding: 20px 15px 20px 30px;
 		border-bottom: $bd;
+		min-height: 180px;
 	}
 
 	&__foot{
@@ -134,13 +237,68 @@
 	}
 
 	&__slider-nav{
+		padding-bottom: 20px;
 		.slick{
 
 			&-slide{
 				img{
-					width: 100%;
+					width: 80%;
+					margin: 0 auto;
 				}
 			}
 		}
 	}
+
+	&__slider-for{
+		padding-bottom: 25px;
+
+		.pict-box{
+			padding-top: 30px;
+			width: 300px;
+			height: 250px;
+			margin: 0 auto;
+		}
+	}
+
+	&__zoom{
+		text-align: right;
+		padding-right: 20px;
+		padding-bottom: 30px;
+		img{
+			display: inline;
+		}
+	}
+}
+
+
+/* ========================c-tabs=================== */
+
+.c-tabs{
+
+	background-color: #FFF;
+	border: $bd2;
+	&__link{
+		font-family: "ProximaNovaBold";
+		font-size: 16px;
+		color: #ababab;
+
+		&--active{
+			color: $primary-color;
+		}
+
+		&:hover{
+			color: $primary-color;
+		}
+	}
+
+	&__item{
+		width: 100px;
+		height: 100px;
+
+		&:first-child{
+			background-color: red;
+		}
+	}
+
+	
 }
