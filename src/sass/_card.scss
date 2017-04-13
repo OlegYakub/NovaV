@@ -65,9 +65,12 @@
 	}
 
 	&__slider{
+		margin-top: -30px;
+		margin-bottom: -30px;
 		.slick-track{
 			display: -webkit-flex;
 			display: flex;
+
 		}
 
 		.slick-slide{
@@ -78,6 +81,7 @@
 			-webkit-box-pack: justify;
 			-webkit-justify-content: space-between;
 			justify-content: space-between;
+			    margin: 30px 0;
 		}
 	}
 
@@ -98,12 +102,38 @@
 	display: -webkit-flex;
 	display: flex;
 
+	.clauses__item{
+		font-size: 14px;
+	}
+
 	&__left{
 		width: 50%;
 	}
 
 	&__right{
 		width: 50%;
+	}
+
+	&__title{
+		font-size: 16px;
+		font-family: "ProximaNovaBold";
+		padding-left: 25px;
+		padding-bottom: 15px;
+	}
+
+	&__benef{
+		padding: 40px 15px;
+	}
+
+	.clauses{
+
+		&__text{
+			width: auto;
+		}
+
+		.pict-box{
+			width: auto;
+		}
 	}
 }
 /* ====================card============== */
@@ -274,17 +304,18 @@
 /* ========================c-tabs=================== */
 
 .c-tabs{
-
+	width: 100%;
+	box-sizing: border-box;
 	background-color: #FFF;
 	border: $bd2;
+	border-radius: 0;
+	padding-left: 40px;
+	padding-right: 35px;
 	&__link{
 		font-family: "ProximaNovaBold";
 		font-size: 16px;
 		color: #ababab;
 
-		&--active{
-			color: $primary-color;
-		}
 
 		&:hover{
 			color: $primary-color;
@@ -292,13 +323,350 @@
 	}
 
 	&__item{
-		width: 100px;
-		height: 100px;
+		font-size: 14px;
+		padding-bottom: 25px;
+	}
 
-		&:first-child{
-			background-color: red;
+	&__p{
+		color: #919191;
+		margin-bottom: 5px;
+	}
+
+	&__nav{
+		background-color: #fff;
+		border: none;
+		padding-bottom: 45px;
+		padding-top: 30px;
+		li{
+			display: inline-block;
+			padding-right: 25px;
 		}
 	}
 
+	&__list{
+		li{
+			padding-bottom: 7px;
+			&:after{
+				content: "";
+				clear: both;
+				display: block;
+			}
+		}
+		&--key{
+			width: 50%;
+			color: #919191;
+			float: left;
+		}
+
+		&--val{
+			width: 50%;
+			float: left;
+		}
+	}
+
+	&__video{
+		width: 100%;
+		height: 320px;
+	}
 	
+	.ui-tabs-active{
+		a{
+			color: $primary-color;
+		}
+	}
+
+	.ui-corner-all{
+		width: 100%;
+	}
+
+	.ui-widget-content{
+		padding: 0;
+		background-color: #fff;
+		padding-bottom: 25px;
+	}
+	
+}
+
+/* ========================c-rewievs=================== */
+
+.c-reviews{
+	border: $bd2;
+	background-color: #FFF;
+	border-bottom-width: 1px;
+
+	&__creat{
+		font-size: 14px;
+
+		img{
+			position: relative;
+			top: 3px;
+			padding-right: 5px;
+		}
+
+		&:hover{
+			color: $bluestyle;
+		}
+	}
+
+	&__top{
+		padding: 24px 15px 24px 40px;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-box-pack: justify;
+		-webkit-justify-content: space-between;
+		justify-content: space-between;
+		border-bottom: $bd;
+	}
+
+	&__title{
+		font-size: 16px;
+    font-family: "ProximaNovaBold";
+	}
+
+	&__item{
+		padding: 22px 24px 0px 40px;
+		font-size: 14px;
+		border-bottom: $bd;
+	}
+
+	&__head{
+		font-size: 14px;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-box-pack: justify;
+		-webkit-justify-content: space-between;
+		justify-content: space-between;
+		padding-bottom: 20px;
+	}
+
+	.rate_row{
+	}
+
+	
+	&__text{
+		line-height: 1.714;
+		padding-bottom: 10px;
+	}
+
+	&__dign{
+		padding-bottom: 5px;
+	}
+
+	&__middle{
+		color: #aeaeae;
+		padding-bottom: 15px;
+		span{
+			color: #919191;
+		}
+	}
+
+	&__link{
+		color: #868686;
+		padding-right: 25px;
+		i{
+			padding-right: 5px;
+		}
+		&:hover{
+			color: $bluestyle;
+		}
+
+		&--active{
+			color: $bluestyle;
+		}
+	}
+
+	&__likes{
+		a{
+			width: 12px;
+			height: 14px;
+			display: inline-block;
+			padding: 0 2px;
+		}
+	}
+
+	&__foot{
+		display: -webkit-flex;
+		display: flex;
+		-webkit-box-pack: justify;
+		-webkit-justify-content: space-between;
+		justify-content: space-between;
+		padding-bottom: 25px;
+	}
+
+
+	&__like{
+		vertical-align: top;
+		background-image: url("../img/like-ic.png");
+		background-repeat: no-repeat;
+		background-position: center;
+
+		&:hover{
+			background-image: url("../img/like-ic-h.png");
+		}
+	}
+
+	&__dlike{
+		vertical-align: bottom;
+		background-image: url("../img/dislike-ic.png");
+		background-repeat: no-repeat;
+		background-position: center;
+		&:hover{
+			background-image: url("../img/dislike-ic-h.png");
+		}
+	}
+
+	&__who{
+		padding-right: 25px;
+	}
+
+	&__inf{
+		display: -webkit-flex;
+		display: flex;
+		-webkit-align-items: center;
+		align-items: center;
+	}
+
+	&__date{
+		color: #aeaeae;
+	}
+
+	&__name{
+		font-family: "ProximaNovaBold";
+		color: $bluestyle;
+	}
+}
+
+.answers{
+	font-size: 14px;
+	margin-left: 20px;
+	display: none;
+	&__item{
+		padding-top: 5px;
+		border-bottom: $bd;
+		margin-bottom: 10px;
+
+		&:last-of-type{
+			border: none;
+		}
+	}
+
+
+	&__close{
+		padding-top: 35px;
+		padding-bottom: 25px;
+		a{
+			padding: 10px;
+			margin-right: -10px;
+		}
+
+		img{
+			transform: rotate(180deg);
+		}
+		text-align: right;
+	}
+
+	&__body{
+		line-height: 1.714;
+    padding-bottom: 10px;
+	}
+
+	&__who{
+		font-family: "ProximaNovaBold";
+	}
+	
+	&__head{
+		display: -webkit-flex;
+		display: flex;
+		-webkit-box-pack: justify;
+		-webkit-justify-content: space-between;
+		justify-content: space-between;
+		padding-bottom: 5px;
+	}
+
+	&__body{
+		color: #919191;
+	}
+
+}
+
+.reply{
+	margin-left: 20px;
+	padding-bottom: 15px;
+	display: none;
+	textarea{
+		width: 100%;
+		height: 65px;
+		box-sizing: border-box;
+	}
+
+	&__tarea{
+		padding-bottom: 10px;
+
+		label{
+			color: #b5b5b5;
+		}
+	}
+
+	&__inputs{
+		padding-bottom: 10px;
+		&:after{
+			content: "";
+			clear: both;
+			display: block;
+		}
+	}
+	&__half{
+		width: 49.3%;
+		float: right;
+
+		&--pd{
+			padding-right: 7px;
+			float: left;
+		}
+
+		input{
+			width: 100%;
+			box-sizing: border-box;
+			font-size: 12px;
+		}
+	}
+
+	.btn--blue{
+		display: block;
+		width: 130px;
+		padding: 8px 0;
+	}
+
+	&__cancel{
+		text-transform: uppercase;
+		color: #b3b3b3;
+		padding-right: 30px;
+	}
+
+	&__btns{
+		padding-bottom: 20px;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-align-items: center;
+		align-items: center;
+		justify-content: flex-end;
+	}
+
+	&__p{
+		color: #b3b3b3;
+		font-size: 12px;
+
+		a{
+			color: $bluestyle;
+			text-decoration: underline;
+		}
+	}
+}
+
+.create{
+	padding-left: 40px;
+
+	&__head{
+		padding-top: 25px;
+	}
 }

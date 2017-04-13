@@ -144,6 +144,9 @@ $('.card__slider-nav').slick({
 
 $(document).ready(function() {
 
+
+/*====================all==================*/
+
 $('.filter__box').each(function(i, el){
   var btn = $(el).find("a.filter__title");
   var drop = $(el).find(".filter__drop");
@@ -153,8 +156,45 @@ $('.filter__box').each(function(i, el){
   })
 });
 
-/*$('.card__slider-for').fancybox();*/
+/*====================коментарии к товару==================*/
 
+$('.c-reviews__item').each(function(i, el){
+
+  var answersBtn = $(el).find("#review-answers");
+  var answersDrop = $(el).find(".answers");
+  var answersClose = $(el).find(".answers__close a");
+  
+  var replyBtn = $(el).find("#review-reply");
+  var replyDrop = $(el).find(".reply");
+  var replyClose = $(el).find(".reply__cancel");
+
+  //посмотреть коментарии
+  $(answersBtn).click(function(e){
+    e.preventDefault();
+    $(answersDrop).animate({ height: "toggle"}, 500);
+    $(this).toggleClass("c-reviews__link--active");
+  });
+
+  $(answersClose).click(function(e){
+    e.preventDefault();
+    $(answersDrop).animate({ height: "hide"}, 500);
+    $(answersBtn).removeClass("c-reviews__link--active");
+  });
+
+  //ответить на коментарий
+  $(replyBtn).click(function(e){
+    e.preventDefault();
+    $(replyDrop).animate({ height: "toggle"}, 500);
+    $(this).toggleClass("c-reviews__link--active");
+  });
+
+  $(replyClose).click(function(e){
+    e.preventDefault();
+    $(replyDrop).animate({ height: "hide"}, 500);
+    $(replyBtn).removeClass("c-reviews__link--active");
+  });
+
+});
 
 /*=========================filter range==============*/
 
