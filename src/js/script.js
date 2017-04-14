@@ -59,7 +59,7 @@ $('#client-slider').slick({
   ]
 });
 
-$('.c-main2__slider').slick({
+$('#c-consum-slider').slick({
   slidesToShow: 4,
   slidesToScroll: 1,
   autoplay: false,
@@ -92,6 +92,41 @@ $('.c-main2__slider').slick({
     }
   ]
 });
+
+$('#c-searched-slider').slick({
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  autoplay: false,
+  dots: false,
+  infinite: false,
+  arrows: true,
+  prevArrow: '#c-searched-left-arr',
+  nextArrow: '#c-searched-right-arr',
+  responsive: [
+    {
+      breakpoint: 1170,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+      }
+    },
+    {
+      breakpoint: 960,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+      }
+    },
+    {
+      breakpoint: 744,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
+});
+
 
 $('.together').slick({
   slidesToShow: 1,
@@ -154,6 +189,27 @@ $('.filter__box').each(function(i, el){
     e.preventDefault();
     $(drop).animate({ height: "toggle"}, 300);
   })
+});
+
+/*====================Добавить отзыв на странице товара==================*/
+
+$('.c-reviews').each(function(i, el){
+
+  var btn = $(el).find("a.c-reviews__creat");
+  var drop = $(el).find(".create");
+  var close =  $(el).find(".create .create__cancel");
+
+  $(btn).click(function(e){
+    e.preventDefault();
+    $(drop).animate({ height: "toggle"}, 500);
+    $(this).toggleClass("c-reviews__creat--active");
+  });
+
+  $(close).click(function(e){
+    e.preventDefault();
+    $(drop).animate({ height: "hide"}, 500);
+    $(btn).removeClass("c-reviews__creat--active");
+  });
 });
 
 /*====================коментарии к товару==================*/

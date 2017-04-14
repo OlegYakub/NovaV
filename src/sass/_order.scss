@@ -1,0 +1,73 @@
+/* =================order============== */
+
+.o-main1{
+	padding-top: 50px;
+	&__title{
+		font-size: 18px;
+		padding-bottom: 10px;
+	}
+}
+
+/* =============o-contact============= */
+
+.o-contact{
+	width: 58.33%;
+	box-sizing: border-box;
+	border: $bd2;
+	background-color: #FFF;
+	padding-top: 25px;
+	padding-left: 28px;
+
+	&__desc{
+		color: #a6a6a6;
+	}
+
+	&__body{
+		padding-top: 42px;
+	}
+
+	&__input{
+		width: 370px;
+		height: 35px;
+		border: $bd;
+		border-radius: 2px;
+		input{
+			width: 85%;
+			box-sizing: border-box;
+			display: inline-block;
+			border: none;
+		}
+	}
+
+	&__icon{
+		height: 100%;
+		vertical-align: top;
+		border-right: $bd;
+		display: inline-block;
+		width: 38px;
+		text-align: center;
+		line-height: 35px;
+		img{
+			vertical-align: middle;
+		}
+	}
+
+	&__row{
+		display: -webkit-flex;
+		display: flex;
+		-webkit-align-items: center;
+		align-items: center;
+		padding-bottom: 10px;
+	}
+}
+
+.o-desc{
+	width: 200px;
+	font-size: 14px;
+	&--must{
+		&:after{
+			content: '*';
+			color: red;
+		}
+	}	
+}
