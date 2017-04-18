@@ -1069,7 +1069,7 @@
 			</div>
 		</div>	
 	</header>
-	<div class="container">
+	<div class="container  container--nonpd">
 		<section class="breadcrumbs">
 			<ul class="breadcrumbs__list">
 				<li class="breadcrumbs__item">
@@ -1093,43 +1093,289 @@
 						Оформление заказа занимает не больше 1 минуты
 					</p>
 				</div>
-				<div class="o-contact__body">
-					<form action="">
-						<div class="o-contact__row">
-							<div class="o-desc o-desc--must">
-								Ваше имя и фамилия
-							</div>
-							<div class="o-contact__input">
-								<div class="o-contact__icon">
-									<img src="img/order-name.png" alt="">
+				<form action="">
+					<div class="o-contact__body">
+						
+							<div class="o-contact__row">
+								<div class="o-desc o-desc--must">
+									Ваше имя и фамилия
 								</div>
-								<input type="text">
-							</div>
-						</div>
-						<div class="o-contact__row">
-							<div class="o-desc o-desc--must">
-								Ваш телефон
-							</div>
-							<div class="o-contact__input">
-								<div class="o-contact__icon">
-									<img src="img/phone-footer.svg" alt="">
+								<div class="o-contact__input">
+									<div class="o-contact__icon">
+										<img src="img/order-name.png" alt="">
+									</div>
+									<input type="text">
 								</div>
-								<input type="text">
 							</div>
-						</div>
-						<div class="o-contact__row">
-							<div class="o-desc o-desc--must">
-								Электронная почта
-							</div>
-							<div class="o-contact__input">
-								<div class="o-contact__icon">
-									<img src="img/footer-mail.svg" alt="">
+							<div class="o-contact__row">
+								<div class="o-desc o-desc--must">
+									Ваш телефон
 								</div>
-								<input type="text">
+								<div class="o-contact__input">
+									<div class="o-contact__icon">
+										<img src="img/order-city.png" alt="">
+									</div>
+									<select name="" id="form-city">
+										<option value="1">Харьков</option>
+										<option value="2">Мерефа</option>
+										<option value="3">Новая Водолага</option>
+									</select>
+								</div>
 							</div>
+							<div class="o-contact__row">
+								<div class="o-desc o-desc--must">
+									Ваш телефон
+								</div>
+								<div class="o-contact__input">
+									<div class="o-contact__icon">
+										<img src="img/phone-footer.svg" alt="">
+									</div>
+									<input type="text">
+								</div>
+							</div>
+							<div class="o-contact__row  o-contact__row--mail">
+								<div class="o-desc o-desc--must">
+									Электронная почта
+								</div>
+								<div class="o-contact__mail">
+									<div class="o-contact__input">
+										<div class="o-contact__icon">
+											<img src="img/footer-mail.svg" alt="">
+										</div>
+										<input type="text">
+									</div>
+									<div class="o-contact__desc">
+										Если вы хотите следить за статусом выполнения заказа
+									</div>
+								</div>
+							</div>
+						
+					</div>
+					<div class="o-contact__foot">
+						<p class="o-contact__desc  o-contact__desc--star">
+							Оформление заказа занимает не больше 1 минуты
+						</p>
+
+						<button type="submit" class="btn--blue  o-contact__btn">
+							Далее
+						</button>
+					</div>
+				</form>	
+				<p class="o-main1__title">
+						2. Выбор способов доставки и оплаты
+				</p>
+			</div>
+			<div class="o-total">
+				<ul class="o-total__list">
+					<li class="o-total__item">
+
+						<div class="pict-box">
+							<img src="img/good1.jpg" alt="">
 						</div>
-					</form>
+						<div class="o-total__right">
+							<div class="o-total__content">
+								<div class="o-total__name">
+									Leader Standart
+								</div>
+								<div class="o-total__desc">
+									комплект картриджей для фильтра обратного осмоса
+
+								</div>
+							</div>
+							<div class="o-total__price">
+								<div class="primal-price">
+										10799
+										<span>грн</span>
+								</div>
+								<div class="o-total__quan">
+									2 шт
+								</div>
+							</div>
+							
+						</div>	
+					</li>
+					<li class="o-total__item">
+
+						<div class="pict-box">
+							<img src="img/good2.jpg" alt="">
+						</div>
+						<div class="o-total__right">
+							<div class="o-total__content">
+								<div class="o-total__name">
+									Leader Standart
+								</div>
+								<div class="o-total__desc">
+									комплект картриджей для фильтра обратного осмоса
+
+								</div>
+							</div>
+							<div class="o-total__price">
+								<div class="primal-price">
+										10799
+										<span>грн</span>
+								</div>
+								<div class="o-total__quan">
+									2 шт
+								</div>
+							</div>
+							
+						</div>	
+					</li>
+				</ul>
+				<div class="o-total__bottom">
+					<div class="o-total__title">
+						Итого
+					</div>
+					<div class="primal-price">
+							23799
+							<span>грн</span>
+					</div>
 				</div>
+				<div class="o-total__back">
+					<a href="#">Редактировать заказ</a>
+				</div>
+			</div>
+		</section>
+		<section class="o-main2">
+			<div class="delivery">
+				<div class="delivery__contact">
+					<a href="" class="o-main1__title">
+						1. Контактные данные
+						<img src="img/list-arr.png" alt="">
+					</a>
+					<a href="" class="delivery__back">
+						Редактировать заказ
+					</a>
+				</div>
+				<div class="delivery__chosen">
+					<div class="o-main1__title">
+						2. Выбор способов доставки и оплаты
+					</div>
+					<ul class="o-chosen">
+						<li class="o-chosen__item">
+							<div class="o-chosen__left">
+								<div class="pict-box">
+									<img src="img/good1.jpg" alt="">
+								</div>
+								<div class="o-total__content">
+									<p class="good-title__code">
+										<a href="">Код 03-39-11s</a>
+									</p>
+									<div class="o-total__name">
+										Leader Standart
+									</div>
+									<div class="o-total__desc">
+										комплект картриджей для фильтра обратного осмоса
+									</div>
+								</div>
+								
+							</div>
+
+							<div class="o-total__price">
+								<div class="o-total__quan">
+									2 шт
+								</div>
+								<div class="primal-price">
+										10799
+										<span>грн</span>
+								</div>
+							</div>
+						</li>
+						<li class="o-chosen__item">
+							<div class="o-chosen__left">
+								<div class="pict-box">
+									<img src="img/good2.jpg" alt="">
+								</div>
+								<div class="o-total__content">
+									<p class="good-title__code">
+										<a href="">Код 03-39-11s</a>
+									</p>
+									<div class="o-total__name">
+										Leader Standart
+									</div>
+									<div class="o-total__desc">
+										комплект картриджей для фильтра обратного осмоса
+									</div>
+								</div>
+								
+							</div>
+
+							<div class="o-total__price">
+								<div class="o-total__quan">
+									2 шт
+								</div>
+								<div class="primal-price">
+										10799
+										<span>грн</span>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<form action="">
+					<div class="delivery__box">
+						<div class="delivery__left">
+							<p class="o-desc o-desc--must">
+								Доставка 
+							</p>
+						</div>
+						<div class="delivery__right">
+							<div class="delivery__row">
+								<div class="delivery__radio">
+									<input type="radio" id="order-r1" name="deliv">
+									<label for="order-r1" class="o-radio"></label>
+									<label for="order-r1" class="o-radio__label">
+										Самовызов из Новой Почты
+									</label>
+								</div>
+								<div class="delivery__price2">
+									35 грн
+								</div>
+							</div>
+							<div class="o-sub">
+								<div class="o-sub__top">
+									<select name="" id="order-delivery">
+										<option value="1">
+											Відділення №10: вул. Онуфрія 
+										</option>
+										<option value="2">
+											Відділення №10: вул. Валентинiвська 13 asdasd asdsa
+										</option>
+										<option value="3">
+											Відділення №10: вул. Онуфрія 
+										</option>
+									</select>
+
+									<a href="" class="delivery__inmap">
+									<img src="img/order-city.png" alt="">
+										См. На карте
+									</a>
+								</div>
+								<div class="o-sub__extra">
+									<p class="o-sub__p">
+										График работы отделения:
+									</p>
+									<p class="o-sub__p">
+										Пн-Вс: 07:00-23:00
+									</p>
+									<p class="o-sub__p  o-sub__p--tel">
+										0-800-500-609
+									</p>
+									
+								</div>
+							</div>
+							<div class="delivery__row">
+								<div class="delivery__radio">
+									<input type="radio" id="order-r2" name="deliv">
+									<label for="order-r2" class="o-radio"></label>
+									<label for="order-r2" class="o-radio__label">
+										Курьером Новой Почты
+									</label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
 			</div>
 		</section>
 	</div>

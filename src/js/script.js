@@ -180,6 +180,8 @@ $('.card__slider-nav').slick({
 $(document).ready(function() {
 
 
+$('#form-city').styler();
+$("#order-delivery").styler();
 /*====================all==================*/
 
 $('.filter__box').each(function(i, el){
