@@ -193,6 +193,17 @@ $('.filter__box').each(function(i, el){
   })
 });
 
+$('.o-comment__btn').click(function(e){
+  e.preventDefault();
+  $('.o-comment__area').toggle();
+  $(".o-comment__btn").toggle();
+})
+
+$('.o-submit__promo-link').click(function(e){
+  e.preventDefault();
+  $('.o-submit__inp').toggle();
+})
+
 /*====================Добавить отзыв на странице товара==================*/
 
 $('.c-reviews').each(function(i, el){

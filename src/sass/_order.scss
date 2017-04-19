@@ -16,7 +16,11 @@
 }
 
 .o-main2{
-
+	&__body{
+		display: -webkit-flex;
+		display: flex;
+		align-items: flex-start;
+	}
 }
 /* =============o-contact============= */
 
@@ -31,6 +35,14 @@
 
 	&__desc{
 		color: #a6a6a6;
+
+		&--star{
+			font-size: 14px;
+			&:before{
+				content: '*';
+    		color: red;
+			}
+		}
 	}
 
 	&__body{
@@ -241,7 +253,16 @@
 			content: '*';
 			color: red;
 		}
+	}
+
+	&--full{
+		width: 100%;
+		font-size: 12px;
 	}	
+
+	&--pb{
+		padding-bottom: 30px;
+	}
 }
 
 .delivery{
@@ -249,6 +270,7 @@
 	width: 800px;
 	border: $bd2;
 	background-color: #FFF;
+	margin-bottom: 55px;
 
 	&__contact{
 		padding-left: 28px;
@@ -282,10 +304,19 @@
 		padding-top: 40px;
 		padding-left: 30px;
 		border-bottom: $bd;
+
+		&--visa{
+			padding-bottom: 35px;
+			display: block;
+		}
 	}
 
 	&__left{
 		width: 185px;
+
+		&--pt{
+			padding-top: 60px;
+		}
 	}
 
 	&__right{
@@ -325,6 +356,78 @@
 			padding-right: 4px; 
 		}
 	}
+
+	&__radio{
+		&--pb{
+			padding-bottom: 10px;
+		}
+	}
+
+	&__warn{
+		position: relative;
+		padding-bottom: 25px;
+		margin-left: 200px;
+		&:before{
+			content: url(../img/warning-ic.png);
+			position: absolute;
+			left: -27px;
+			top: 3px;;
+		}
+	}
+
+	&__mailfield{
+		padding-bottom: 25px;
+	}
+
+	&__input{
+		input{
+			width: 100%;
+		}
+	}
+
+
+	&__link{
+		font-size: 14px;
+		padding-left: 20px;
+		color: $bluestyle;
+		img{
+			padding-left: 5px;
+			position: relative;
+			top: 2px;
+		}
+	}
+
+	&__comment{
+		padding-left: 230px;
+		padding-right: 100px;
+		padding-bottom: 20px;
+	}
+
+	&__check{
+		display: -webkit-flex;
+		display: flex;
+		padding: 20px 0 25px;
+		label{
+			position: static;
+			display: block;
+	    width: 14px;
+	    height: 14px;
+	    cursor: pointer;
+	    border: 1px solid #e8e8e8;
+		}
+
+		input{
+			position: absolute;
+    	left: -999px;
+		}
+
+		.o-desc{
+			width: 100%;
+			padding-left: 10px;
+		}
+	}
+
+
 }
 
 .o-chosen{
@@ -393,7 +496,7 @@
 		width: 7px;
 		height: 7px;
 		top: 4px;
-		border-radius: 7px;
+		border-radius: 10px;
 		left: 4px;
 		background-color: $bluestyle;
 		display: none;
@@ -409,7 +512,6 @@
 
 #order-r1:checked + .o-radio:before{
 	display: block;
-
 }
 
 #order-r2:checked + .o-radio:before{
@@ -429,6 +531,26 @@
 }
 #order-r6:checked + .o-radio:before{
 	display: block;
+}
+
+#order-r7:checked + .o-radio:before{
+	display: block;
+}
+
+#order-subr1:checked + .o-radio:before{
+	display: block;
+}
+
+#order-subr2:checked + .o-radio:before{
+	display: block;
+}
+
+#order-subr3:checked + .o-radio:before{
+	display: block;
+}
+
+#deliv-check1:checked + #deliv-check1-l{
+	background: url("../img/check-ic.png") no-repeat center;
 }
 
 
@@ -489,11 +611,360 @@
 			left: 25px;
 			transform: rotate(-45deg); 
 		}
+
+		&--credit{
+			margin-top: 15px;
+		}
+	}
+
+	input{
+		position: absolute;
+		left: -9999px;
 	}
 
 	&__p{
+		padding-bottom: 5px;
 		&--tel{
 			padding-top: 30px;
 		}
+
+		&--bold{
+			font-family: "ProximaNovaBold";
+		}
 	}
+
+	&--pl{
+		padding-left: 30px;
+	}
+
+	&__row{
+		display: -webkit-flex;
+		display: flex;
+		-webkit-box-pack: justify;
+		-webkit-justify-content: space-between;
+		justify-content: space-between;
+	}
+}
+
+.o-comment{
+	padding-bottom: 15px;
+	&__btn{
+		font-size: 14px;
+		color: #999999;
+
+		img{
+			opacity: 0.5;
+			padding-left: 5px;
+		}
+
+		&--revers{
+			display: none;
+			img{
+				transform: rotate(180deg);
+				padding-right: 5px;
+			}
+		}
+	}
+
+	&__area{
+		display: none;
+		textarea{
+			resize: no-resize;
+			width: 100%;
+			margin-top: 5px;
+			border-radius: 2px;
+			height: 105px;
+			
+		}
+		
+	}
+
+	&__desc{
+		padding-top: 5px;
+		color: #999999;
+	}
+}
+
+.o-submit{
+	width: 400px;
+	font-size: 14px;
+	background-color: #FFF;
+	border: $bd2;
+	box-sizing: border-box;
+	&__goods{
+		padding-top: 30px;
+		li{
+			display: -webkit-flex;
+			display: flex;
+			-webkit-box-pack: justify;
+			-webkit-justify-content: space-between;
+			justify-content: space-between;
+			padding-bottom: 5px;
+			.primal-price{
+				font-size: 18px;
+			}
+		}
+	}
+
+	&__top{
+		padding: 25px 25px 15px;
+		border-bottom: $bd;
+	}
+
+	&__title{
+		text-transform: uppercase;
+		font-size: 18px;
+	}
+
+	&__body{
+		padding: 0 25px;
+		padding-bottom: 50px;
+	}
+
+	&__total{
+		display: -webkit-flex;
+		display: flex;
+		-webkit-box-pack: justify;
+		-webkit-justify-content: space-between;
+		justify-content: space-between;
+		-webkit-align-items: center;
+		align-items: center;
+		padding-bottom: 28px;
+		padding-top: 28px;
+		.primal-price{
+			font-size: 30px;
+			color: $bluestyle;
+
+			span{
+				color:#5f5f5f;
+			}
+		}
+	}
+
+	&__btn{
+		line-height: 37px;
+		display: block;
+		width: 100%;
+		margin-bottom: 15px;
+		font-size: 18px;
+		font-family: "ProximaNovaLight";
+	}
+
+	&__rules{
+		text-align: center;
+		padding: 0 30px;
+		margin-bottom: 35px;
+		a{
+			color: #7fabc6;
+		}
+	}
+
+	&__promo{
+		text-align: center;
+		padding-bottom: 20px;
+		img{
+			padding-left: 5px;
+		}
+	}
+
+	&__inp{
+		display: none;
+		input{
+			font-size: 14px;
+			margin: 0 auto;
+			margin-top: 10px;
+			margin-bottom: 15px;
+			width: 170px;
+			border-color: #bebebe;
+			box-shadow: 0px 1px 10px 0px rgba(0, 0, 2, 0.1);
+		}
+	}
+
+	&__back{
+		padding-right: 20px;
+		display: block;
+		text-align: center;
+		color: #7fabc6;
+		img{
+			transform: rotate(180deg);
+			padding-left: 5px;
+		}
+	}
+}
+
+
+header, footer{
+	display: none;
+}
+
+
+/* ==============================RESPONSIVE============= */
+/* =============================940======================= */
+@media screen and (max-width: 1170px){
+	
+	/* ==============delivery=========== */
+	.delivery{
+		width: 560px;
+
+		&__box{
+			display: block;
+		}
+
+		&__right{
+			padding-left: 0;
+			padding-top: 15px;
+		}
+
+		&__warn{
+			margin-left: 25px;
+		}
+
+		&__comment{
+			padding-left: 30px;
+		}
+	}
+
+	/* ==============o-chosen=========== */	
+
+	.o-chosen{
+
+		&__left{
+			display: block;
+		}
+
+		.o-total__content{
+			width: 100%;
+			padding-left: 0;
+			padding-top: 15px;
+		}
+	}
+
+	/* ==============o-contact=========== */
+
+	.o-contact{
+		
+		&__input{
+			width: 318px;
+
+			.jq-selectbox{
+				width: 86%;
+			}
+		}
+	}
+
+
+	/* ==============o-desc=========== */
+	.o-desc{
+		width: 180px;
+
+		&--full{
+			width: 100%;
+		}
+	}
+
+	/* ==============o-total=========== */
+
+	.o-total{
+
+		&__right{
+			width: 100%;
+		}
+
+		&__bottom{
+			padding-left: 35px;
+		}
+		
+		&__content{
+
+		}
+	}
+}
+
+
+/* =============================744======================= */
+@media screen and (max-width: 959px){
+	
+/* ==============o-contact=========== */
+
+	.o-contact{
+		width: 50%;
+		padding-right: 30px;
+		&__row{
+			display: block;
+		}
+
+		&__input{
+			width: 100%;
+			margin-top: 5px;
+		}
+
+		&__foot{
+			display: block;
+			padding: 20px 0;
+			padding-right: 0;
+		}
+
+		&__desc{
+
+			&--star{
+				padding-bottom: 13px;
+			}
+		}
+
+		&__btn{
+			margin-left: auto;
+		}
+	}
+
+/* ==============o-total=========== */
+
+	.o-total{
+		width: 50%;
+
+		&__right{
+			padding-left: 0;
+		}
+
+		&__item{
+			padding-left: 23px;
+		}
+
+		&__bottom{
+			padding-left: 23px;
+		}
+
+		&__back{
+			padding-left: 23px;
+		}
+
+		&__content{
+			padding-right: 15px;
+		}
+	}
+
+	/* ==============delivery=========== */
+	.delivery{
+		width: 50%;
+
+		&__chosen{
+			padding-left: 24px;
+			padding-right: 24px;
+		}
+	}
+
+	/* ==============o-submit=========== */
+	.o-submit{
+		width: 50%;
+	}
+
+	/* ==============o-chosen=========== */	
+
+	.o-chosen{
+
+		&__item{
+			padding-right: 0;
+			
+		}
+	}
+
 }
