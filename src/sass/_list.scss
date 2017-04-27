@@ -150,6 +150,10 @@
 			}
 		}
 	}
+
+	&__btn-f{
+		display: none;
+	}
 }
 
 @keyframes rotateloar{
@@ -270,6 +274,10 @@
 	&__list2{
 		padding-top: 5px;
 		padding-bottom: 10px;
+	}
+
+	&__click{
+		display: none;
 	}
 
 	&__chosen{
@@ -472,8 +480,125 @@
 			background: none;
 		}
 	}
-
-
 }
 
-/* ======================================== */
+/* ===================================================== */
+/* =====================RESPONSIVE============= */
+/* =====================940======================= */
+
+@media screen and (max-width: 1170px){
+	/* =================list============== */
+	.list{
+		display: block;
+
+		.title{
+			padding-left: 8px;
+		}
+
+		&__desc{
+			padding-left: 8px;
+		}
+
+		&__box{
+			width: 100%;
+		}
+
+		&__btn-f{
+			display: block;
+			margin: 0 8px;
+			margin-top: 15px;
+			font-size: 14px;
+			text-align: center;
+			border: 2px solid #d24a43;
+			color: #d24a43;
+			border-radius: 3px;
+			padding: 7px 0;
+
+			span{
+				&:after{
+					content: url(../img/filter-ic.png);
+					position: relative;
+					top: 4px;
+					padding-left: 7px;
+				}
+			}
+
+			&:hover{
+				background-color: #d24a43;
+				color: #fff;
+				span{
+					&:after{
+						content: url(../img/filter-ic-h.png);
+					}
+				}
+			}
+		}
+	}
+
+	/* =================filter============== */
+	.filter{
+		width: 300px;
+		&__wrap{
+		/* 	&:after{
+				content: "";
+				clear: both;
+				display: block;
+			} */
+			position: relative;
+		}
+
+		&__click{
+			display: block;
+			width: 50%;
+			position: fixed;
+			left: 300px;
+			top: 0;
+			bottom: 0;
+		}
+
+		&__aside{
+			width: 100%;
+			display: block;
+			position: fixed;
+			left: 0;
+			top: 0;
+			transition: 0.5s;
+			transform: translateX(-100%);
+			z-index: 5;
+			margin-right: auto;
+			&--show{
+				transform: translateX(0px);
+			}
+
+			.slimScrollBar{
+				width: 5px !important;
+				color: #000 !important;
+				opacity: 0.3 !important;
+				right: auto;
+				left: 300px;
+			}
+
+			.ui-slider-horizontal{
+				width: 75%;
+			}
+		}
+
+		
+	}
+}
+
+/* =============================744======================= */
+@media screen and (max-width: 959px){
+	/* =================list============== */
+	.list{
+		&__view{
+			display: none;
+		}
+
+		&__box{
+			.good-h{
+				display: none;
+			}
+		}
+	}
+}

@@ -154,6 +154,8 @@
 
 }
 
+/* =============o-total============= */
+
 .o-total{
 	float: left;
 	width: 41.6667%;
@@ -245,6 +247,8 @@
 	}
 }
 
+/* =============o-desc============= */
+
 .o-desc{
 	width: 200px;
 	font-size: 14px;
@@ -264,6 +268,8 @@
 		padding-bottom: 30px;
 	}
 }
+
+/* =============delivery============= */
 
 .delivery{
 	box-sizing: border-box;
@@ -290,6 +296,9 @@
 		text-decoration: underline;
     font-size: 14px;
     padding-left: 15px;
+    &--m{
+			display: none;
+		}
 	}
 
 	&__chosen{
@@ -426,9 +435,9 @@
 			padding-left: 10px;
 		}
 	}
-
-
 }
+
+/* =============o-chosen============= */
 
 .o-chosen{
 	
@@ -458,6 +467,9 @@
 	.o-total__content{
 		padding-top: 5px;
 		padding-left: 15px;
+		&--m{
+				display: block;
+		}
 	}
 
 	.o-total__price{
@@ -475,6 +487,8 @@
 		padding-top: 3px;
 	}
 }
+
+/* =============o-radio============= */
 
 .o-radio{
 	display: inline-block;
@@ -793,11 +807,6 @@
 }
 
 
-header, footer{
-	display: none;
-}
-
-
 /* ==============================RESPONSIVE============= */
 /* =============================940======================= */
 @media screen and (max-width: 1170px){
@@ -884,7 +893,7 @@ header, footer{
 /* =============================744======================= */
 @media screen and (max-width: 959px){
 	
-/* ==============o-contact=========== */
+	/* ==============o-contact=========== */
 
 	.o-contact{
 		width: 50%;
@@ -916,7 +925,7 @@ header, footer{
 		}
 	}
 
-/* ==============o-total=========== */
+	/* ==============o-total=========== */
 
 	.o-total{
 		width: 50%;
@@ -940,6 +949,7 @@ header, footer{
 		&__content{
 			padding-right: 15px;
 		}
+
 	}
 
 	/* ==============delivery=========== */
@@ -947,14 +957,46 @@ header, footer{
 		width: 50%;
 
 		&__chosen{
-			padding-left: 24px;
-			padding-right: 24px;
+			padding-left: 25px;
+			padding-right: 25px;
+		}
+
+		&__back{
+			display: none;
+
+			&--m{
+				display: inline;
+			}
+		}
+
+		&__right{
+			width: 100%;
+		}
+
+		&__box{
+			padding-right: 25px;
+			padding-left: 25px;
+		}
+
+		&__inmap{
+			text-align: right;
+			display: block;
+			padding-bottom: 10px;
+		}
+
+		&__comment{
+			padding-right: 25px;
+			padding-left: 25px;
 		}
 	}
 
 	/* ==============o-submit=========== */
 	.o-submit{
 		width: 50%;
+
+		&__rules{
+			padding: 0;
+		}
 	}
 
 	/* ==============o-chosen=========== */	
@@ -965,6 +1007,49 @@ header, footer{
 			padding-right: 0;
 			
 		}
+
+		&__left{
+			width: 50%;
+		}
+
+		.o-total__price{
+			width: 50%;
+		}
+
+		.o-total__content{
+			display: none;
+			&--m{
+				display: block;
+				padding-top: 0;
+				padding-right: 0;
+				padding-bottom: 20px;
+			}
+		}
 	}
 
+	/* ==============o-sub=========== */	
+
+	.o-sub{
+		
+		&__p{
+			&--tel{
+				padding-top: 25px;
+			}
+		}
+
+		.jq-selectbox{
+			margin-bottom: 0;
+			width: 100%;
+		}
+	}
+
+	/* ==============o-comment=========== */	
+
+	.o-comment{
+		&__area{
+			textarea{
+				box-sizing: border-box;
+			}
+		}
+	}
 }

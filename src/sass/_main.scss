@@ -832,6 +832,14 @@
 		color: #898989;
 		opacity: 0.5;
 	}
+
+	&__body{
+		&:after{
+			content: "";
+			clear: both;
+			display: block;
+		}
+	}
 }
 
 .maker-sl{
@@ -986,4 +994,222 @@
 		color: #74a3c1;
 		padding-bottom: 20px;
 	}
+}
+
+/* ===================================================== */
+/* =====================RESPONSIVE============= */
+/* =====================940======================= */
+
+@media screen and (max-width: 1170px){
+	
+
+	/* ===========m-reasons============ */
+	.m-reasons{
+		&__banner{
+			img{
+				width: 100%;
+			}
+		}
+
+		&__item{
+			width: 160px;
+
+			&--1{
+				margin-right: 77px;
+			}
+
+			&--2{
+				margin-right: 86px;
+
+			}
+
+			&--4{
+				margin-left: -20px;
+			}
+		}
+
+		&__body{
+			margin: 0;
+			margin-top: -20px;
+		}
+	}
+
+	/* ===========m-recomend============ */
+	.m-recomend{
+		&__card{
+			width: 33.33%;
+			&:last-child{
+				display: none;
+			}
+		}
+	}
+
+	/* ===========m-search============ */
+	.m-search{
+		&__item{
+			width: 33.33%;
+		}
+
+		&__title{
+			&:before{
+				width: 81%;
+			}
+		}
+
+		&-chos{
+			.m-search__title{
+				&:before{
+					width: 77%;
+				}
+			}
+		}
+	}
+
+	/* =================shares================ */
+	.shares{
+		&__card{
+			float: none;
+			width: 100%;
+			
+			&:nth-child(n+3){
+				display: none;
+			}
+			
+		}
+
+		&__img{
+			width: 280px;
+		}
+
+		&__cont{
+			width: 653px;
+			height: 100%;
+		}
+
+		&__time{
+			width: 80%;
+			position: absolute;
+			left: 25px;
+			bottom: 25px;
+		}
+	}
+
+	/* =========m-overwv==================== */
+
+	.m-overwv{
+		&__desc{
+			height: 57px;
+		}
+	}
+
+}
+
+/* =============================744======================= */
+@media screen and (max-width: 959px){
+	
+	/* ===========m-search============ */
+	.m-search{
+
+		&__title{
+			&:before{
+				width: 76%;
+			}
+		}
+
+		&__item{
+			width: 42%;
+		}
+
+		&-chos{
+			.m-search__title{
+				&:before{
+					width: 72%;
+				}
+			}
+		}
+	}
+
+	/* =============m-recomend================ */
+	.m-recomend{
+
+		&__card{
+			width: 50%;
+
+			&:nth-last-child(2){
+				display: none;
+			}
+		}
+	}
+
+	/* ===================shares=================== */
+	.shares{
+		
+		&__cont{
+			width: 436px;
+		}
+	}
+
+	/* ====================m-overwv================= */
+	.m-overwv{
+
+		&__body{
+			padding-bottom: 37px;
+		}
+		
+		&__col{
+			width: 100%;
+			float: none;
+			margin-bottom: 0;
+
+			&--hide{
+				display: none;
+			}
+		}
+
+		&__desc{
+			height: 38px;
+		}
+	}
+
+	/* ====================m-reasons================= */
+	.m-reasons{
+		overflow: hidden;
+		&__box{
+			margin-left: -60px;
+			width: 1200px;
+			transition: 0.5s;
+			//transform: translateX(-235px);
+			.container{
+				max-width: 1200px;
+			}
+		}
+
+		&__body{
+			margin: 0 70px;
+		margin-top: -20px;
+		}
+
+		&__item{
+			width: 200px;
+
+			&--1{
+			margin-right: 52px;
+			
+			}
+
+			&--2{
+				margin-right: 41px;
+			}
+
+			&--3{
+				margin-right: 41px;
+			}
+
+			&--4{
+				margin-right: 70px;
+				margin-left: auto;
+			}
+		}
+	}
+
 }

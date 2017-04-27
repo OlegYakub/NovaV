@@ -173,9 +173,124 @@
 	}
 }
 
+
+/* ===============.good-h--list============== */
+
+.good-h--list{
+	width: 100%;
+	//margin-right: 3px;
+	.guarantee﻿-link{
+		right: 155px;
+	}
+	
+	div.good-status{
+			display: none;
+
+			&--no{
+				top: 12px;
+				display: block;
+			}
+	}
+	.good-h__left{
+		width: 268px;	
+	}
+
+	.good-h__right{
+		display: block;
+		width: 631px;
+	}
+
+	.good-h__box2{
+		border-left: none;
+		border-top: $bd;
+		display: flex;
+		width: 100%;
+		flex-direction: row;
+		-webkit-align-items: center;
+		align-items: center;
+		-webkit-box-pack: justify;
+		-webkit-justify-content: space-between;
+		justify-content: space-between;
+		padding-bottom: 20px;
+		padding-top: 20px;
+		padding-right: 15px;
+
+		.good-status {
+			display: none;
+		}
+	}
+
+	.good-h__price{
+		padding: 0;
+	}
+
+	.good-h__fast{
+		margin: 0;
+	}
+
+	.compare{
+		padding-top: 0;
+	}
+
+	.good-h__content{
+		padding: 20px 0;
+	}
+
+}
+
+
+
+/* ======================================== */
+
+.benefict{
+	width: 100%;
+
+	li{
+		display: block;
+		&:after{
+						content: "";
+						clear: both;
+						display: block;
+				}
+	}
+	&__left{
+		width: 50%;
+		font-family: "ProximaNovaBold";
+		text-align: right;
+		/* display: inline-block; */
+		float: left;
+	}
+
+	&__right{
+		width: 49%;
+		padding-left: 25px;
+		position: relative;
+		padding-bottom: 5px;
+		/* display: inline-block; */
+		float: left;
+		box-sizing: border-box;
+		&:before{
+			content: '';
+			position: absolute;
+			width: 4px;
+			height: 4px;
+			background-color: $bluestyle;
+			border-radius: 4px;
+			top: 6px;
+			left: 12px;
+		}
+	}
+}
+
+
+/* ===================================================== */
+/* =====================RESPONSIVE============= */
+/* =====================940======================= */
+
 @media screen and (max-width: 1170px){
 
 	.good-h{
+		box-sizing: border-box;
 		.guarantee﻿-link{
 				right: 155px;
 		}
@@ -243,72 +358,7 @@
 			padding: 20px 0;
 		}
 	}
-}
-/* ===============.good-h--list============== */
 
-.good-h--list{
-	width: 100%;
-	//margin-right: 3px;
-	.guarantee﻿-link{
-		right: 155px;
-	}
-	
-	div.good-status{
-			display: none;
-
-			&--no{
-				top: 12px;
-				display: block;
-			}
-	}
-	.good-h__left{
-		width: 268px;	
-	}
-
-	.good-h__right{
-		display: block;
-		width: 631px;
-	}
-
-	.good-h__box2{
-		border-left: none;
-		border-top: $bd;
-		display: flex;
-		width: 100%;
-		flex-direction: row;
-		-webkit-align-items: center;
-		align-items: center;
-		-webkit-box-pack: justify;
-		-webkit-justify-content: space-between;
-		justify-content: space-between;
-		padding-bottom: 20px;
-		padding-top: 20px;
-		padding-right: 15px;
-
-		.good-status {
-			display: none;
-		}
-	}
-
-	.good-h__price{
-		padding: 0;
-	}
-
-	.good-h__fast{
-		margin: 0;
-	}
-
-	.compare{
-		padding-top: 0;
-	}
-
-	.good-h__content{
-		padding: 20px 0;
-	}
-
-}
-
-@media screen and (max-width: 1170px){
 	.good-h--list{
 		.good-h__right{
 			display: block;
@@ -317,44 +367,8 @@
 	}
 }
 
-/* ======================================== */
 
-.benefict{
-	width: 100%;
-
-	li{
-		display: block;
-		&:after{
-						content: "";
-						clear: both;
-						display: block;
-				}
-	}
-	&__left{
-		width: 50%;
-		font-family: "ProximaNovaBold";
-		text-align: right;
-		/* display: inline-block; */
-		float: left;
-	}
-
-	&__right{
-		width: 49%;
-		padding-left: 25px;
-		position: relative;
-		padding-bottom: 5px;
-		/* display: inline-block; */
-		float: left;
-		box-sizing: border-box;
-		&:before{
-			content: '';
-			position: absolute;
-			width: 4px;
-			height: 4px;
-			background-color: $bluestyle;
-			border-radius: 4px;
-			top: 6px;
-			left: 12px;
-		}
-	}
+/* =============================744======================= */
+@media screen and (max-width: 959px){
+	
 }

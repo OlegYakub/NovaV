@@ -12,12 +12,10 @@ $('#maker-slider').slick({
   nextArrow: '#maker-right-arr',
   responsive: [
     {
-      breakpoint: 960,
+      breakpoint: 1170,
       settings: {
         slidesToShow: 4,
         slidesToScroll: 1,
-        infinite: true,
-        dots: true
       }
     },
     {
@@ -41,12 +39,10 @@ $('#client-slider').slick({
   nextArrow: '#client-right-arr',
   responsive: [
     {
-      breakpoint: 960,
+      breakpoint: 1170,
       settings: {
         slidesToShow: 4,
         slidesToScroll: 1,
-        infinite: true,
-        dots: true
       }
     },
     {
@@ -184,6 +180,10 @@ $('#form-city').styler();
 $("#order-delivery").styler();
 /*====================all==================*/
 
+var windowWidth = $(window).width();
+var windowHeight = $(window).height();
+
+
 $('.filter__box').each(function(i, el){
   var btn = $(el).find("a.filter__title");
   var drop = $(el).find(".filter__drop");
@@ -204,6 +204,230 @@ $('.o-submit__promo-link').click(function(e){
   $('.o-submit__inp').toggle();
 })
 
+
+
+/*============================================*/
+/*====================Header==================*/
+/*============================================*/
+
+/*====бургер который только на мобайле*/
+$('#burger-btn-mob').click(function(e){
+  e.preventDefault();
+  $('#burger-menu-mob').animate({ height: "toggle"}, 500);
+   $(this).toggleClass('burger--active');
+});
+
+
+/*====бургер который на прилипающем меню до мобайла*/
+$('#burger-btn-mini').click(function(e){
+  e.preventDefault();
+  $('#burger-menu-mini').animate({ height: "toggle"}, 250);
+   $(this).toggleClass('burger--active');
+});
+
+
+/*====бургер который в главном хедере на 940-740*/
+$("#burger-btn-top").click(function(e){
+  e.preventDefault();
+  $('#burger-menu-top').animate({ height: "toggle"}, 250);
+   $(this).toggleClass('burger--active');
+});
+  
+/*===== закрывание при клике вне зоны меню*/
+$(document).mouseup(function (e) {
+
+    /*====бургер который на прилипающем меню до мобайла*/
+    if(windowWidth < 1170){
+    var container = $(".mini-head");
+    if (container.has(e.target).length === 0){
+        $('#burger-menu-mini').animate({ height: "hide"}, 250);
+        $('#burger-btn-mini').removeClass('burger--active');
+    };
+    }
+
+    /*====бургер который в главном хедере на 940-740*/
+    var container2 = $(".header-top");
+    if (container2.has(e.target).length === 0){
+        $('#burger-menu-top').animate({ height: "hide"}, 250);
+        $('#burger-btn-top').removeClass('burger--active');
+    }
+
+    /*====бургер находиться на мобайле 320*/
+    var container3 = $(".header");
+    if (container3.has(e.target).length === 0){
+        $('#burger-menu-mob').animate({ height: "hide"}, 500);
+        $('#burger-btn-mob').removeClass('burger--active');
+    }
+    
+});
+
+
+/*=======список телефонов на главном хедере*/
+$('#open-phones').click(function(){
+  $('#phones').show();
+});
+
+$('#close-phones').click(function(e){
+  e.preventDefault();
+  $('#phones').hide();
+  console.log(1);
+});
+
+/*=======список телефонов на прилипающем хедере*/
+$('#open-phones-mini').click(function(e){
+  e.preventDefault();
+  $('#phones-mini').show();
+});
+
+$('#close-phones-mini').click(function(e){
+  e.preventDefault();
+  $('#phones-mini').hide();
+  console.log(1);
+});
+
+
+/*=======список телефонов на хедере тоглько мобайл*/
+$('#open-phones-mob').click(function(e){
+   e.preventDefault();
+  $('#phones-mob').animate({ height: "toggle"}, 500);
+});
+
+$('#mob-search-open').click(function(e){
+   e.preventDefault();
+  $('.mob-search').animate({ height: "toggle"}, 200);
+});
+
+if(windowWidth > 744){
+  $(window).scroll(function(){
+    var top = $(window).scrollTop();
+
+    if(top > 200){
+      $('.mini-head').show();
+    }else{
+      $('.mini-head').hide();
+    }
+  });
+}
+
+/*================нижнее меню===============*/
+
+$('#water-for').click(function(e){
+  e.preventDefault();
+  $('#water-for-list').toggle();
+  $('#drink-water').hide();
+  $('#prom-water').hide();
+  $('#cartr-list').hide();
+  if(windowWidth < 960){
+    $('#water-type-list').hide();
+    
+  }
+});
+
+$('#water-type').click(function(e){
+  e.preventDefault();
+  $('#water-type-list').toggle();
+  
+  if(windowWidth < 960){
+    $('#water-for-list').hide();
+    $('#cartr-list').hide();
+  }
+});
+
+if(windowWidth < 1170){
+  $('#drink-water-item').click(function(e){
+    e.preventDefault();
+    $('#drink-water').toggle();
+
+    $('#prom-water').hide();
+    $('#for-float').hide();
+    $('#for-home').hide();
+    $('#for-company').hide();
+    $('#water-for-list').hide();
+    $('#cartr-list').hide();
+
+  });
+  $('#prom-water-item').click(function(e){
+    e.preventDefault();
+    $('#prom-water').toggle();
+
+    $('#drink-water').hide();
+    $('#for-float').hide();
+    $('#for-home').hide();
+    $('#for-company').hide();
+    $('#water-for-list').hide();
+    $('#cartr-list').hide();
+
+  });
+  $('#for-float-item').click(function(e){
+    e.preventDefault();
+    $('#for-float').toggle();
+
+    $('#drink-water').hide();
+    $('#prom-water').hide();
+    $('#for-home').hide();
+    $('#for-company').hide();
+    $('#cartr-list').hide();
+
+    if(windowWidth < 960){
+      $('#water-type-list').hide();
+    }
+  });
+  $('#for-home-item').click(function(e){
+    e.preventDefault();
+    $('#for-home').toggle();
+
+    $('#drink-water').hide();
+    $('#prom-water').hide();
+    $('#for-float').hide();
+    $('#for-company').hide();
+    $('#cartr-list').hide();
+
+    if(windowWidth < 960){
+      $('#water-type-list').hide();
+    }
+  });
+   $('#for-company-item').click(function(e){
+    e.preventDefault();
+    $('#for-company').toggle();
+
+    $('#drink-water').hide();
+    $('#prom-water').hide();
+    $('#for-float').hide();
+    $('#for-home').hide();
+    $('#cartr-list').hide();
+
+    if(windowWidth < 960){
+      $('#water-type-list').hide();
+    }
+  });
+
+  $('.header__cartr').click(function(e){
+    e.preventDefault();
+    $('#water-for-list').hide();
+    $('#drink-water').hide();
+    $('#prom-water').hide();
+
+    $('#cartr-list').toggle();
+
+  });
+}
+
+
+/*============================================*/
+/*====================FOOTER==================*/
+/*============================================*/
+
+$('.footer__col').each(function(i, el){
+  var btn = $(el).find($('.footer__title'));
+  var list = $(el).find($('.footer__list'));
+
+  $(btn).click(function(){
+    $(list).animate({ height: "toggle"}, 200);
+    $(this).toggleClass('footer__title--active')
+  })
+})
+
+/*==============================================================*/
 /*====================Добавить отзыв на странице товара==================*/
 
 $('.c-reviews').each(function(i, el){
@@ -325,20 +549,19 @@ $('.c-reviews__item').each(function(i, el){
     });
 /*======================================================*/
 
-$('.main-search__select').click(function(e){
+$('#open-category').click(function(e){
   e.preventDefault();
   $('#category-list').toggle();
-})
-
-$('#open-phones').click(function(){
-  $('.phones').show();
-})
-
-$('#close-phones').click(function(e){
-  console.log(1);
-  e.preventDefault();
-  $('.phones').hide();
 });
+
+$('#open-category-mini').click(function(e){
+  e.preventDefault();
+  $('#category-list-mini').toggle();
+})
+
+
+
+
 
 $('#list-top-filter').click(function(e){
   e.preventDefault();
@@ -352,6 +575,19 @@ $('.list__option a').click(function(e){
    $("#list-top-filter").removeClass('list__switch--active');
    
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*==========================truncate============================*/
 
@@ -368,10 +604,7 @@ function truncate(str, maxlength){
   }
 }
 
-$('.shares__desc').each(function(i, el){
-  var r = $(el).text();
-  $(el).text(truncate(r, 178));
-})
+
 
 $('.m-overwv__desc').each(function(i, el){
   var r = $(el).text();
@@ -381,31 +614,142 @@ $('.m-overwv__desc').each(function(i, el){
 $(' .rate_row ').starwarsjs();
 
 
+if(windowWidth < 1170 && windowWidth > 960){
+  $('.shares__desc').each(function(i, el){
+    var r = $(el).text();
+    $(el).text(truncate(r, 580));
+  })
+} else if(windowWidth < 960 && windowWidth > 744){
+  $('.shares__desc').each(function(i, el){
+    var r = $(el).text();
+    $(el).text(truncate(r, 250));
+  })
+}else{
+  $('.shares__desc').each(function(i, el){
+    var r = $(el).text();
+    $(el).text(truncate(r, 178));
+  })
+}
+
+
+
+
 /*==================tabs======================*/
 
 $( ".c-tabs" ).tabs();
 
+/*===========filter-aside==============*/
 
+$('.list__btn-f').click(function(){
+  $('.filter__aside').toggleClass('filter__aside--show');
+  $('.overlay').toggle();
+});
+
+$('.filter__click').click(function(){
+  $('.overlay').hide();
+  $('.filter__aside').removeClass('filter__aside--show');
+});
+
+
+
+
+if(windowWidth < 1170){
+
+
+
+  $('.filter__wrap').slimScroll({
+          height: windowHeight
+  });
+
+  document.addEventListener('touchstart', handleTouchStart, false);        
+  document.addEventListener('touchmove', handleTouchMove, false);
+ 
+  var xDown = null;                                                        
+  var yDown = null;     
+
+  function showFilter() {
+    $('.overlay').show();
+    $('.filter__aside').addClass('filter__aside--show');
+  }
+
+  function hideFilter() {
+    $('.filter__aside').removeClass('filter__aside--show');
+    $('.overlay').hide();
+  }
+
+  function moveReasonBoxIn() {
+    var boxWidth = 1140;
+    var boxDiff = 1140 - windowWidth; 
+    console.log(boxDiff);
+    $('.m-reasons__box').css("transform", 'translateX(-'+ boxDiff +'px)')
+  }
+
+  function moveReasonBoxOut() {
+    var boxWidth = 1140;
+    var boxDiff = 1140 - windowWidth; 
+    console.log(boxDiff);
+    $('.m-reasons__box').css("transform", 'translateX(0px)')
+  }
+  
+
+  function handleTouchStart(evt) {                                         
+      xDown = evt.touches[0].clientX;                                      
+      yDown = evt.touches[0].clientY;                                      
+  };                                                
+  function handleTouchMove(evt) {
+    if ( ! xDown || ! yDown ) {
+        return;
+    }
+
+    var xUp = evt.touches[0].clientX;                                    
+    var yUp = evt.touches[0].clientY;
+
+    var xDiff = xDown - xUp;
+    var yDiff = yDown - yUp;
+    if(Math.abs( xDiff )+Math.abs( yDiff )>150){ //to deal with to short swipes
+
+    if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {/*most significant*/
+        if ( xDiff > 0 ) {/ left swipe / 
+           //alert('left!');
+          hideFilter();
+          moveReasonBoxIn();
+
+        } else {/ right swipe /
+           //alert('right!');
+          showFilter();
+          moveReasonBoxOut();
+        }                       
+    } else {
+        if ( yDiff > 0 ) {/ up swipe /
+           // alert('Up!'); 
+        } else { / down swipe /
+           // alert('Down!');
+        }                                                               
+    }
+    / reset values /
+    xDown = null;
+    yDown = null;
+    }
+  };
+
+}
 
 /*===============slimScroll=====================*/
 
- $('#category-drop').slimScroll({
+$('#category-drop').slimScroll({
         height: '450px'
 });
- $('.trash-modal__list').slimScroll({
+$('.trash-modal__list').slimScroll({
         height: '345px'
 });
 
 /*================modal=====================*/
 	
-	$('.btn').click(function(){
+	/*$('.btn').click(function(){
 		$('.header').modal({
 		  fadeDuration: 250,
 		  fadeDelay: 0.80
 		});
-	});
-
-
-
+	});*/
 
 });

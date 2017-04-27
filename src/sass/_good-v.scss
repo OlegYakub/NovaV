@@ -15,8 +15,6 @@
 		-webkit-box-pack: justify;
 		-webkit-justify-content: space-between;
 		justify-content: space-between;
-		//margin-bottom: 85px;
-		//cursor: pointer;
 		&:hover{
 			z-index: 3;
 			
@@ -150,7 +148,7 @@
 
 @media screen and (max-width: 959px){
 	.good-v{
-		width: 374px;
+		width: 50%;
 
 		&--w305{
 			width: 309px;
