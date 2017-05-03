@@ -564,7 +564,7 @@
 			top: 0;
 			transition: 0.5s;
 			transform: translateX(-100%);
-			z-index: 5;
+			z-index: 7;
 			margin-right: auto;
 			&--show{
 				transform: translateX(0px);
@@ -599,6 +599,67 @@
 			.good-h{
 				display: none;
 			}
+		}
+
+		&__filt{
+			width: 100%;
+			display: -webkit-flex;
+			display: flex;
+			-webkit-box-pack: justify;
+			-webkit-justify-content: space-between;
+			justify-content: space-between;
+
+			.list__switch--pdl{
+				padding-right: 0;
+			}
+		}
+	}
+}
+
+/* ===================================320=============================== */
+
+@media screen and (max-width: 743px){
+	.filter{
+
+		&__click{
+			left: 160px;
+		}
+	}
+
+	.list{
+
+		&__btn-f{
+			margin: 0px 3px;
+		}
+
+		&__paginator{
+			width: 80%;
+			box-sizing: border-box;
+			text-align: center;
+		}
+
+		&__head{
+			padding: 0 10px;
+		}
+
+		&__switch{
+			&--pdl{
+				padding-left: 0;
+				
+			}
+		}
+
+		.title{
+			padding-left: 0;
+			text-align: center;
+			padding-bottom: 20px;
+		}
+
+		&__desc{
+			width: 100%;
+			box-sizing: border-box;
+			padding-right: 20px;
+			padding-bottom: 25px;
 		}
 	}
 }

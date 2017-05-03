@@ -1,4 +1,5 @@
-
+var windowWidth = $(window).width();
+var windowHeight = $(window).height();
 /*==============slick=============*/
 
 $('#maker-slider').slick({
@@ -26,6 +27,15 @@ $('#maker-slider').slick({
       }
     }
   ]
+});
+
+$('.card-m__slider').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  autoplay: false,
+  dots: true,
+  infinite: true,
+  arrows: false
 });
 
 $('#client-slider').slick({
@@ -82,7 +92,7 @@ $('#c-consum-slider').slick({
     {
       breakpoint: 744,
       settings: {
-        slidesToShow: 1,
+        slidesToShow: 2,
         slidesToScroll: 1
       }
     }
@@ -116,7 +126,7 @@ $('#c-searched-slider').slick({
     {
       breakpoint: 744,
       settings: {
-        slidesToShow: 1,
+        slidesToShow: 2,
         slidesToScroll: 1
       }
     }
@@ -140,7 +150,8 @@ $('.together').slick({
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1,
-        dots: false
+        dots: true,
+        arrows: false
       }
     }
   ]
@@ -163,7 +174,23 @@ $('.card__slider-nav').slick({
   arrows: false,
 });
 
+if(windowWidth < 743){
+  $('.shares__slider').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: true,
+    infinite: true,
+    arrows: false
+  });
 
+  $('.m-recomend__body').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: true,
+    infinite: true,
+    arrows: false
+  });
+}
 
  $('.card__slider-nav').on('click', '.slick-slide', function (e) {
     e.stopPropagation();
@@ -180,8 +207,7 @@ $('#form-city').styler();
 $("#order-delivery").styler();
 /*====================all==================*/
 
-var windowWidth = $(window).width();
-var windowHeight = $(window).height();
+
 
 
 $('.filter__box').each(function(i, el){
@@ -542,11 +568,21 @@ $('.c-reviews__item').each(function(i, el){
       $(".filter__range").slider("values",1,value2);
   });
 
-  $('.list__paginator').pagination({
+  if(windowWidth < 743){
+    $('.list__paginator').pagination({
+        items: 100,
+        itemsOnPage: 20,
+        cssStyle: 'light-theme'
+    });
+  }else{
+    $('.list__paginator').pagination({
         items: 100,
         itemsOnPage: 10,
         cssStyle: 'light-theme'
     });
+  }
+
+  
 /*======================================================*/
 
 $('#open-category').click(function(e){
@@ -666,6 +702,7 @@ if(windowWidth < 1170){
  
   var xDown = null;                                                        
   var yDown = null;     
+  var counter = 0;
 
   function showFilter() {
     $('.overlay').show();
@@ -680,17 +717,35 @@ if(windowWidth < 1170){
   function moveReasonBoxIn() {
     var boxWidth = 1140;
     var boxDiff = 1140 - windowWidth; 
-    console.log(boxDiff);
+    //console.log(boxDiff);
     $('.m-reasons__box').css("transform", 'translateX(-'+ boxDiff +'px)')
   }
 
   function moveReasonBoxOut() {
     var boxWidth = 1140;
     var boxDiff = 1140 - windowWidth; 
-    console.log(boxDiff);
+    //console.log(boxDiff);
     $('.m-reasons__box').css("transform", 'translateX(0px)')
   }
-  
+
+  function moveReasonMob(counter) {
+    var pdSlides = (windowWidth - 285) / 2;
+    var lengthOfMove = (285 - pdSlides);
+    var lengthOfMoveNext = (lengthOfMove * counter) + pdSlides;
+
+    /*console.log(counter + "- counter");
+    console.log(lengthOfMove + "- lengthOfMove");
+    console.log(pdSlides + "- pdSlides");*/
+    if(counter == 4){
+      return
+    }else if(counter == 1 ){
+      $('.m-reasons__box').css("transform", 'translateX(-'+ lengthOfMove +'px)')
+    }else if(counter == 2 || counter == 3){
+      $('.m-reasons__box').css("transform", 'translateX(-'+ lengthOfMoveNext +'px)');
+    }else{
+      $('.m-reasons__box').css("transform", 'translateX(0px)');
+    }
+  }
 
   function handleTouchStart(evt) {                                         
       xDown = evt.touches[0].clientX;                                      
@@ -700,6 +755,7 @@ if(windowWidth < 1170){
     if ( ! xDown || ! yDown ) {
         return;
     }
+
 
     var xUp = evt.touches[0].clientX;                                    
     var yUp = evt.touches[0].clientY;
@@ -712,12 +768,33 @@ if(windowWidth < 1170){
         if ( xDiff > 0 ) {/ left swipe / 
            //alert('left!');
           hideFilter();
-          moveReasonBoxIn();
+          
+          if(windowWidth < 744){        
+            counter = counter + 1;
+            //console.log(counter);
+            if(counter > 3){
+              counter = 4;
+            }  
+            moveReasonMob(counter);
+          }else{
+            moveReasonBoxIn();
+          }
 
         } else {/ right swipe /
            //alert('right!');
           showFilter();
-          moveReasonBoxOut();
+
+          if(windowWidth < 744){        
+            counter = counter - 1;
+            //console.log(counter);
+            if(counter < 1){
+              counter = 0;
+            }  
+            moveReasonMob(counter);
+          }else{
+            moveReasonBoxOut();
+          }
+
         }                       
     } else {
         if ( yDiff > 0 ) {/ up swipe /

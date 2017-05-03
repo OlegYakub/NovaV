@@ -37,6 +37,38 @@ input, textarea{
 	border-radius: $inputradius;
 }
 
+.breadcrumbs{
+	font-family: "ProximaNovaLight";
+	text-align: center;
+	padding-bottom: 30px;
+
+	&__item{
+		display: inline-block;
+
+		&:after{
+			content: '/';
+		}
+
+		a{
+			color: #929292;
+		
+		}
+
+		&:last-child{
+			a{
+				color: #5f5f5f;
+			}
+			&:after{
+				content: '';
+			}
+		}
+	}
+
+	&__back{
+		display: none;
+	}
+}
+
 .btn--blue{
 	text-transform: uppercase;
 	text-align: center;
@@ -81,7 +113,7 @@ input, textarea{
 
 .add{
 	font-size: 14px;
-	img{
+	&__desc{
 		display: inline;
 		position: relative;
 		top: 4px;
@@ -90,6 +122,10 @@ input, textarea{
 
 	&:hover{
 		opacity: 0.7;
+	}
+
+	&__mob{
+		display: none;
 	}
 }
 
@@ -426,6 +462,7 @@ input, textarea{
 			display: block;
 	}
 
+
 	&__right{
 		width: 58%;
 		float: left;
@@ -450,7 +487,7 @@ input, textarea{
 	}
 
 	.good-title__code{
-		padding-top: 20px;
+		padding-top: 15px;
 	}
 }
 
@@ -502,7 +539,7 @@ input, textarea{
 	top: 0px;
 	background-color: #000;
 	opacity: 0.5;
-	z-index: 3;
+	z-index: 6;
 }
 
 .burger{
@@ -581,12 +618,14 @@ input, textarea{
 
 /* ===================================320=============================== */
 
-
-
 @media screen and (max-width: 743px){
 	.container{
 		max-width:  460px;
 		padding: 0 10px;
+
+		&--nonpd{
+			padding: 0;
+		}
 	}
 
 	html, body{
@@ -601,7 +640,65 @@ input, textarea{
 
 	.title{
 		font-size: $title-font-size-mob;
+		
+		span{
+			&:before{
+				display: none;
+			}
+
+			&:after{
+				display: none;
+			}
+			
+		}
+
+		&--long{
+			font-size: 22px;
+			&:before{
+				display: none;
+			}
+
+			&:after{
+				display: none;
+			}
+		}
 	}
 
+	.good-title{
+		&__name{
+			font-size: 14px;
+		}
+	}
 
+	.breadcrumbs{
+		max-width: 460px;
+		margin: 0 auto;
+		padding-left: 10px;
+		text-align: left;
+		&__list{
+			display: none;
+		}
+
+		&__back{
+			display: block;
+			color: #929292;
+			font-size: 12px;
+			img{
+				padding-left: 5px;
+				transform: rotate(180deg) translateY(-2px);
+			}
+		}
+	}
+
+	.add{
+		font-size: 0;
+
+		&__mob{
+			display: block;
+		}
+
+		&__desc{
+			display: none !important;
+		}
+	}
 }	

@@ -67,6 +67,11 @@
 			display: inline-block;
 			border: none;
 			color: #555555;
+
+			&::-webkit-input-placeholder {font-size: 0px;}
+			&::-moz-placeholder          {font-size: 0px;}/* Firefox 19+ */
+			&:-moz-placeholder           {font-size: 0px;}/* Firefox 18- */
+			&:-ms-input-placeholder      {font-size: 0px;}
 		}
 
 		.jq-selectbox{
@@ -1051,5 +1056,70 @@
 				box-sizing: border-box;
 			}
 		}
+	}
+}
+
+/* ===================================320=============================== */
+
+@media screen and (max-width: 743px){
+	/* =================order============== */
+
+	.o-main1{
+		padding-top: 20px;
+	}
+
+	/* =============o-contact============= */
+
+	.o-contact{
+		float: none;
+		width: 100%;
+		padding: 0 18px;
+		padding-top: 15px;
+
+		.o-main1__title{
+			padding-bottom: 0;
+
+			&--desk{
+				display: none;
+			}
+		}
+
+		&__row{
+			.o-desc{
+				display: none;
+			}
+		}
+
+
+		&__foot{
+			display: none;
+		}
+
+		&__body{
+			padding-top: 15px;
+		}
+
+
+		&__input{
+
+			.jq-selectbox{
+				width: 84%;
+				float: right;
+			}
+
+			input{
+				width: 84%;
+				&::-webkit-input-placeholder {font-size: 14px;}
+			&::-moz-placeholder          {font-size: 14px;}/* Firefox 19+ */
+			&:-moz-placeholder           {font-size: 14px;}/* Firefox 18- */
+			&:-ms-input-placeholder      {font-size: 14px;}
+			}
+		}
+	}
+
+	/* =============o-total============= */
+
+	.o-total{
+
 	}
 }

@@ -1227,6 +1227,10 @@ header{
 
 		&__bot{
 			margin-bottom: 50px;
+
+			&--nonmb{
+				margin-bottom: 0;
+			}
 		}
 
 		&__for{
@@ -1512,6 +1516,11 @@ header{
 	/* ===============header================ */
 	.header{
 		padding-top: 10px;
+		padding-bottom: 0;
+
+		&--bg{
+			padding-bottom: 120px;
+		}
 		&__bot{
 			display: none;
 		}

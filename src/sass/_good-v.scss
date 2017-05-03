@@ -155,3 +155,23 @@
 		}
 	}
 }
+
+/* ===================================320=============================== */
+
+@media screen and (max-width: 743px){
+	.good-v{
+		width: 100%;
+
+		&__basket{
+			a{
+				background-color: #d1383e;
+				background-image: url(../img/shopping-cart-white.svg);
+				background-repeat: no-repeat;
+	    	background-position: center;
+	    	background-size: 59%;
+			}
+		}
+	}
+
+	
+}

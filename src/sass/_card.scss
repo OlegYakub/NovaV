@@ -301,6 +301,10 @@
 	}
 }
 
+.card-m{
+	display: none;
+}
+
 /* ========================c-tabs=================== */
 
 .c-tabs{
@@ -444,6 +448,10 @@
 	}
 
 	.rate_row{
+
+		&--mob{
+			display: none;
+		}
 	}
 
 	
@@ -869,6 +877,10 @@
 	.c-main2{
 		&__title{
 			padding-top: 35px;
+
+			.maker-sl__arrs{
+				top: 35px;
+			}
 		}
 	}
 
@@ -940,6 +952,361 @@
 
 		.good-status{
 			right: 72px;
+		}
+	}
+}
+
+/* ===================================320=============================== */
+
+@media screen and (max-width: 743px){
+	/* ====================card============== */
+	.card{
+		display: none;
+
+		&__charact{
+
+			li{
+				width: 100%;
+			}
+		}
+	}
+	
+	/* ====================card-m============== */
+	.card-m{
+		display: block;
+		background-color: #FFF;
+		border-top: 1px solid #e8e8e8;
+		border-bottom: 1px solid #e8e8e8;
+		
+		&__title{
+			padding: 25px 20px;
+		}
+
+		&__top{
+			border-bottom: 1px solid #e8e8e8;
+		}
+
+		&__middle{
+			padding: 0 20px;
+			border-bottom: 1px solid #e8e8e8;
+
+			.good-v__price{
+				padding-top: 5px;
+				font-size: 30px;
+
+				&--old{
+					font-size: 14px;
+					padding-left: 5px;
+				}
+			}
+		}
+
+		&__bottom{
+			padding: 10px 20px 15px;
+		}
+
+		&__pict{
+
+			img{
+				margin: 0 auto;
+				max-width: 100%;
+				max-height: 100%;
+				width: auto;
+				height: auto;
+			}
+		}
+
+		.slick{
+
+			&-dots{
+				position: static;
+
+				li{
+					width: 10px;
+				}
+			}
+
+			&-dotted{
+				margin-bottom: 5px;
+			}
+		}
+
+		.card__fl{
+			padding-bottom: 15px;
+		}
+
+		.good-status{
+			position: static;
+		}
+
+		&__buy{
+			font-size: 18px;
+	    width: 153px;
+	    height: 37px;
+	    display: block;
+	    line-height: 37px;
+	    img{
+	    	vertical-align: middle;
+		    width: 18px;
+		    height: 20px;
+		    position: relative;
+		    top: -1px;
+	    }
+		}
+
+		&__btns{
+			display: -webkit-flex;
+			display: flex;
+			padding-bottom: 7px;
+
+		}
+
+		&__compare{
+			display: block;
+			background: #c5c5c5;
+			line-height: 37px;
+			width: 37px;
+			margin-left: 5px;
+			text-align: center;
+			border-radius: 3px;
+			img{
+				vertical-align: middle;
+
+			}
+		}
+	}
+
+	/* ===================c-main1================ */
+	.c-main1{
+
+		&__title{
+			padding-top: 10px;
+			padding-left: 20px;
+		}
+
+		&__reason{
+
+			.clauses{
+				display: block;
+				box-sizing: border-box;
+				width: 100%;
+				padding: 0 40px;
+				padding-top: 25px;
+				ul{
+					display: block;
+				}
+
+				&__item{
+					width: 100%;
+				}
+			}
+		}
+
+		&__delivery{
+			.clauses{
+				margin-left: 0;
+				padding: 0 40px;
+				padding-top: 25px;
+				&__item{
+					width: 100%;
+				}
+				ul{
+
+					display: block;
+				}
+			}
+		}
+	}
+	
+	/* ===================c-main2================ */
+	.c-main2{
+
+		&__title{
+			padding-top: 20px;
+			padding-right: 70px;
+			padding-left: 10px;
+			.maker-sl__arrs{
+				top: 21px;
+			}
+		}
+
+		&__bot{
+				padding-left: 10px;
+				padding-right: 10px;
+		}
+
+		&__slide{
+
+			.good-short{
+				padding-left: 10px;
+				padding-right: 10px;
+				&__right{
+					padding-bottom: 15px;
+					padding-top: 15px;
+					box-sizing: border-box;
+					width: 100%;
+				}
+			}
+
+			.pict-box{
+				float: none;
+				width: 100%;
+				padding-right: 0;
+			}
+
+			.good-title__code{
+				display: none;
+			}
+		}
+	}
+	
+	/* ====================c-tabs=============== */
+	.c-tabs{
+		padding-left: 0;
+		padding-right: 0;
+		&__item{
+			width: 100%;
+			
+		}
+
+		&__link{
+			font-size: 14px;
+		}
+
+		&__nav{
+				padding: 28px 20px 28px 10px;
+				box-sizing: border-box;
+			li{
+				padding-right: 8px;
+
+				
+			}
+		}
+
+		&__list{
+
+			li{
+				padding: 5px 20px 5px 10px;
+				&:nth-child(2n+1){
+					background-color: #f0f0f0;
+				}
+			}
+
+			&--val{
+				padding-left: 10px;
+				box-sizing: border-box;
+			}
+		}
+	}
+
+	/* ==================c-main3================= */
+	.c-main3{
+
+		&__benef{
+			padding: 15px 10px;
+		}
+
+		&__title{
+			padding-left: 0;
+		}
+	}
+	
+	/* ==================c-reviews================= */
+	.c-reviews{
+		&__top{
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+
+		&__item{
+			padding: 5px 10px 0;
+		}
+
+		&__like{
+			background-image: url(../img/like-ic-h.png);
+		}
+
+		&__dlike{
+		  background-image: url(../img/dislike-ic-h.png);
+		}
+
+		.rate_row{
+
+			&--desk{
+				display: none;
+			}
+
+			&--mob{
+				display: block;
+				padding-bottom: 10px;
+			}
+		}
+
+		&__foot{
+			padding-bottom: 15px;
+		}
+
+	}
+
+	/* ==================create=================== */
+
+	.create{
+		padding: 0 10px 20px;
+		box-shadow: 0px 10px 14px -4px rgba(0,0,0,0.3);
+	}
+
+	/* ===================reply=================== */
+
+	.reply{
+
+		margin-left: 10px;
+		&__half{
+			width: 100%;
+			padding: 0;
+
+			&--pd{
+				padding-bottom: 10px;
+			}
+		}
+
+		&__btns{
+			padding-bottom: 15px;
+		}
+	}
+	
+	/* ============answers============= */
+	.answers{
+		margin-left: 10px;
+
+		&__close{
+			padding-top: 5px;
+    	padding-bottom: 15px;
+		}
+	}
+
+	#c-searched-slider{
+		.c-main2__slide{
+			margin-bottom: 0;
+		}
+	}
+
+	/* ============c-questions=============== */
+	
+	.c-questions{
+		padding: 0 10px;
+		&__list{
+			display: block;
+			padding-top: 30px;
+			padding-bottom: 20px;
+		}
+
+		&__item{
+			width: 100%;
+		}
+
+		&__title{
+			font-size: 16px;
+			padding-top: 30px;
 		}
 	}
 }
