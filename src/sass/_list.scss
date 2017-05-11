@@ -412,75 +412,7 @@
 
 }
 
-/* ================paginator============== */
 
-.list__paginator{
-	width: 340px;
-	margin: 0 auto;
-	padding-top: 30px;
-	.page-link{
-		border: 0;
-		background-image: none;
-		box-shadow: none;
-		font-size: 14px;
-		color: #9d9d9d;
-
-		&:hover{
-			background-color: $lightgrey;
-		}
-	}
-	.current{
-		border-radius: 2px;
-		border-color: transparent;
-		box-shadow: none;
-		background-color: $lightgrey;
-		color: #9d9d9d;
-	}
-
-	.prev{
-		font-size: 0;
-		//opacity: 0.6;
-		background-color: transparent;
-		border: none;
-		box-shadow: none;
-		&:hover{
-			background: url("../img/paginleft.png") no-repeat center;
-			opacity: 0.5;
-		}
-		background: url("../img/paginleft.png") no-repeat center;
-	}
-
-	.next{
-		font-size: 0;
-		//opacity: 0.6;
-		background-color: transparent;
-		border: none;
-		box-shadow: none;
-		background-image: url("../img/paginright.png");
-		background-repeat: no-repeat;
-		background-position: center;
-		&:hover{
-			background: url("../img/paginright.png") no-repeat center;
-			opacity: 0.5;
-		}
-	}
-
-	.active{
-
-	}
-
-	.clickable{
-		&:hover{
-			background-color: $lightgrey !important;
-		}
-	}
-
-	.light-theme{
-		a:hover{
-			background: none;
-		}
-	}
-}
 
 /* ===================================================== */
 /* =====================RESPONSIVE============= */

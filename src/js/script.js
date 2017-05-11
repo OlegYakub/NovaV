@@ -438,6 +438,15 @@ if(windowWidth < 1170){
   });
 }
 
+$('.b-aside__li').each(function(i, el){
+  var btn = $(el).find($('.b-aside__year'));
+  var list = $(el).find($('.b-aside__list'));
+
+  $(btn).click(function(){
+    $(list).animate({ height: "toggle"}, 200);
+    $(this).toggleClass('b-aside__year--active')
+  });
+});
 
 /*============================================*/
 /*====================FOOTER==================*/
@@ -569,19 +578,46 @@ $('.c-reviews__item').each(function(i, el){
   });
 
   if(windowWidth < 743){
-    $('.list__paginator').pagination({
+    $('#list-paginator').pagination({
         items: 100,
         itemsOnPage: 20,
         cssStyle: 'light-theme'
     });
   }else{
-    $('.list__paginator').pagination({
+    $('#list-paginator').pagination({
         items: 100,
         itemsOnPage: 10,
         cssStyle: 'light-theme'
     });
   }
 
+if(windowWidth < 743){
+    $('#news-paginator').pagination({
+        items: 100,
+        itemsOnPage: 20,
+        cssStyle: 'light-theme'
+    });
+  }else{
+    $('#news-paginator').pagination({
+        items: 100,
+        itemsOnPage: 10,
+        cssStyle: 'light-theme'
+    });
+  }
+
+if(windowWidth < 743){
+  $('#blog-paginator').pagination({
+      items: 100,
+      itemsOnPage: 20,
+      cssStyle: 'light-theme'
+  });
+}else{
+  $('#blog-paginator').pagination({
+      items: 100,
+      itemsOnPage: 10,
+      cssStyle: 'light-theme'
+  });
+}
   
 /*======================================================*/
 
@@ -613,10 +649,20 @@ $('.list__option a').click(function(e){
 });
 
 
+$('.blog__archiv a').click(function(e){
+  e.preventDefault();
+  $('.blog__aside').show();
+  $('.overlay').show();
+  $('body').addClass("overflowHd");
+});
 
 
-
-
+$('.b-aside__close, .overlay').click(function(e){
+  e.preventDefault();
+  $('.blog__aside').hide();
+  $('.overlay').hide();
+  $('body').removeClass("overflowHd");
+});
 
 
 
@@ -669,6 +715,24 @@ if(windowWidth < 1170 && windowWidth > 960){
 
 
 
+if(windowWidth > 960){
+  $('.news__text').each(function(i, el){
+    var r = $(el).text();
+    $(el).text(truncate(r, 580));
+  })
+} else if(windowWidth < 960 && windowWidth > 744){
+  $('.news__text').each(function(i, el){
+    var r = $(el).text();
+    $(el).text(truncate(r, 280));
+  })
+}else{
+  $('.news__text').each(function(i, el){
+    var r = $(el).text();
+    $(el).text(truncate(r, 178));
+  })
+}
+
+
 
 /*==================tabs======================*/
 
@@ -705,13 +769,13 @@ if(windowWidth < 1170){
   var counter = 0;
 
   function showFilter() {
-    $('.overlay').show();
+    $('.overlay__swipe').show();
     $('.filter__aside').addClass('filter__aside--show');
   }
 
   function hideFilter() {
     $('.filter__aside').removeClass('filter__aside--show');
-    $('.overlay').hide();
+    $('.overlay__swipe').hide();
   }
 
   function moveReasonBoxIn() {
@@ -822,11 +886,6 @@ $('.trash-modal__list').slimScroll({
 
 /*================modal=====================*/
 	
-	/*$('.btn').click(function(){
-		$('.header').modal({
-		  fadeDuration: 250,
-		  fadeDelay: 0.80
-		});
-	});*/
+	
 
 });

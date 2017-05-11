@@ -77,6 +77,7 @@
 		.jq-selectbox{
 			height: 100%;
 			width: 88%;
+			z-index: 5 !important;
 			&__select{
 				box-shadow: none;
 				border: none;
@@ -179,6 +180,10 @@
 			clear: both;
 			display: block;
 		}
+	}
+
+	&__bottom2{
+		display: none;
 	}
 
 	&__name{
@@ -1065,7 +1070,8 @@
 	/* =================order============== */
 
 	.o-main1{
-		padding-top: 20px;
+		padding-top: 0px;
+		padding-bottom: 35px;
 	}
 
 	/* =============o-contact============= */
@@ -1075,6 +1081,7 @@
 		width: 100%;
 		padding: 0 18px;
 		padding-top: 15px;
+		border-bottom: none;
 
 		.o-main1__title{
 			padding-bottom: 0;
@@ -1105,14 +1112,15 @@
 			.jq-selectbox{
 				width: 84%;
 				float: right;
+
 			}
 
 			input{
 				width: 84%;
 				&::-webkit-input-placeholder {font-size: 14px;}
-			&::-moz-placeholder          {font-size: 14px;}/* Firefox 19+ */
-			&:-moz-placeholder           {font-size: 14px;}/* Firefox 18- */
-			&:-ms-input-placeholder      {font-size: 14px;}
+				&::-moz-placeholder          {font-size: 14px;}/* Firefox 19+ */
+				&:-moz-placeholder           {font-size: 14px;}/* Firefox 18- */
+				&:-ms-input-placeholder      {font-size: 14px;}
 			}
 		}
 	}
@@ -1120,6 +1128,148 @@
 	/* =============o-total============= */
 
 	.o-total{
+		width: 100%;
+		float: none;
 
+		&__bottom2{
+			padding-top: 10px;
+			border-top: $bd;
+			display: block;
+			padding-bottom: 30px;
+		}
+
+		&__btn{
+			display: block;
+			width: 280px;
+			font-size: 14px;
+			padding: 11px 0;
+			margin: 0 auto;
+		}
+
+		&__item{
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+
+		&__bottom{
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+
+		&__back{
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+	}
+
+	/* =============o-main2============= */
+
+	.o-main2{
+
+		&__body{
+			display: block;
+		}
+	}
+
+	/* ==============delivery============ */
+
+	.delivery{
+		width: 100%;
+		margin-bottom: 0;
+		border-bottom: none;
+		&__contact{
+			padding-left: 20px;
+			//padding-right: 20px;
+		}
+
+		&__chosen{
+			padding-left: 20px;
+			padding-right: 20px;
+			border-bottom: none;
+		}
+
+		&__box{
+			padding-left: 20px;
+			padding-top: 10px;
+			padding-right: 20px;
+
+			&--pt{
+				padding-top: 25px;
+			}
+
+			&--visa{
+				border-bottom: none;
+			}
+		}
+
+		&__right{
+			padding-bottom: 10px;
+
+			.jq-selectbox{
+				&__dropdown{
+					width: 100%;
+				}
+				
+				li{
+					overflow: hidden;
+			    white-space: nowrap;
+			    text-overflow: ellipsis;
+				}
+			}
+
+		}
+
+		&__visa{
+			
+			.o-desc{
+				display: block;
+
+				&--span{
+					display: inline;
+				}
+			}
+		}
+
+		&__comment{
+			.delivery__check{
+				padding-top: 0px;
+				padding-bottom: 10px;
+			}
+		}
+	}
+
+	/* ================o-submit============== */
+
+	.o-submit{
+		margin-bottom: 35px;
+		width: 100%;
+
+		&__top{
+			padding: 20px 20px 15px;
+		}
+
+		&__body{
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+
+		&__total{
+			padding-top: 20px;
+			padding-bottom: 15px;
+		}
+
+		&__rules{
+			margin-bottom: 25px;
+		}
+
+		&__body{
+			padding-bottom: 30px;
+		}
+	}
+
+	/* ================o-chosen=============== */
+
+	.o-chosen{
+		display: none;
 	}
 }

@@ -37,6 +37,10 @@ input, textarea{
 	border-radius: $inputradius;
 }
 
+.overflowHd{
+	overflow: hidden;
+}
+
 .breadcrumbs{
 	font-family: "ProximaNovaLight";
 	text-align: center;
@@ -561,6 +565,9 @@ input, textarea{
 	}
 }
 
+
+
+
 /* ============================================================== */
 /* ==============================RESPONSIVE============= */
 /* ==================================960========================== */
@@ -587,8 +594,10 @@ input, textarea{
 		}
 	}
 
-}	
+	
 
+	
+}
 /* ==================================744========================== */
 
 @media screen and (max-width: 959px){
@@ -612,6 +621,8 @@ input, textarea{
 			}
 		}
 	}
+
+	
 
 }	
 
@@ -662,6 +673,10 @@ input, textarea{
 				display: none;
 			}
 		}
+
+		&--order{
+			margin-bottom: 20px;
+		}
 	}
 
 	.good-title{
@@ -701,4 +716,8 @@ input, textarea{
 			display: none !important;
 		}
 	}
+
+	
+
+	
 }	

@@ -1,0 +1,112 @@
+
+/* ======================compare================== */
+
+.comparing{
+	margin-left: 10vw;
+	background-color: #FFF;
+	&__area{
+		&:after{
+			content: "";
+			clear: both;
+			display: block;
+		}
+
+		white-space: nowrap;
+		overflow-x: auto;
+		//font-size: 0;
+	}
+
+	&__col-f{
+		width: 300px;
+		display: inline-block;
+		//float: left;
+		//height: 50vh;
+		position: relative;
+		vertical-align: top;
+		//background-color: pink;
+	}
+
+	&__col{
+		display: inline-block;
+		width: 300px;
+		margin-left: -3px;
+		vertical-align: top;
+		//float: left;
+		//height: 50vh;
+		background-color: forestgreen;
+	}
+}
+
+.comp-add{
+	padding: 0 45px;
+	border: $bd2;
+	font-size: 14px;
+	display: block;
+	&__btn{
+		color: $bluestyle;
+		text-align: center;
+		border: $bd;
+		display: block;
+		width: 130px;
+		height: 130px;
+		margin: 0 auto;
+		margin-top: 20px;
+		margin-bottom: 5px;
+
+		&:hover{
+			border-color: #555555;
+			color: #555555;
+			.comp-add__plus{
+				color: #555555;
+			}
+		}
+	}
+
+	&__add{
+		margin-top: -30px;
+	}
+
+	&__plus{
+		color: #cfcfcf;
+		font-size: 90px;
+		transition: 0.3s;
+	}
+
+	&__link{
+		display: block;
+		color: $bluestyle;
+		text-align: center;
+		padding: 2px 0;
+	}
+
+	&__text{
+		color: #555555;
+	}
+
+	&__call{
+		display: block;
+		font-size: 18px;
+		padding: 8px 0;
+		width: 100%;
+		margin-top: 10px;
+		margin-bottom: 18px;
+	}
+}
+
+/* ===================================================== */
+/* =====================RESPONSIVE============= */
+/* =====================940======================= */
+
+@media screen and (max-width: 1170px){
+
+}
+
+/* =============================744======================= */
+@media screen and (max-width: 959px){
+
+}
+
+/* =============================320======================= */
+@media screen and (max-width: 743px){
+
+}
