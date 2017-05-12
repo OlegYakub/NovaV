@@ -472,6 +472,21 @@
 		.blog__inc{
 			display: none;
 		}
+		
+		.b-info--list .b-info__name{
+			display: block;
+		}
+
+		.b-info__date{
+				padding-left: 0;
+    		padding-top: 12px;
+    		display: block;
+		}
+
+		.b-info__body{
+			align-items: flex-end;
+		}
+
 	}
 
 }
@@ -553,15 +568,6 @@
 				}
 			}
 
-			.b-info--list .b-info__name{
-				display: block;
-			}
-
-			.b-info__date{
-				padding-left: 0;
-    		padding-top: 12px;
-    		display: block;
-			}
 		}
 
 		&__shares{
@@ -651,6 +657,14 @@
 			display: -webkit-flex;
 			display: flex;
 		}
+
+		&__blog{
+			.blog__pict{
+				height: 340px;
+			}
+		}
+
+		
 	}
 }
 

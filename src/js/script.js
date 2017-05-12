@@ -664,13 +664,22 @@ $('.b-aside__close, .overlay').click(function(e){
   $('body').removeClass("overflowHd");
 });
 
+/*======================compare=============*/
+/*============================================*/
 
+var compareMargin = (windowWidth - $('.comparing__title').width())/2;
 
+console.log($('.comparing__title').width());
+console.log(compareMargin);
+$('.comparing').css("marginLeft", compareMargin);
+if(windowWidth > 1170){
 
-
-
-
-
+  window.onscroll = function() {
+    var scrolled = window.pageXOffset || document.documentElement.scrollLeft;
+     //console.log(scrolled);
+     $('.comparing__header, .comparing__title, .comparing__footer').css("left", scrolled);
+  }
+}
 /*==========================truncate============================*/
 
 
@@ -685,7 +694,6 @@ function truncate(str, maxlength){
     return str;
   }
 }
-
 
 
 $('.m-overwv__desc').each(function(i, el){

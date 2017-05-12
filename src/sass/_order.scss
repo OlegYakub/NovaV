@@ -583,6 +583,7 @@
 		margin-bottom: 20px;
 		height: 100%;
 		width: 270px;
+		z-index: 5 !important;
 		&__select{
 			box-shadow: none;
 			border: $bd;
@@ -1050,6 +1051,15 @@
 		.jq-selectbox{
 			margin-bottom: 0;
 			width: 100%;
+
+			li{
+				text-overflow: ellipsis;
+				overflow: hidden;
+			}
+
+			&__dropdown{
+				width: 100% !important;
+			}
 		}
 	}
 

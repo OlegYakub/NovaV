@@ -2,8 +2,19 @@
 /* ======================compare================== */
 
 .comparing{
-	margin-left: 10vw;
-	background-color: #FFF;
+	//margin-left: 10vw;
+	margin-top: 20px;
+	margin-bottom: 35px;
+	&__header{
+		position: relative;
+	}
+
+	&__footer{
+		position: relative;
+	}
+
+	
+
 	&__area{
 		&:after{
 			content: "";
@@ -12,8 +23,12 @@
 		}
 
 		white-space: nowrap;
-		overflow-x: auto;
-		//font-size: 0;
+		overflow-x: visible;
+		overflow-y: visible;
+		
+		.comp-card{
+			white-space: normal;
+		}
 	}
 
 	&__col-f{
@@ -29,18 +44,75 @@
 	&__col{
 		display: inline-block;
 		width: 300px;
-		margin-left: -3px;
+		margin-left: -4px;
+
 		vertical-align: top;
 		//float: left;
-		//height: 50vh;
-		background-color: forestgreen;
+		//height: 100vh;
+		//background-color: forestgreen;
+	}
+
+	&__tabs{
+		padding-left: 15px;
+		padding-top: 15px;
+		height: 48px;
+		box-sizing: border-box;
+	}
+
+	&__tab{
+		display: inline-block;
+		font-family: "ProximaNovaBold";
+		font-size: 14px;
+		color: #9d9d9d;
+		padding-bottom: 10px;
+		border-bottom: 3px solid transparent;
+		&--active{
+			border-bottom: 3px solid #7fabc6;
+			color: #555555;
+		}
+
+		&:hover{
+			color: #555555;
+		}
+	}
+
+	&__diff{
+		margin-left: 30px;
+	}
+
+	&__options{
+		color: $bluestyle;
+		font-family: "ProximaNovaBold";
+
+		.comparing__param{
+			padding-left: 30px;
+		}
+	}
+
+	&__param{
+		height: 61px;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-align-items: center;
+		align-items: center;
+		padding-left: 15px;
+		&:nth-child(2n+1){
+			background-color: #fff;
+		}
+	}
+
+	&__table{
+		font-size: 14px;
+		white-space: normal;
 	}
 }
 
 .comp-add{
+	background-color: #FFF;
 	padding: 0 45px;
 	border: $bd2;
 	font-size: 14px;
+	height: 285px;
 	display: block;
 	&__btn{
 		color: $bluestyle;
@@ -76,7 +148,7 @@
 		display: block;
 		color: $bluestyle;
 		text-align: center;
-		padding: 2px 0;
+		padding: 1px 0;
 	}
 
 	&__text{
@@ -89,7 +161,55 @@
 		padding: 8px 0;
 		width: 100%;
 		margin-top: 10px;
-		margin-bottom: 18px;
+		margin-bottom: 17px;
+	}
+}
+
+/* ======================.comp-card================== */
+.comp-card{
+	border: $bd2;
+	background-color: #FFF;
+	height: 333px;
+	position: relative;
+	.review{
+		display: -webkit-flex;
+		display: flex;
+		-webkit-box-pack: justify;
+		-webkit-justify-content: space-between;
+		justify-content: space-between;
+	}
+
+	&__close{
+		position: absolute;
+		top: 10px;
+		right: 10px;
+	}
+
+	.good-v__foot2{
+		display: block;
+		padding: 20px 13px;
+	}
+
+	.good-short .good-title__code{
+		padding-top: 5px;
+	}
+
+	.good-short .pict-box{
+		height: 95px;
+	}
+
+	.good-v__foot3{
+		padding-bottom: 25px;
+	}
+
+	.good-v__foot{
+		padding: 5px 13px 10px;
+	}
+
+	.good-short__name{
+		 overflow: hidden;
+		 height: 38px;
+		 padding-right: 10px
 	}
 }
 
@@ -98,15 +218,50 @@
 /* =====================940======================= */
 
 @media screen and (max-width: 1170px){
+	.comparing{
+		overflow: auto;
 
+		&__area{
+			overflow-x: visible;
+		}
+
+		&__col-f{
+			width: 320px;
+		}
+
+		&__col{
+			width: 320px;
+		}
+	}
 }
 
 /* =============================744======================= */
 @media screen and (max-width: 959px){
+	.comparing{
+		
+		&__col-f{
+			width: 250px;
+		}
 
+		&__col{
+			width: 310px;
+		}
+
+		&__diff{
+			margin-left: 10px;
+		}
+
+		&__param{
+			height: 51px;
+		}
+	}
+
+	.comp-add{
+		padding: 0 20px;
+	}
 }
 
 /* =============================320======================= */
 @media screen and (max-width: 743px){
-
+	
 }

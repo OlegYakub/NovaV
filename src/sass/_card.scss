@@ -56,11 +56,17 @@
 		display: -webkit-flex;
 		display: flex;
 		
-
-
 		&:hover{
 			z-index: 5;
 			box-shadow: 0px 4px 20px 0px rgba(0, 0, 2, 0.25);
+		}
+
+		.add__mob{
+			display: none;
+		}
+
+		.add__desc{
+			display: inline;
 		}
 	}
 
@@ -1148,6 +1154,10 @@
 				}
 			}
 
+			.add__mob{
+				display: block;
+			}
+
 			.pict-box{
 				float: none;
 				width: 100%;
@@ -1169,8 +1179,17 @@
 			
 		}
 
+		&__p{
+			padding: 0 10px;
+		}
+
 		&__link{
 			font-size: 14px;
+		}
+
+		&__video{
+			padding: 0 10px;
+			box-sizing: border-box;
 		}
 
 		&__nav{
