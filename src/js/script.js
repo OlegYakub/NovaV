@@ -524,6 +524,25 @@ $('.c-reviews__item').each(function(i, el){
 
 });
 
+$('.b-message').each(function(i, el){
+  var replyBtn = $(el).find(".c-reviews__link");
+  var replyDrop = $(el).find(".reply");
+  var replyClose = $(el).find(".reply__cancel");
+
+  //ответить на коментарий
+  $(replyBtn).click(function(e){
+    e.preventDefault();
+    $(replyDrop).animate({ height: "toggle"}, 500);
+    $(this).toggleClass("c-reviews__link--active");
+  });
+
+  $(replyClose).click(function(e){
+    e.preventDefault();
+    $(replyDrop).animate({ height: "hide"}, 500);
+    $(replyBtn).removeClass("c-reviews__link--active");
+  });
+});
+
 /*=========================filter range==============*/
 
   $(".filter__range").slider({
@@ -766,7 +785,7 @@ if(windowWidth < 1170){
 
 
   $('.filter__wrap').slimScroll({
-          height: windowHeight
+    height: "100vh"
   });
 
   document.addEventListener('touchstart', handleTouchStart, false);        

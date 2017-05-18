@@ -620,6 +620,10 @@
 		box-sizing: border-box;
 		margin-top: 5px;
 
+		&:focus{
+				border-color: $bluestyle;
+			}
+
 	}
 
 	&__tarea{
@@ -651,6 +655,9 @@
 			width: 100%;
 			box-sizing: border-box;
 			font-size: 12px;
+			&:focus{
+				border-color: $bluestyle;
+			}
 			
 			&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
 			  color: #b5b5b5;;

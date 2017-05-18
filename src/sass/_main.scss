@@ -967,15 +967,14 @@
 		padding-right: 30px;
 		width: 370px;
 		text-align: center;
-
+		float: left;
 		img{
 			-min-width: 100%;
 		}
 	}
 
 	&__cont{
-		display: -webkit-flex;
-		display: flex;
+		
 	}
 
 	&__right{
@@ -984,7 +983,7 @@
 
 	&__list{
 		color: #74a3c1;
-		padding-left: 20px;
+		padding-left: 430px;
 		list-style-type: disc ;
 		padding-bottom: 20px;
 
@@ -1476,6 +1475,12 @@
 			padding-bottom: 0;
 		}
 
+		&__item{
+			padding-left: 10px;
+			padding-right: 10px;
+			border-left: none !important;
+		}
+
 		.title{
 			padding-top: 55px;
 			padding-bottom: 35px;
@@ -1492,6 +1497,10 @@
 
 		.title{
 			padding-bottom: 10px;
+		}
+
+		&__list{
+			padding-left: 25px;
 		}
 
 		&__pict{

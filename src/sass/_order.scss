@@ -194,7 +194,7 @@
 	&__right{
 		padding-top: 5px;
 		float: left;
-		width: 396px;
+		width: 393px;
 		box-sizing: border-box;
 		padding-left: 20px;
 		padding-right: 15px;
@@ -478,7 +478,7 @@
 		padding-top: 5px;
 		padding-left: 15px;
 		&--m{
-				display: block;
+				display: none;
 		}
 	}
 
@@ -856,6 +856,12 @@
 			width: 100%;
 			padding-left: 0;
 			padding-top: 15px;
+			display: none;
+			&--m{
+				display: block;
+				padding-bottom: 20px;
+				padding-top: 0;
+			}
 		}
 	}
 
@@ -895,7 +901,7 @@
 		}
 		
 		&__content{
-
+			
 		}
 	}
 }
@@ -959,6 +965,7 @@
 
 		&__content{
 			padding-right: 15px;
+
 		}
 
 	}
