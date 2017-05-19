@@ -824,12 +824,11 @@ $('.filter__click').click(function(){
   $('.filter__aside').removeClass('filter__aside--show');
 });
 
-
-
+/*=====================================================*/
+/*==========================handleTouch functions===================*/
+/*=====================================================*/
 
 if(windowWidth < 1170){
-
-
 
   $('.filter__wrap').slimScroll({
     height: "100vh"
@@ -914,7 +913,7 @@ if(windowWidth < 1170){
               counter = 4;
             }  
             moveReasonMob(counter);
-          }else{
+          }else if(windowWidth < 960){
             moveReasonBoxIn();
           }
 
@@ -929,7 +928,7 @@ if(windowWidth < 1170){
               counter = 0;
             }  
             moveReasonMob(counter);
-          }else{
+          }else if(windowWidth < 960){
             moveReasonBoxOut();
           }
 
@@ -949,6 +948,7 @@ if(windowWidth < 1170){
 
 }
 
+/*==========================end of handleTouch functions======*/
 /*===============slimScroll=====================*/
 
 $('#category-drop').slimScroll({
