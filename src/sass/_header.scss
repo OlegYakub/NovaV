@@ -658,74 +658,6 @@ header{
 }
 
 
-/* .jq-selectbox{
-
-	&__select{
-		background-image: none;
-		border: none;
-		box-shadow: none;
-		height: 55px;
-		padding-right: 35px;
-
-		&-text{
-			overflow: visible;
-			white-space: normal;
-			width: 73px !important;
-			height: 100%;
-			line-height: 56px;
-			text-transform: uppercase;
-			font-weight: bold;
-			font-size: 12px;
-			color: #5f5f5f;
-			font-family: "ProximaNovaBlack";
-		}
-
-		&:hover{
-			background-image: none;
-		}
-
-		&:active{
-			box-shadow: none;
-			background-color: transparent;
-		}
-	}
-
-	&__trigger{
-		border: none;
-		width: 45px;
-	}
-
-	&__trigger-arrow{
-		display: none;
-	}
-
-	&__trigger{
-		background-image: url("../img/list-arr.png");
-		background-position: center;
-		background-repeat: no-repeat;
-	}
-
-	&.focused{
-
-
-		.jq-selectbox__select{
-			border: none;
-		}
-	}
-
-	li{
-		color: #5f5f5f;
-		&:hover{
-			background-color: transparent;
-			color: #5f5f5f;
-		}
-
-		&.selected{
-			opacity: 0.8;
-		}
-	}
-} */
-
 .phones{
 	display: none;
 	position: absolute;
@@ -1231,7 +1163,7 @@ header{
 			margin-bottom: 50px;
 
 			&--nonmb{
-				margin-bottom: 0;
+				margin-bottom: 20px;
 			}
 		}
 

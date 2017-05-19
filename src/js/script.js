@@ -230,7 +230,51 @@ $('.o-submit__promo-link').click(function(e){
   $('.o-submit__inp').toggle();
 })
 
+/*==========================================*/
+/*====================POPUP==================*/
+/*==========================================*/
 
+
+$('.m-reasons__banner a').click(function(e){
+  e.preventDefault();
+  $('.overlay__pop').show();
+  $('.btn-popup').show();
+
+});
+
+$('.btn-popup__btn').click(function(e){
+  e.preventDefault();
+   $('.overlay__pop').hide();
+   $('.btn-popup').hide();
+});
+
+/*============================================*/
+/*=================basketInput================*/
+
+function countgood() {
+  var minus = $('.step1__prev');
+  var plus = $('.step1__next');
+  var value = $('.step1__input input').val();
+  //console.log(value + ' - input value');
+
+  $(plus).click(function(){
+    value = +value + 1;
+    $('.step1__input input').val(value);
+  });
+
+  $(minus).click(function(){
+    value = +value - 1;
+
+    if(value < 0){
+      value = 0;
+    }else{
+      $('.step1__input input').val(value);
+    }
+    
+  });
+}
+
+countgood();
 
 /*============================================*/
 /*====================Header==================*/
@@ -339,6 +383,7 @@ if(windowWidth > 744){
 
 $('#water-for').click(function(e){
   e.preventDefault();
+  /*$('.header__bot').toggleClass('header__bot--open');*/
   $('#water-for-list').toggle();
   $('#drink-water').hide();
   $('#prom-water').hide();
@@ -351,6 +396,7 @@ $('#water-for').click(function(e){
 
 $('#water-type').click(function(e){
   e.preventDefault();
+  /*$('.header__bot').toggleClass('header__bot--open');*/
   $('#water-type-list').toggle();
   
   if(windowWidth < 960){
@@ -429,6 +475,7 @@ if(windowWidth < 1170){
 
   $('.header__cartr').click(function(e){
     e.preventDefault();
+    /*$('.header__bot').removeClass('header__bot--open');*/
     $('#water-for-list').hide();
     $('#drink-water').hide();
     $('#prom-water').hide();
@@ -688,8 +735,8 @@ $('.b-aside__close, .overlay').click(function(e){
 
 var compareMargin = (windowWidth - $('.comparing__title').width())/2;
 
-console.log($('.comparing__title').width());
-console.log(compareMargin);
+//console.log($('.comparing__title').width());
+//console.log(compareMargin);
 $('.comparing').css("marginLeft", compareMargin);
 if(windowWidth > 1170){
 

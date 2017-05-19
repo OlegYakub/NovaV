@@ -538,6 +538,7 @@ input, textarea{
 	background-color: #000;
 	opacity: 0.5;
 	z-index: 6;
+
 }
 
 .burger{
@@ -559,8 +560,59 @@ input, textarea{
 	}
 }
 
+.btn-popup{
+	display: none;
+	background-color: #FFF;
+	border-radius: 4px;
+	position: fixed;
+	width: 40%;
+	left: 30%;
+	top: 20%;
+	opacity: 1;
+	z-index: 7;
+	padding: 35px 0;
+	text-align: center;
+	&__title{
+		padding-bottom: 15px;
+		font-size: 18px;
+		font-family: "ProximaNovaBold";
+	}
 
+	&__text{
+		font-size: 16px;
+		padding:  0 20px;
+		padding-bottom: 15px;
 
+	}
+
+	&__btn{
+		display: block;
+		margin: 0 auto;
+		width: 170px;
+		padding: 9px 0;
+	}
+}
+
+.done-popup{
+	display: none;
+	background-color: #FFF;
+	border-radius: 4px;
+	border: $bd2;
+	position: fixed;
+	width: 40%;
+	left: 30%;
+	top: 30%;
+	z-index: 7;
+	padding: 30px 0 40px;
+	text-align: center;
+	&__text{
+		padding: 0 20px;
+		font-family: "ProximaNovaBold";
+		font-size: 18px;
+		padding-bottom: 20px;
+	}
+
+}
 
 /* ============================================================== */
 /* ==============================RESPONSIVE============= */
@@ -588,9 +640,6 @@ input, textarea{
 		}
 	}
 
-	
-
-	
 }
 /* ==================================744========================== */
 
@@ -616,7 +665,15 @@ input, textarea{
 		}
 	}
 
-	
+	.btn-popup{
+		width: 60%;
+		left: 20%;
+	}
+
+	.done-popup{
+		width: 60%;
+		left: 20%;
+	}
 
 }	
 
@@ -711,7 +768,14 @@ input, textarea{
 		}
 	}
 
-	
+	.btn-popup{
+		width: 90%;
+		left: 5%;
+	}
 
-	
+	.done-popup{
+		width: 90%;
+		left: 5%;
+	}
+
 }	
