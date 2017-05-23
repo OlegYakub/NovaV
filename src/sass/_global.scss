@@ -37,6 +37,36 @@ input, textarea{
 	border-radius: $inputradius;
 }
 
+h1{
+	font-weight: 100;
+	text-transform: uppercase;
+  font-size: 30px;
+  color: #5f5f5f;
+  font-family: "ProximaNovaLight";
+}
+
+h2{
+	font-weight: 100;
+	font-family: "ProximaNovaLight";
+	color: $bluestyle;
+	font-size: 18px;
+	padding-bottom: 15px;
+}
+
+h3{
+	font-family: "ProximaNovaBold";
+	font-size: 16px;
+	padding-bottom: 15px;
+}
+
+h4{
+	font-weight: 100;
+	color: $bluestyle;
+	font-size: 16px;
+	font-family: "ProximaNovaLight";
+	padding-bottom: 15px;
+}
+
 .overflowHd{
 	overflow: hidden;
 }
@@ -693,6 +723,26 @@ input, textarea{
 	html, body{
 		font-size: $primary-fz-mob;
 		line-height: $primary-l-heigth-mob;
+	}
+
+	h1{
+	  font-size: 24px;
+	}
+
+	h2{
+		font-size: 16px;
+		padding-bottom: 10px;
+	}
+
+	h3{
+		font-size: 14px;
+		padding-bottom: 10px;
+	}
+
+	h4{
+
+		font-size: 14px;
+		padding-bottom: 10px;
 	}
 
 	.btn{

@@ -721,12 +721,8 @@
 	}
 
 
-	&__img{
-		height: 290px;
+	&__img{	
 		background-color: #FFF;
-		margin-right: 30px;
-		//padding-right: 0!important;
-		border: $bd2;
 		display: -webkit-flex;
 		display: flex;
 		-webkit-align-items: center;
@@ -747,11 +743,450 @@
 }
 
 .onebrand{
-	margin-top: -35px;
+	/* margin-top: -35px; */
 	.brands__img{
+		height: 290px;
 		padding-right: 0;
+		margin-right: 30px;
+		border: $bd2;
 	}
 }
+
+/* =======================onenew================= */
+.onenew{
+	margin-top: 20px;
+	border: $bd;
+	background-color: #FFF;
+	margin-bottom: 60px;
+	&__title{
+		font-size: 14px;
+		font-family: "ProximaNovaBold";
+		padding: 15px 25px;
+		border-bottom: $bd;
+	}
+
+	&__date{
+		font-size: 12px;
+		color: #9d9d9d;
+		padding: 8px 25px 20px;
+	}
+
+	&__back{
+		padding-bottom: 25px;
+		padding-left: 25px;
+
+		a{
+			font-family: "ProximaNovaBold";
+			color: $bluestyle;
+			text-transform: uppercase;
+
+			&:hover{
+				opacity: 0.7;
+			}
+		}
+
+		img{
+			transform: rotate(180deg);
+			position: relative;
+			top: 3px;
+			padding-left: 7px;
+		}
+	}
+
+	&__text{
+		color: #767676;
+		padding: 0 25px;
+		padding-bottom: 25px;
+	}
+
+	&__pict{
+		float: left;
+		width: 485px;
+		//height: 400px;
+		overflow: hidden;
+		margin-right: 25px;
+		margin-bottom: 25px;
+
+		img{
+			width: 100%;
+		}
+	}
+}
+
+/* =======================contact================= */
+.contact{
+	margin-top: 50px;
+	margin-bottom: 50px;
+	
+	&:after{
+			content: "";
+			clear: both;
+			display: block;
+	}
+
+	&__left{
+		width: 380px;
+		float: left;
+	}
+
+	&__map{
+		width: 760px;
+		height: 450px;
+	}
+
+	&__right{
+		float: right;
+	}
+
+	&__title{
+		font-size: 18px;
+		color: $bluestyle;
+		padding-bottom: 15px;
+	}
+
+	&__item{
+		font-size: 14px;
+		vertical-align: top;
+		padding-bottom: 25px;
+	}
+
+	&__icon{
+		display: inline-block;
+		padding-right: 10px;
+		vertical-align: top;
+		padding-top: 4px;
+		width: 20px;
+	}
+
+	&__text{
+		display: inline-block;
+	}
+
+	&__addres{
+		width: 300px;
+	}
+
+	&__call{
+		width: 170px;
+	}
+
+	&__title2{
+		padding-bottom: 7px;
+		font-size: 14px;
+		font-family: "ProximaNovaBold";
+	}
+	&__time{
+		padding-left: 30px;
+		padding-bottom: 20px;
+		p{
+			padding-bottom: 4px;
+			font-size: 14px;
+		}
+	}
+
+	&__link{
+		font-size: 14px;
+		padding-bottom: 5px;
+	}
+
+	&__mail-ic{
+		position: relative;
+		left: -2px;
+	}
+}
+
+/* =======================categ================= */
+.categ{
+	margin-top: 50px;
+	margin-bottom: 50px;
+	&__body{
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-wrap: wrap;
+		-moz-flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		-o-flex-wrap: wrap;
+		flex-wrap: wrap;
+	}
+
+	&__item{
+		display: block;
+		text-align: center;
+		width: 33.33%;
+		background-color: #FFF;
+		border: $bd2;
+		box-sizing: border-box;
+		height: 430px;
+		position: relative;
+
+		&:hover{
+			box-shadow: 0px 4px 20px 0px rgba(0, 0, 2, 0.25);
+			z-index: 4;
+		}
+	}
+
+	&__title{
+		font-size: 18px;
+		padding: 0 40px;
+		font-family: "ProximaNovaBold";
+	}
+
+	&__pict{
+		text-align: center;
+		margin-top: 30px;
+		padding: 0 20px;
+		img{
+	    max-width: 100%;
+	    max-height: 100%;
+	    width: auto;
+	    height: auto;
+		}
+	}
+
+	&__text{
+		font-size: 14px;
+		padding: 10px 40px 0;
+	}
+
+	&__name{
+		width: 100%;
+		position: absolute;
+		left: 0;
+		bottom: 40px;
+	}
+
+	&__ext{
+		padding-top: 25px;
+		margin-bottom: 50px;
+		.categ__item{
+			width: 50%;
+		}
+	}
+
+	&__slider{
+		.maker-sl__item{
+			display: -webkit-flex;
+			display: flex;
+			-webkit-align-items: center;
+			align-items: center;
+			-webkit-box-pack: justify;
+			-webkit-justify-content: center;
+			justify-content: center;
+		}
+	}
+}
+
+/* =======================onestock================= */
+.onestock{
+	margin-top: 25px;
+	margin-bottom: 60px;
+	background-color: #FFF;
+	border: $bd2;
+	&__pict{
+		height: 400px;
+		overflow: hidden;
+		position: relative;
+
+		img{
+			width: 100%;
+
+		}
+	}
+
+	&__info{
+		display: none;
+	}
+
+	&__top{
+		position: absolute;
+		bottom: 35px;
+		color: #fff;
+		padding: 0 60px;
+		line-height: 1.1;
+		font-size: 32px;
+	}
+
+	&__name{
+		font-family: "ProximaNovaBold";
+	}
+
+	&__subname{
+		//margin-top: -10px;
+	}
+}
+
+
+/* =======================stock-list================= */
+.stock-list{
+	padding-top: 45px;
+	&:after {
+    content: "";
+    clear: both;
+    display: block;
+	}
+
+	&__card{
+		float: left;
+    width: 50%;
+    background-color: #FFF;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+    height: 266px;
+    border: 1px solid #e8e8e8;
+    font-family: "ProximaNovaLight";
+	}
+
+	&__paginator{
+		margin-bottom: 50px;
+	}
+}
+
+/* =======================text================= */
+.text{
+	p{
+		font-size: 14px;
+		line-height: 1.286;
+		margin-bottom: 20px;
+	}
+
+	h1{
+		margin-bottom: 30px;
+	}
+
+	ul{
+		list-style-type: disc;
+		font-size: 14px;
+		padding-left: 20px;
+		margin-bottom: 20px;
+		li{
+			color: $bluestyle;
+			padding-bottom: 5px;
+			span{
+				color: $primary-color;
+			}
+		}
+	}
+
+	h1{
+		padding-bottom: 30px;
+	}
+
+	ol{
+		list-style-type: decimal ;
+		font-size: 14px;
+		padding-left: 20px;
+		margin-bottom: 20px;
+		li{
+			color: $bluestyle;
+			padding-bottom: 5px;
+			span{
+				color: $primary-color;
+			}
+		}
+	}
+
+	table{
+		width: 100%;
+		text-align: left;
+		font-size: 14px;
+		border-spacing: 0;
+		border-collapse: collapse;
+		box-sizing: border-box;
+	}
+
+	thead{
+		background-color: #FFF;
+		color: $bluestyle;
+
+		font-family: "ProximaNovaBold";
+	}
+
+	tbody{
+		font-family: "ProximaNovaLight";
+		color: #555555;
+	}
+
+	th, td{
+		padding: 11px 10px 14px;
+		border: 1px solid #e8e8e8;
+	}
+
+	&__pictleft{
+		margin-right: 30px;
+		//margin-top: 30px;
+		margin-bottom: 30px;
+		float: left;
+		width: 370px;
+
+		img{
+			width: 100%;
+		}
+	}
+
+	&__pictright{
+		width: 270px;
+		float: right;
+		margin-left: 30px;
+		//margin-top: 30px;
+		margin-bottom: 30px;
+
+		img{
+			width: 100%;
+		}
+	}
+
+	&__quote{
+		margin-left: 30px;
+		margin-bottom: 20px;
+		line-height: 1.286;
+		font-style: italic;
+    position: relative;
+		font-size: 14px;
+    &:before{
+    	content: '"';
+	    font-size: 30px;
+	    color: #7fabc6;
+	    position: absolute;
+	    top: -10px;
+	    left: -15px;
+    }
+	}
+
+	&__clearf{
+		margin-bottom: 20px;
+		&:after{
+			content: "";
+			clear: both;
+			display: block;
+		}
+	}
+
+	&__half{
+		float: left;
+		width: 50%;
+		font-size: 14px;
+		line-height: 1.286;
+		box-sizing: border-box;
+		padding-right: 20px;
+	}
+
+	&__table{
+		margin-bottom: 50px;
+	}
+
+	&__tabtitle{
+		font-size: 16px;
+		font-family: "ProximaNovaBold";
+		margin-bottom: 25px;
+		color: #9a9a9a;
+	}
+
+	
+
+
+}
+
 
 /* ============================================================== */
 /* ==============================RESPONSIVE============= */
@@ -878,7 +1313,54 @@
 		
 	}
 
+	/* =======================onenew================= */
 
+	.onenew{
+		&__pict{
+			width: 370px;
+		}
+	}
+
+	/* =======================categ================= */
+	.categ{
+		&__item{
+			width: 50%;
+		}
+	}
+
+	/* =======================contact================= */
+	.contact{
+		
+
+		&__left{
+			width: 320px;
+		}
+
+		&__map{
+			width: 600px;
+		}
+
+		&__addres{
+			width: 250px;
+		}
+	}
+
+	/* =======================onestock================= */
+	.onestock{
+		&__top{
+			font-size: 30px;
+			padding: 0px 50px;
+		}
+	}
+
+	/* =======================stock-list================= */
+	.stock-list{
+
+		&__card{
+			float: none;
+    	width: 100%;
+		}
+	}
 
 
 }
@@ -1020,6 +1502,27 @@
 
 		.onebrand__list{
 			padding-left: 355px;
+		}
+	}
+
+	/* =======================onenew================= */
+
+	.onenew{
+		&__pict{
+			width: 280px;
+		}
+	}
+
+	/* =======================contact================= */
+	.contact{
+		
+
+		&__left{
+			width: 310px;
+		}
+
+		&__map{
+			width: 400px;
 		}
 	}
 
@@ -1408,7 +1911,7 @@
 	}
 
 	.onebrand{
-		margin-top: 0;
+		margin-top: 10px;
 		padding-top: 10px;
 		border-top: $bd2; 
 		background-color: #FFF !important;
@@ -1429,6 +1932,216 @@
 
 		.onebrand__list{
 			padding-left: 25px;
+		}
+	}
+
+	/* =======================onenew================= */
+
+	.onenew{
+		margin-top: 0;
+		margin-bottom: 30px;
+		&__pict{
+			float: none;
+			width: 100%;
+			margin-bottom: 0;
+		}
+
+		&__title{
+			padding: 15px 10px 10px;
+			border-bottom: none;
+		}
+
+		&__date{
+			padding: 0px 10px 10px;
+			border-bottom: $bd;
+		}
+
+		&__text{
+			padding: 0 10px;
+			padding-top: 10px;
+		}
+
+		&__back{
+			padding: 20px 10px 25px;
+		}
+	}
+
+	/* =======================contact================= */
+	.contact{
+		margin-top: 15px;
+
+		&__left{
+			width: 100%;
+			float: none;
+			padding: 0 20px;
+			padding-top: 30px;
+			box-sizing: border-box;
+		}
+
+		&__right{
+
+			width: 100%;
+			float: none;
+		}
+
+		&__map{
+			width: 100%;
+			height: 240px;
+			border-bottom: $bd;
+			border-top: $bd;
+		}
+	}
+
+	/* =======================categ================= */
+	.categ{
+		margin-top: 25px;
+		margin-bottom: 10px;
+		&__text{
+			display: none;
+		}
+
+		&__item{
+			height: 170px;
+		}
+
+		&__name{
+			//position: static;
+			bottom: 12px;
+			height: 38px;
+		}
+
+		&__pict{
+			margin: 0 auto;
+			margin-top: 10px;
+			max-width: 130px;
+			height: 100px;
+		}
+
+		&__title{
+			padding: 0 10px;
+			font-size: 14px;
+		}
+
+		&__ext{
+			display: block;
+			margin-bottom: 20px;
+			.categ__item{
+				width: 100%;
+			}
+		}
+	}
+
+	/* =======================onestock================= */
+	.onestock{
+		margin-top: 0;
+		margin-bottom: 30px;
+		&__pict{
+			height: auto;
+			border-bottom: $bd;
+		}
+
+		&__top{
+			display: none;
+		}
+
+		&__info{
+			display: block;
+		}
+
+		&__date{
+			display: inline-block;
+			background-color: #7fabc6;
+			padding: 7px 13px;
+			color: #fff;
+			font-size: 12px;
+			margin-left: 25px;
+			z-index: 3;
+			position: relative;
+			top: -4px;
+		}
+
+		&__subdate{
+			font-size: 12px;
+			margin-left: 20px;
+			color: #898989;
+			display: inline-block;
+		}
+
+		.onenew__date{
+			display: none;
+		}
+	}
+
+	/* =======================stock-list================= */
+	.stock-list{
+		padding: 0 10px;
+		padding-top: 20px;
+
+		&__card{
+			height: auto;
+		}
+
+		&__paginator{
+			margin-bottom: 25px;
+		}
+
+		.shares__img{
+			height: auto;
+		}
+
+		.shares__cont{
+			height: auto;
+		}
+
+		.shares__desc{
+			height: auto;
+		}
+	}
+
+	/* =======================text================= */
+	.text{
+		
+		table{
+			font-size: 12px;
+		}
+
+		th, td{
+			padding: 9px 10px;
+			border: 1px solid #e8e8e8;
+		}
+
+		h1, h2, h3, h4{
+			padding: 0 10px;
+			padding-bottom: 20px;
+		}
+
+		p{
+			padding: 0 10px;
+			margin-bottom: 14px;
+		}
+
+		ul{
+			padding: 0 10px;
+			padding-left: 30px;
+			margin-bottom: 14px;
+		}
+
+		img{
+			padding: 0 10px;
+			padding-bottom: 14px;
+			box-sizing: border-box;
+		}
+
+		&__pictleft{
+			float: none;
+			margin: 0;
+			width: 100%;
+		}
+
+		&__pictright{
+			float: none;
+			margin: 0;
+			width: 100%;
 		}
 	}
 }
