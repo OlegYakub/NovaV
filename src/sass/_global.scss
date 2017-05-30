@@ -446,7 +446,7 @@ h4{
 	left: 20px;
 
 	&--sale{
-		display: none;
+		//display: none;
 		background-color: #d24a43;
 	}
 
@@ -461,9 +461,18 @@ h4{
 	color: #7c7c7c;
 	right: 20px;
 	font-size: 12px;
+	img{
+		position: relative;
+		top: 4px;
+	}
+
 	&--ok{
-		display: none;
+		//display: none;
 		color: $bluestyle;
+		top: 0;
+
+
+
 	}
 
 	&--no{
@@ -474,10 +483,7 @@ h4{
 		}
 	}
 
-	img{
-		position: relative;
-		top: 3px;
-	}
+	
 }
 
 .good-short{

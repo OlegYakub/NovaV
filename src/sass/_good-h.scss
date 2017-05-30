@@ -56,6 +56,7 @@
 		position: relative;
 		div.good-status{
 			display: none;
+			top: 5px;
 		}
 	}
 
@@ -86,7 +87,7 @@
 		justify-content: flex-end;
 
 		.good-status--ok{
-			top: 2;
+			top: 5px;
 		}
 	}
 
@@ -184,7 +185,7 @@
 	}
 	
 	div.good-status{
-			display: none;
+			//display: none;
 
 			&--no{
 				top: 12px;
@@ -198,6 +199,16 @@
 	.good-h__right{
 		display: block;
 		width: 631px;
+	}
+
+	.good-h__head{
+		.good-status{
+			display: block;
+
+			&--ok{
+				top: 5px	;
+			}
+		}
 	}
 
 	.good-h__box2{

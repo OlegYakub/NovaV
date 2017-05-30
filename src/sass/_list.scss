@@ -43,6 +43,13 @@
 		position: relative;
 		.list__switch{
 			padding-right: 12px;
+
+			&--active{
+				//border-color: #e8e8e8 !important;
+				img{
+					transform: rotate(180deg) translateX(-3px);
+				}
+			}
 		}
 	}
 
@@ -54,12 +61,11 @@
 			transition: 0.3s;
 		}
 
-		&--active{
-			//border-color: #e8e8e8 !important;
-			img{
-				transform: rotate(180deg) translateX(-3px);
-			}
+		&Active{
+			color: $bluestyle;
 		}
+
+		
 
 		&--pdl{
 			padding-left: 68px;

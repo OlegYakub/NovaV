@@ -5,7 +5,7 @@
 lessFiles = ['./src/less/*.less'];
 sassFiles = ['./src/sass/*.scss', './node_modules/slick-carousel/slick/*.scss'];
 cssFiles = ['./src/css/*.css', './node_modules/jquery-modal/jquery.modal.min.css'];
-jsFiles = ['./node_modules/jquery/dist/jquery.min.js', './node_modules/slick-carousel/slick/slick.min.js', './node_modules/jquery-modal/jquery.modal.min.js', './src/js/*.js'];
+jsFiles = ['./node_modules/jquery/dist/jquery.min.js', './node_modules/vue/dist/vue.js',  './node_modules/slick-carousel/slick/slick.min.js', './node_modules/jquery-modal/jquery.modal.min.js', './src/js/*.js'];
 pugFiles = ['./src/*.pug'];
 htmlFiles = ['./src/*.html'];
 imgFiles = ['./src/img/*'];
@@ -82,7 +82,7 @@ if (cssFiles.length) {
 if (jsFiles.length) {
   gulp.task('js', () =>
     gulp.src(jsFiles)
-    .pipe(babel({ presets: ['es2015'] }))
+    /*.pipe(babel({ presets: ['es2015'] }))*/
     .pipe(gulpif(MINIFY, uglify()))
     .pipe(gulp.dest('./build/js/'))
     .pipe(reload({stream: true}))
