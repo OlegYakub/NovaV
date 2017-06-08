@@ -1,3 +1,5 @@
+"use strict"
+
 var windowWidth = $(window).width();
 var windowHeight = $(window).height();
 /*==============slick=============*/
@@ -958,6 +960,6 @@ $('.trash-modal__list').slimScroll({
         height: '345px'
 });
 
-/*================modal=====================*/
+/*=====================================*/
 	
 });

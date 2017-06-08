@@ -250,6 +250,10 @@
 	.good-status{
 		top: auto;
 		bottom: 20px;
+
+		&--no{
+			display: none;
+		}
 	}
 
 	.btn--red{
@@ -294,6 +298,9 @@
 			width: 300px;
 			height: 250px;
 			margin: 0 auto;
+			img{
+				margin: 0 auto;
+			}
 		}
 	}
 

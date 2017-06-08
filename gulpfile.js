@@ -5,7 +5,9 @@
 lessFiles = ['./src/less/*.less'];
 sassFiles = ['./src/sass/*.scss', './node_modules/slick-carousel/slick/*.scss'];
 cssFiles = ['./src/css/*.css', './node_modules/jquery-modal/jquery.modal.min.css'];
-jsFiles = ['./node_modules/jquery/dist/jquery.min.js', './node_modules/vue/dist/vue.js',  './node_modules/slick-carousel/slick/slick.min.js', './node_modules/jquery-modal/jquery.modal.min.js', './src/js/*.js'];
+jsFiles = ['./node_modules/jquery/dist/jquery.min.js', './node_modules/vue/dist/vue.js',  './node_modules/slick-carousel/slick/slick.min.js', './src/js/*.js'];
+browserifyFiles = ['./src/js/vue/app.js'];
+vueifyFiles = ['./src/js/vue/**/*.vue'];
 pugFiles = ['./src/*.pug'];
 htmlFiles = ['./src/*.html'];
 imgFiles = ['./src/img/*'];
@@ -23,6 +25,8 @@ const gulpif = require('gulp-if');
 const watch = require('gulp-watch');
 const clean = require('gulp-clean');
 const less = require('gulp-less');
+const vueify = require('gulp-vueify');
+const browserify = require('gulp-browserify');
 const sass = require('gulp-sass');
 const pug = require('gulp-pug');
 const babel = require('gulp-babel');
@@ -78,11 +82,34 @@ if (cssFiles.length) {
   );
 }
 
+/* build browserify */
+if (browserifyFiles.length) {
+  gulp.task('browserify', () =>
+    gulp.src(browserifyFiles)
+    .pipe(browserify({
+      insertGlobals : true, 
+      debug: true,
+      transform: 'vueify'
+     }))
+    .pipe(gulp.dest('./build/js'))
+    .pipe(reload({stream: true}))
+  );
+}
+
+/* build vueify */
+if (vueifyFiles.length) {
+  gulp.task('vueify', () =>
+    gulp.src(vueifyFiles)
+    .pipe(vueify())
+    .pipe(reload({stream: true}))
+  );
+}
+
 /* build js */
 if (jsFiles.length) {
   gulp.task('js', () =>
     gulp.src(jsFiles)
-    /*.pipe(babel({ presets: ['es2015'] }))*/
+    //.pipe(babel({ presets: ['es2015'] }))
     .pipe(gulpif(MINIFY, uglify()))
     .pipe(gulp.dest('./build/js/'))
     .pipe(reload({stream: true}))
@@ -139,6 +166,8 @@ gulp.task('build', ['clean'], () => {
   if (lessFiles.length) gulp.start('less'); // less build
   if (sassFiles.length) gulp.start('sass'); // sass build
   if (cssFiles.length) gulp.start('css'); // css build
+  if (browserifyFiles.length) gulp.start('browserify'); // browserify build
+  if (vueifyFiles.length) gulp.start('vueify'); // vueify build
   if (jsFiles.length) gulp.start('js'); // js build
   if (pugFiles.length) gulp.start('pug'); // pug build
   if (htmlFiles.length) gulp.start('html'); // html build
@@ -152,6 +181,8 @@ gulp.task('default', ['build'], () => {
   if (lessFiles.length) watch(lessFiles, () => gulp.start('less')); // less watcher
   if (sassFiles.length) watch(sassFiles, () => gulp.start('sass')); // sass watcher
   if (cssFiles.length) watch(cssFiles, () => gulp.start('css')); // css watcher
+  if (browserifyFiles.length) watch(browserifyFiles, () => gulp.start('browserify')); // browserify watcher
+  if (vueifyFiles.length) watch(vueifyFiles, () => gulp.start('browserify')); // vueify watcher
   if (jsFiles.length) watch(jsFiles, () => gulp.start('js')); // js watcher
   if (pugFiles.length) watch(pugFiles, () => gulp.start('pug')); // sass watcher
   if (htmlFiles.length) watch(htmlFiles, () => gulp.start('html')); // html watcher

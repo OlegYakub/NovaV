@@ -2016,42 +2016,7 @@
 			<aside class="filter__aside">
 				<div class="filter__wrap">
 					<div class="filter">
-						<div class="filter__box">
-							<p class="filter__title">
-								Вы выбрали
-							</p>
-							<ul class="filter__list2">
-								<li class="filter__chose">
-									<span class="filter__chosen">
-										<a href="" class="filter__delete">
-											<img src="img/close.svg" alt="">
-										</a>
-										Обратный осмос
-									</span>
-								</li>
-								<li class="filter__chose">
-									<span class="filter__chosen">
-										<a href="" class="filter__delete">
-											<img src="img/close.svg" alt="">
-										</a>
-										Мембранный
-									</span>
-								</li>
-								<li class="filter__chose">
-									<span class="filter__chosen">
-										<a href="" class="filter__delete">
-											<img src="img/close.svg" alt="">
-										</a>
-										Проточный
-									</span>
-								</li>
-							</ul>
-							<a href="#" class="filter__deleteall">
-								Очистить весь фильтр
-								<img src="img/clear-ic.png" alt="" class="filter__deleteall--img">
-								<img src="img/clear-ic-h.png" alt="" class="filter__deleteall--img-h">
-							</a>
-						</div>
+						<filter-chosen></filter-chosen>
 						<div class="filter__box">
 							<p class="filter__title">
 								Цена
@@ -2102,141 +2067,11 @@
 								
 							</div>
 						</div>
-						<div class="filter__box">
-							<a href="#" class="filter__title">
-								Производитель
-								<img src="img/list-arr.png" alt="">
-							</a>
-							<div class="filter__drop">
-								<ul class="filter__list">
-									<li class="filter__item">
-										<a href="#" class="filter__link">
-											Наша вода (Украина)
-											(<span class="filter__amount">7</span>)
-										</a>
-									</li>
-									<li class="filter__item">
-										<a href="#" class="filter__link  filter__link--active">
-											Наша вода (Украина)
-											(<span class="filter__amount">7</span>)
-										</a>
-									</li>
-								</ul>
-								<a href="" class="filter__more">
-									Показать все
-									<img src="img/list-arr.png" alt="">
-								</a>
-								
-							</div>
-						</div>
-						<div class="filter__box">
-							<a href="#" class="filter__title">
-								Производитель
-								<img src="img/list-arr.png" alt="">
-							</a>
-							<div class="filter__drop">
-								<ul class="filter__list">
-									<li class="filter__item">
-										<a href="#" class="filter__link">
-											Наша вода (Украина)
-											(<span class="filter__amount">7</span>)
-										</a>
-									</li>
-									<li class="filter__item">
-										<a href="#" class="filter__link  filter__link--active">
-											Наша вода (Украина)
-											(<span class="filter__amount">7</span>)
-										</a>
-									</li>
-								</ul>
-								<a href="" class="filter__more">
-									Показать все
-									<img src="img/list-arr.png" alt="">
-								</a>
-								
-							</div>
-						</div>
-						<div class="filter__box">
-							<a href="#" class="filter__title">
-								Производитель
-								<img src="img/list-arr.png" alt="">
-							</a>
-							<div class="filter__drop">
-								<ul class="filter__list">
-									<li class="filter__item">
-										<a href="#" class="filter__link">
-											Наша вода (Украина)
-											(<span class="filter__amount">7</span>)
-										</a>
-									</li>
-									<li class="filter__item">
-										<a href="#" class="filter__link  filter__link--active">
-											Наша вода (Украина)
-											(<span class="filter__amount">7</span>)
-										</a>
-									</li>
-								</ul>
-								<a href="" class="filter__more">
-									Показать все
-									<img src="img/list-arr.png" alt="">
-								</a>
-								
-							</div>
-						</div>
-						<div class="filter__box">
-							<a href="#" class="filter__title">
-								Производитель
-								<img src="img/list-arr.png" alt="">
-							</a>
-							<div class="filter__drop">
-								<ul class="filter__list">
-									<li class="filter__item">
-										<a href="#" class="filter__link">
-											Наша вода (Украина)
-											(<span class="filter__amount">7</span>)
-										</a>
-									</li>
-									<li class="filter__item">
-										<a href="#" class="filter__link  filter__link--active">
-											Наша вода (Украина)
-											(<span class="filter__amount">7</span>)
-										</a>
-									</li>
-								</ul>
-								<a href="" class="filter__more">
-									Показать все
-									<img src="img/list-arr.png" alt="">
-								</a>
-								
-							</div>
-						</div>
-						<div class="filter__box">
-							<a href="#" class="filter__title">
-								Производитель
-								<img src="img/list-arr.png" alt="">
-							</a>
-							<div class="filter__drop">
-								<ul class="filter__list">
-									<li class="filter__item">
-										<a href="#" class="filter__link">
-											Наша вода (Украина)
-											(<span class="filter__amount">7</span>)
-										</a>
-									</li>
-									<li class="filter__item">
-										<a href="#" class="filter__link  filter__link--active">
-											Наша вода (Украина)
-											(<span class="filter__amount">7</span>)
-										</a>
-									</li>
-								</ul>
-								<a href="" class="filter__more">
-									Показать все
-									<img src="img/list-arr.png" alt="">
-								</a>
-								
-							</div>
-						</div>
+						<filter-item 
+							v-for="(filterItem, index) in filters"  
+							v-bind:key="filterItem" 
+							v-bind:this-filter="filterItem"></filter-item>
+						
 					</div>
 					<div class="filter__click">
 						
@@ -2250,7 +2085,7 @@
 				<p class="list__desc">
 					Очистка воды происходит через мембрану пористостью 0,00001 мкм, что равно размеру молекулы воды. После примеси попадают в сток, а очищеная вода в накопительный бак.
 				</p>
-				<a href="#" class="list__btn-f">
+				<a href="javascript:void(0);" class="list__btn-f">
 					<span>Фильтры</span>
 				</a>
 				<div class="list__box">
@@ -2267,7 +2102,6 @@
 							<div class="list__option">
 								<a href="#">
 									от дорогих к дешевым
-
 								</a>
 								<a href="#">
 									от дорогих к дешевым
@@ -2278,7 +2112,6 @@
 								<a href="#">
 									от дорогих к дешевым
 								</a>
-								
 							</div>
 						</div>
 						<div class="list__view">
@@ -2644,10 +2477,7 @@
 					</div>
 				</div>	
 			</div>
-			
-		</section>
-
-		
+		</section>	
 	</div>
 	<footer>
 		<div class="container">
@@ -2809,17 +2639,18 @@
 	<div class="overlay  overlay__swipe">
 	
 	</div>
-	<script src="js/vue.js"></script>
-	<script src="js/vue-resource.js"></script>
+<!--	<script src="js/vue.js"></script>-->
+	<!--<script src="js/vue-resource.js"></script>-->
 	<script src="js/jquery.min.js"></script>
-	<script src="js/good-item.component.js"></script>
+	<script src="js/app.js"></script> 
+	<!--<script src="js/good-list.component.js"></script>-->
 	<script src="js/jquery-ui.js"></script> 
-	<script src="js/jquery.modal.min.js"></script>
 	<script src="js/jquery.simplePagination.js"></script>
 	<script src="js/starwars.js"></script>
 	<script src="js/jquery.formstyler.min.js"></script>
 	<script src="js/jquery.slimscroll.min.js"></script>
 	<script src="js/slick.min.js"></script>
 	<script src="js/script.js"></script>
+	
 </body>
 </html>

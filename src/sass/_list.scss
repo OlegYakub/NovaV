@@ -240,6 +240,14 @@
 		font-size: 14px;
 		img{
 			opacity: 0.6;
+			padding: 0 4px;
+			//transition: .3s;
+		}
+
+		&--active{
+			img{
+				transform: rotate(180deg);
+			}
 		}
 	}
 
@@ -251,7 +259,7 @@
 	}
 
 	&__link{
-		padding-bottom: 5px;
+		padding-bottom: 6px;
 		font-size: 14px;
 		display: block;
 		padding-left: 30px;
@@ -264,7 +272,7 @@
 			border-radius: 1px;
 			border: $bd;
 			left: 0;
-			top: 2px;
+			top: 0;
 		}
 
 		&--active{
@@ -275,6 +283,12 @@
 	}
 	&__list{
 		padding-top: 15px;
+
+		&--cut{
+			li:nth-child(n+6){
+				display: none;
+			}
+		}
 	}
 
 	&__list2{

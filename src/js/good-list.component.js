@@ -1,5 +1,111 @@
 
+Vue.use(VueResource);
 
+/*==========  Components  =========*/
+
+// filter-chosen
+var filterChosen = {
+	template: `
+	<div class="filter__box">
+		<p class="filter__title">
+			Вы выбрали
+		</p>
+		<ul class="filter__list2">
+			<li class="filter__chose">
+				<span class="filter__chosen">
+					<a href="" class="filter__delete">
+						<img src="img/close.svg" alt="">
+					</a>
+					Обратный осмос
+				</span>
+			</li>
+			<li class="filter__chose">
+				<span class="filter__chosen">
+					<a href="" class="filter__delete">
+						<img src="img/close.svg" alt="">
+					</a>
+					Мембранный
+				</span>
+			</li>
+			<li class="filter__chose">
+				<span class="filter__chosen">
+					<a href="" class="filter__delete">
+						<img src="img/close.svg" alt="">
+					</a>
+					Проточный
+				</span>
+			</li>
+		</ul>
+		<a href="#" class="filter__deleteall">
+			Очистить весь фильтр
+			<img src="img/clear-ic.png" alt="" class="filter__deleteall--img">
+			<img src="img/clear-ic-h.png" alt="" class="filter__deleteall--img-h">
+		</a>
+	</div>
+	`,
+	data: function() {
+		return {
+			
+		}
+	}
+}
+
+// filter-item
+var filterItem = {
+	props: ["thisFilter"],
+	template: `
+	<div class="filter__box">
+		<a href="#" class="filter__title">
+			{{thisFilter.name}}
+			<img src="img/list-arr.png" alt="">
+		</a>
+		<div class="filter__drop">
+			<ul class="filter__list"  v-bind:class="{'filter__list--cut' : listClasses.cut}">
+				<li class="filter__item"  v-for="item in thisFilter.options" >
+					<a href="javascript:void(0);" class="filter__link"  v-on:click="toChose(item.option)">
+						Наша вода ({{item.option}})
+						(<span class="filter__amount">7</span>)
+					</a>
+				</li>
+			</ul>
+			<a href="javascript:void(0);" class="filter__more" v-show="hideMoreBtn(thisFilter.options)"  v-on:click="showOptions">
+				Показать все
+				<img src="img/list-arr.png" alt="">
+			</a>	
+		</div>
+	</div>
+	`,
+	data: function() {
+		return {
+			ChosenFilters: [],
+			listClasses: {
+				cut: true
+			}
+		}
+	},
+
+	methods: {
+		showOptions: function(e) {
+			this.listClasses.cut = !this.listClasses.cut
+		},
+
+		hideMoreBtn: function(prop) {
+			if(prop.length > 5){
+				return true
+			}else{
+				return false
+			}
+		},
+
+		toChose: function(prop) {
+			console.log(prop);
+			this.$emit('toChose')
+		}
+	}
+
+}
+
+// filter-item-v
 Vue.component('good-item-v', {
 	props: ["thisGood"],
   template: `
@@ -134,9 +240,9 @@ Vue.component('good-item-v', {
 
 		</div>
   `
-
 })
 
+// filter-item-h
 Vue.component('good-item-h', {
 	props: ["thisGood"],
   template: `
@@ -335,11 +441,12 @@ Vue.component('good-item-h', {
 			</div>
 		</div>
   `
-
 })
 
+/*==========  end components  =========*/
+/*==========  data  =========*/
 
-
+//массив товаров
 var goods = [
 	{
 		photo: "img/good2.jpg",
@@ -390,6 +497,31 @@ var goods = [
 	}
 ]
 
+//массив фильтров
+var filters = [
+	{
+		name: "Страна",
+		options: [
+			{option: 'Украина'}, 
+			{option: "Польша"}, 
+			{option: "Германия"},
+			{option: "США"},
+			{option: "Новая Гвинея"},
+			{option: "Зимбабве"}
+		]
+	},
+	{
+		name: "Обьем",
+		options: [
+			{option: 'Стандартые'}, 
+			{option: "Увеличеные"}, 
+			{option: "Уменьшеные"}
+		]
+	}
+]
+
+/*==========  end data  =========*/
+/*==========  Main Vue Exemplar  =========*/
 
 // создание корневого экземпляра
 var ListComponent = new Vue({
@@ -397,6 +529,8 @@ var ListComponent = new Vue({
   data: {
   	goods: goods,
   	viewBox: true,
+  	filters: filters,
+  	
   },
 
   methods: {
@@ -404,17 +538,34 @@ var ListComponent = new Vue({
   		this.viewBox = !this.viewBox;
   		e.preventDefault();
   	},
+
+  	getGoods: function() {
+	    // GET /users
+	    this.$http.post('https://jsonplaceholder.typicode.com/posts').then( //запрос на url
+	      function (response) { // Success.
+	        /*this.goods = response.data;*/ //данные из базы вставляем в data Vue
+	        console.log(response)
+	      },
+	      function (response) { // Error.
+	        console.log('An error occurred.');
+	      }
+	    );
+	  },
+
+	  addFilter: function() {
+
+	  }
   },
 
-  ready: function() {
-      // GET /users
-      this.$http.get('/someUrl').then( //запрос на url
-        function (response) { // Success.
-          this.goods = response.data; //данные из базы вставляем в data Vue
-        },
-        function (response) { // Error.
-          console.log('An error occurred.');
-        }
-      );
-    },
+  created: function(){
+  	this.getGoods()
+  },
+
+  components: {
+  	"filter-chosen" : filterChosen,
+  	"filter-item" : filterItem
+  }
+
 });
+
+/*========== end Main Vue Exemplar  =========*/
