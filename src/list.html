@@ -2034,44 +2034,12 @@
 								</div>
 							</div>				
 						</div>
-						<div class="filter__box">
-							<a href="#" class="filter__title">
-								Производитель
-								<img src="img/list-arr.png" alt="">
-							</a>
-							<div class="filter__drop">
-								<ul class="filter__list">
-									<li class="filter__item">
-										<a href="#" class="filter__link">
-											Наша вода (Украина)
-											(<span class="filter__amount">7</span>)
-										</a>
-									</li>
-									<li class="filter__item">
-										<a href="#" class="filter__link  filter__link--active">
-											Nasza woda (Польша)
-											(<span class="filter__amount">7</span>)
-										</a>
-									</li>
-									<li class="filter__item">
-										<a href="#" class="filter__link  filter__link--active">
-											unser Wasser (Германия)
-											(<span class="filter__amount">7</span>)
-										</a>
-									</li>
-								</ul>
-								<a href="" class="filter__more">
-									Показать все
-									<img src="img/list-arr.png" alt="">
-								</a>
-								
-							</div>
-						</div>
 						<filter-item 
 							v-for="(filterItem, index) in filters"  
 							v-bind:key="filterItem" 
-							v-bind:this-filter="filterItem"></filter-item>
-						
+							v-bind:this-filter="filterItem"
+							
+							></filter-item>
 					</div>
 					<div class="filter__click">
 						

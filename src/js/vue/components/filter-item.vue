@@ -8,7 +8,7 @@
 			<ul class="filter__list"  v-bind:class="{'filter__list--cut' : cut}">
 				<li class="filter__item  "  v-for="item in thisFilter.options" >
 					<a href="javascript:void(0);" class="filter__link" v-on:click="toChose(item)" v-bind:class="{'filter__link--active': item.chosen}">
-						Наша вода ({{item.option}})
+						{{item.name}}
 						(<span class="filter__amount">7</span>)
 					</a>
 				</li>
@@ -32,7 +32,6 @@
         chosenFilters: [],
         cut: true,
         showMore: 'Показать все',
-        //choseCounter: 0,
       }
     },
 
@@ -55,23 +54,20 @@
       },
 
       toChose: function(prop) {
-        this.$emit('toChose');
         prop.chosen = !prop.chosen;
         
-        console.log(prop.option);
         if(prop.chosen == true){
-          this.chosenFilters.push(prop.option);
+          this.chosenFilters.push(prop);
         }else{
           for (var i = 0; i < this.chosenFilters.length; i++) {
-            if(prop.option == this.chosenFilters[i]){
+            if(prop == this.chosenFilters[i]){
               this.chosenFilters.splice(i, 1);
             }
           }
         }
-
-        console.log(prop.chosen);
-        console.log("Выбранные фильтры :" + this.chosenFilters);
-      }
-    }
+        this.$root.$emit('to-сhose', this.chosenFilters);
+        //console.log(this.chosenFilters)
+      },
+    },
 	}
 </script>

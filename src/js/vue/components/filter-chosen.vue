@@ -4,28 +4,12 @@
 			Вы выбрали
 		</p>
 		<ul class="filter__list2">
-			<li class="filter__chose">
+			<li class="filter__chose" v-for="item in chosenFilters">
 				<span class="filter__chosen">
 					<a href="" class="filter__delete">
 						<img src="img/close.svg" alt="">
 					</a>
-					Обратный осмос
-				</span>
-			</li>
-			<li class="filter__chose">
-				<span class="filter__chosen">
-					<a href="" class="filter__delete">
-						<img src="img/close.svg" alt="">
-					</a>
-					Мембранный
-				</span>
-			</li>
-			<li class="filter__chose">
-				<span class="filter__chosen">
-					<a href="" class="filter__delete">
-						<img src="img/close.svg" alt="">
-					</a>
-					Проточный
+					{{item.name}}
 				</span>
 			</li>
 		</ul>
@@ -41,8 +25,15 @@
   module.exports = {
     data: function() {
       return {
-        
+        chosenFilters: [],
       }
-    }
+    },
+
+		mounted: function() {
+			
+			this.$root.$on('to-сhose', function(prop){
+					
+			})
+		}
   }
 </script>

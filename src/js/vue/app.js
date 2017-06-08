@@ -70,22 +70,22 @@ var goods = [
 //массив фильтров
 var filters = [
 	{
-		name: "Страна",
+		name: "Производитель",
 		options: [
-			{option: 'Украина', chosen: false}, 
-			{option: "Польша", chosen: false }, 
-			{option: "Германия", chosen: false},
-			{option: "США", chosen: false},
-			{option: "Новая Гвинея", chosen: false},
-			{option: "Зимбабве", chosen: false}
+			{name: "Наша вода (Украина)" , chosen: false}, 
+			{name: "Nasza woda (Польша)", chosen: false }, 
+			{name: "unser Wasser (Германия)", chosen: false},
+			{name: "Our water (США)", chosen: false},
+			{name: "हमारे पानी (Индия)" , chosen: false},
+			{name: "amanzi ethu (Зимбабве)", chosen: false}
 		]
 	},
 	{
 		name: "Обьем",
 		options: [
-			{option: 'Стандартые', chosen: false}, 
-			{option: "Увеличеные", chosen: false}, 
-			{option: "Уменьшеные", chosen: false}
+			{name: 'Стандартые', chosen: false}, 
+			{name: "Увеличеные", chosen: false}, 
+			{name: "Уменьшеные", chosen: false}
 		]
 	}
 ]
@@ -113,7 +113,7 @@ var ListComponent = new Vue({
 	    this.$http.post('https://jsonplaceholder.typicode.com/posts').then( //запрос на url
 	      function (response) { // Success.
 	        //this.goods = response.data; //данные из базы вставляем в data Vue
-	        console.log(response)
+	        //console.log(response)
 	      },
 	      function (response) { // Error.
 	        console.log('An error occurred.');
@@ -121,7 +121,9 @@ var ListComponent = new Vue({
 	    );
 	  },
 
-	  addFilter: function() {},
+	  /*addFilter: function(prop) {
+			console.log(prop)
+		},*/
   },
 
   created: function(){
@@ -135,3 +137,4 @@ var ListComponent = new Vue({
 
 });
 
+/*==========  end Main Vue Exemplar  =========*/
