@@ -29,7 +29,6 @@
 		props: ["thisFilter"],
     data: function() {
       return {
-        chosenFilters: [],
         cut: true,
         showMore: 'Показать все',
       }
@@ -55,19 +54,26 @@
 
       toChose: function(prop) {
         prop.chosen = !prop.chosen;
-        
+
         if(prop.chosen == true){
-          this.chosenFilters.push(prop);
-        }else{
-          for (var i = 0; i < this.chosenFilters.length; i++) {
-            if(prop == this.chosenFilters[i]){
-              this.chosenFilters.splice(i, 1);
-            }
-          }
+          this.$root.$emit('to-сhose', prop);
         }
-        this.$root.$emit('to-сhose', this.chosenFilters);
-        //console.log(this.chosenFilters)
+        else{
+          this.$root.$emit('to-remove', prop);
+        }
       },
+    },
+
+    mounted: function() {
+      var thisFilter = this.thisFilter;
+      this.$root.$on('remove-filter', function(item){
+        item.chosen = false;
+			});
+      this.$root.$on('remove-all-filter', function(){
+        thisFilter.options.forEach(function(element){
+          element.chosen = false;
+        })
+			});
     },
 	}
 </script>

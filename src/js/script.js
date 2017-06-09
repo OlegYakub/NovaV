@@ -819,11 +819,13 @@ $( ".c-tabs" ).tabs();
 $('.list__btn-f').click(function(){
   $('.filter__aside').toggleClass('filter__aside--show');
   $('.overlay').toggle();
+  $('body').addClass('overflowHd');
 });
 
 $('.filter__click').click(function(){
   $('.overlay').hide();
   $('.filter__aside').removeClass('filter__aside--show');
+  $('body').removeClass('overflowHd');
 });
 
 /*=====================================================*/
@@ -846,11 +848,13 @@ if(windowWidth < 1170){
   function showFilter() {
     $('.overlay__swipe').show();
     $('.filter__aside').addClass('filter__aside--show');
+    $('body').addClass('overflowHd');
   }
 
   function hideFilter() {
     $('.filter__aside').removeClass('filter__aside--show');
     $('.overlay__swipe').hide();
+    $('body').removeClass('overflowHd');
   }
 
   function moveReasonBoxIn() {

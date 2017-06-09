@@ -121,9 +121,6 @@ var ListComponent = new Vue({
 	    );
 	  },
 
-	  /*addFilter: function(prop) {
-			console.log(prop)
-		},*/
   },
 
   created: function(){
