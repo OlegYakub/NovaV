@@ -24,7 +24,6 @@
           v-for="(filterItem, index) in filters"  
           v-bind:key="filterItem" 
           v-bind:this-filter="filterItem"
-          
           ></filter-item>
       </div>
       <div class="filter__click">
@@ -35,15 +34,60 @@
 </template>
 
 <script>
+import filterChosen from './filter-chosen.vue';
+import filterItem from './filter-item.vue';
+
   module.exports = {
     data: function() {
-      return: {
+      return {
         filters: filters,
       }
     },
     components: {
       "filter-chosen" : filterChosen,
       "filter-item" : filterItem,
-    }
+    },
+
+    methods: {
+      getFilters: function() {
+        // GET /users
+        this.$http.post('https://jsonplaceholder.typicode.com/posts').then( //запрос на url
+          function (response) { // Success.
+            //this.goods = response.data; //данные из базы вставляем в data Vue
+            //console.log(response)
+          },
+          function (response) { // Error.
+            console.log('An error occurred.');
+          }
+        );
+      },
+    },
+
+    created: function(){
+      this.getFilters()
+    },
   }
+
+//массив фильтров
+var filters = [
+	{
+		name: "Производитель",
+		options: [
+			{name: "Наша вода (Украина)" , chosen: false}, 
+			{name: "Nasza woda (Польша)", chosen: false }, 
+			{name: "unser Wasser (Германия)", chosen: false},
+			{name: "Our water (США)", chosen: false},
+			{name: "हमारे पानी (Индия)" , chosen: false},
+			{name: "amanzi ethu (Зимбабве)", chosen: false}
+		]
+	},
+	{
+		name: "Обьем",
+		options: [
+			{name: 'Стандартые', chosen: false}, 
+			{name: "Увеличеные", chosen: false}, 
+			{name: "Уменьшеные", chosen: false}
+		]
+	}
+] 
 </script>
