@@ -173,7 +173,7 @@
             </span>
           </p>
         </div>
-        <a href="#" class="btn--red">
+        <a href="" class="btn--red" @click.prevent="inBasket">
           купить
           <img src="img/shopping-cart-white.svg" alt="">
         </a>
@@ -181,11 +181,11 @@
           купить в один клик
         </a>
         <div class="compare">
-          <a href="" class="compare__add">
+          <a href="" class="compare__add" v-on:click.prevent="inCompare"  v-if="!toCompare">
             в сравнение
             <img src="img/balance.svg" alt="" width="20px" height="16px">
           </a>
-          <a href="" class="compare__open">
+          <a href="" class="compare__open" v-if="toCompare">
             сравнить
             <img src="img/balance-blue.svg" alt="" width="20px" height="16px">
           </a>
@@ -197,6 +197,32 @@
 
 <script>
   module.exports = {
-		props: ["thisGood"]
+		props: ["thisGood"],
+    data: function(){
+			return {
+				toCompare: false
+			}
+		},
+    methods: {
+			inBasket: function() {
+				this.$root.$emit('in-basket', this.thisGood);
+			},
+
+      inCompare: function() {
+				this.$root.$emit('in-compare', this.thisGood);
+				this.toCompare = true;
+			},
+
+			unCompare: function() {
+				var self = this
+				this.$root.$on('from-compare', function(item){
+					if(item.categoryId == self.thisGood.categoryId) self.toCompare = false;	
+				})
+			}
+		},
+
+    mounted: function() {
+			this.unCompare();
+		},
 	}
 </script>

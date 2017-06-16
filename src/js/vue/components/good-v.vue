@@ -1,16 +1,16 @@
 <template>
   <div class="good-v">
-		<div class="label label--sale"  v-show="!thisGood.new">
+		<div class="label label--sale"  v-if="!thisGood.new">
 			sale
 		</div>
-		<div class="label label--new"  v-show="thisGood.new">
+		<div class="label label--new"  v-if="thisGood.new">
 			new
 		</div>
-		<div class="good-status  good-status--ok" v-show="thisGood.availability">
+		<div class="good-status  good-status--ok" v-if="thisGood.availability">
 			В наличии 
 			<img src="img/status-good.png" alt="">
 		</div>
-		<div class="good-status  good-status--no" v-show="!thisGood.availability">
+		<div class="good-status  good-status--no" v-if="!thisGood.availability">
 			Под заказ 
 			<img src="img/status-good.png" alt="">
 		</div>
@@ -41,14 +41,12 @@
 				<span class="good-v__price--font">
 					грн
 				</span>
-				<span class="good-v__price--old">
+				<span class="good-v__price--old"  v-if="thisGood.new == false">
 					{{thisGood.oldPrice}}
 				</span>
 			</p>
 			<p class="good-v__basket">
-				<a href="#">
-							
-				</a>
+				<a href="#" @click.prevent="inBasket" ></a>
 			</p>
 		</div>
 		<div class="good-v__foot2">
@@ -69,11 +67,11 @@
 				</div>
 			</div>
 			<div class="compare">
-				<a href="" class="compare__add">
+				<a href="" class="compare__add" v-on:click.prevent="inCompare"  v-if="!toCompare">
 					в сравнение
 					<img src="img/balance.svg" alt="" width="20px" height="16px">
 				</a>
-				<a href="" class="compare__open">
+				<a href="" class="compare__open" v-if="toCompare">
 					сравнить
 					<img src="img/balance-blue.svg" alt="" width="20px" height="16px">
 				</a>
@@ -131,6 +129,32 @@
 
 <script>
 	module.exports = {
-		props: ["thisGood"]
+		props: ["thisGood"],
+		data: function(){
+			return {
+				toCompare: false
+			}
+		},
+		methods: {
+			inBasket: function() {
+				this.$root.$emit('in-basket', this.thisGood);
+			},
+
+			inCompare: function() {
+				this.$root.$emit('in-compare', this.thisGood);
+				this.toCompare = true;
+			},
+
+			unCompare: function() {
+				var self = this
+				this.$root.$on('from-compare', function(item){
+					if(item.categoryId == self.thisGood.categoryId) self.toCompare = false;	
+				})
+			}
+		},
+
+		mounted: function() {
+			this.unCompare();
+		}
 	}
 </script>

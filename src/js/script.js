@@ -373,7 +373,7 @@ if(windowWidth > 744){
   $(window).scroll(function(){
     var top = $(window).scrollTop();
 
-    if(top > 200){
+    if(top > 130){
       $('.mini-head').show();
     }else{
       $('.mini-head').hide();
@@ -960,9 +960,9 @@ if(windowWidth < 1170){
 $('#category-drop').slimScroll({
         height: '450px'
 });
-$('.trash-modal__list').slimScroll({
+/*$('.trash-modal__list').slimScroll({
         height: '345px'
-});
+});*/
 
 /*=====================================*/
 	

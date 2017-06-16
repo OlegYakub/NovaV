@@ -76,6 +76,7 @@
 
 		&--list{
 			border-right: 2px solid transparent;
+			width: 180px;
 		}
 	}
 
@@ -95,7 +96,9 @@
 		z-index: 4;
 		background-color: #FFF;
 		top: 46px;
-		left: -14px;
+		box-sizing: border-box;
+		width: 210px;
+		left: -15px;
     padding: 0px 16px;
 		padding-right: 30px;
 		border: 2px solid $lightgrey; 

@@ -59,7 +59,7 @@ header{
 			.img1{
 				padding-right: 20px;
 				position: relative;
-				top: 2px;
+				top: 1px;
 			}
 			span{
 				padding-right: 18px;
@@ -85,6 +85,7 @@ header{
 
 	&__icons{
 		margin-top: 9px;
+		//margin-left: 13px;
 		float: left;
 		height: 55px;
 		display: -webkit-flex;
@@ -97,9 +98,10 @@ header{
 			padding-top: 10px;
 			position: relative;
 			height: 30px;
-			margin-left: 20px;
+			margin-left: 5px;
 			padding-bottom: 20px;
 			padding-left: 10px;
+			padding-right: 13px;
 		.header__numb{
 			background-color: #cc232a;
 		}
@@ -118,6 +120,7 @@ header{
 			height: 30px;
 			padding-bottom: 20px;
 			padding-top: 12px;
+			padding-right: 15px;
 			padding-left: 10px;
 		.header__numb{
 			background-color: #74a3c1;
@@ -140,7 +143,7 @@ header{
 		
 		color: #fff;
 		text-align: center;
-		right: -10px;
+		right: 0;
 		top: -2px;
 	}
 
@@ -407,12 +410,6 @@ header{
 	}
 }
 
-.slimScrollBar{
-	border-radius: 0 !important;
-	background-color: #d6d6d6 !important;
-	opacity: 1 !important;
-	width: 10px !important;
-}
 
 /* ==========trash-modal============ */
 
@@ -422,9 +419,9 @@ header{
 	box-shadow: 2.5px 4.33px 15px 0px rgba(0, 0, 0, 0.25);
 		position: absolute;
 		background-color: #FFF;
-		z-index: 3;
+		z-index: 4;
 		top: 50px;
-		right: -40px;
+		right: -24px;
 
 	&:before{
 		position: absolute;
@@ -434,8 +431,13 @@ header{
     right: 43px;
 	}
 
+	&--visible{
+		display: block;
+	}
+
 	&__list{
 		border: 1px solid #e8e8e8;
+		max-height: 345px;
 	}
 
 	&__item{
@@ -631,6 +633,10 @@ header{
 	top: 50px;
   left: -47px;
   z-index: 4;
+
+	&--visible{
+		display: block;
+	}
 
 	&:before{
 		position: absolute;
@@ -836,16 +842,20 @@ header{
 		}
 
 		&--balance{
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
 			.sub-menu__link{
 				width: 60px;
 				text-align: center;
 				margin: 0 auto;
 			}
 
-			.header__numb{
-				background-color: #74a3c1;
-				right: -8px;
-				top: 7px;
+			.header__balance{
+				display: block;
+				height: 26px;
+				padding-bottom: 15px;
+				margin-top: 5px;
 			}
 		}
 	}
@@ -1320,7 +1330,7 @@ header{
 	.header{
 		&__icons{
 			float: right;
-			margin-right: 30px;
+			margin-right: 20px;
 		}
 
 		&__search{
@@ -1366,8 +1376,8 @@ header{
 		&__balance{
 			display: block;
 			padding: 0;
-			padding-top: 15px;
-			margin-top: 10px;
+			padding-top: 10px;
+			//margin-top: 10px;
 			padding-right: 0;
 			margin-left: auto;
 			margin-right: 88px;
@@ -1472,7 +1482,9 @@ header{
 		}
 
 		&__icons{
-			//margin-top: 15px;
+			margin-top: 2px;
+			margin-left: 15px;
+			margin-right: 25px;
 		}
 
 		&__search{
@@ -1544,4 +1556,5 @@ header{
 	.mini-head{
 		display: none;
 	} 
+
 }

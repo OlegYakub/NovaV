@@ -13,18 +13,17 @@
       <div class="list__head">
         <div class="list__filt">
           <a href="#" class="list__switch list__switch--list" id="list-top-filter">
-            от дешевых к дорогим
+            {{fromWhat}}
             <img src="img/list-arr.png" alt="">
           </a>
-          <a href="#" class="list__switch  list__switch--pdl">
-            популярные
-            
-          </a>
           <div class="list__option">
-            <a href="#">
-              от дорогих к дешевым
+            <a href="#" @click="fromPopular">
+              популярные
             </a>
-            <a href="#">
+            <a href="#" @click="fromExpensive">
+              от дорогих к дешевым 
+            </a>
+            <a href="#" @click="fromCheap">
               от дешевых к дорогим
             </a>
           </div>
@@ -78,6 +77,7 @@ import goodh from './good-h.vue';
       return {
         goods: goods,
   	    viewBox: true,
+        fromWhat: '',
       }
     },
 
@@ -88,7 +88,42 @@ import goodh from './good-h.vue';
       },
 
       fromCheap: function() {
-        
+        this.fromWhat = "от дешевых к дорогим"
+        this.goods.sort(function(a, b){
+          if (+a.actualyPrice > +b.actualyPrice) {
+            return 1;
+          }
+          if (+a.actualyPrice < +b.actualyPrice) {
+            return -1;
+          }
+          return 0;
+        });
+      },
+
+      fromExpensive: function() {
+        this.fromWhat = "от дорогих к дешевым"
+        this.goods.sort(function(a, b){
+          if (+b.actualyPrice > +a.actualyPrice) {
+            return 1;
+          }
+          if (+b.actualyPrice < +a.actualyPrice) {
+            return -1;
+          }
+          return 0;
+        });
+      },
+
+      fromPopular: function() {
+        this.fromWhat = "популярные"
+        this.goods.sort(function(a, b){
+          if (b.popular > a.popular) {
+            return 1;
+          }
+          if (b.popular < a.popular) {
+            return -1;
+          }
+          return 0;
+        });
       },
 
       getGoods: function() {
@@ -105,18 +140,22 @@ import goodh from './good-h.vue';
       },
 
     },
-
+    
     created: function(){
-      this.getGoods()
+      this.getGoods();
+      this.fromPopular();
     },
 
   }
 //массив товаров
 var goods = [
-	{
+	{ 
+    id: 1,
+    category: "фильтры",
+    categoryId: 10,
 		photo: "img/good2.jpg",
 		name: "Bluefilters New Line RO-9PAF",
-		description: "Фильтр обратного осмоса",
+		description: "Популярный Фильтр обратного осмоса",
 		code: '03-39-11s',
 		garantee: "112 лет",
 		actualyPrice: "5770",
@@ -135,12 +174,16 @@ var goods = [
 		performance: 285,
 		flasks: 'Универсальный',
 		dimension: '340x145x440',
+    popular: true,
 
 	},
-	{
+	{ 
+    id: 2,
+    category: "фильтры",
+    categoryId: 10,
 		photo: "img/good1.jpg",
 		name: "Bluefilters ",
-		description: "Фильтр еще какого нибуть осмоса",
+		description: " Фильтр еще какого нибуть осмоса",
 		code: '73-39-11s',
 		garantee: "2 лет",
 		actualyPrice: "15770",
@@ -159,11 +202,15 @@ var goods = [
 		performance: 1285,
 		flasks: 'Уменьшенные',
 		dimension: '1340x145x1440',
+    popular: false,
 	},
-  {
+  { 
+    id: 3,
+    category: "Насосы",
+    categoryId: 20,
 		photo: "img/good2.jpg",
 		name: "Bluefilters New Line RO-9PAF",
-		description: "Фильтр обратного осмоса",
+		description: "Популярный Фильтр обратного осмоса",
 		code: '03-39-11s',
 		garantee: "5 лет",
 		actualyPrice: "12770",
@@ -182,7 +229,7 @@ var goods = [
 		performance: 285,
 		flasks: 'Универсальный',
 		dimension: '340x145x440',
-
+    popular: true,
 	},
 ]
 </script>

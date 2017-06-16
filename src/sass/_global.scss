@@ -103,6 +103,22 @@ h4{
 	}
 }
 
+.slimScrollBar{
+	border-radius: 0 !important;
+	background-color: #d6d6d6 !important;
+	opacity: 1 !important;
+	width: 10px !important;
+}
+
+.vb{
+	&-dragger{
+		right: 0;
+		width: 4px;
+		background-color: #000;
+		opacity: 0.3;
+	}
+}
+
 .btn--blue{
 	text-transform: uppercase;
 	text-align: center;
@@ -371,7 +387,7 @@ h4{
 	text-align: right;
 	position: relative;
 	top: -2px;
-
+	width: 92px;
 	&__add{
 		opacity: 0.6;
 
@@ -382,7 +398,7 @@ h4{
 	}
 
 	&__open{
-		display: none;
+		//display: none;
 		color: $bluestyle;
 		img{
 			position: relative;
