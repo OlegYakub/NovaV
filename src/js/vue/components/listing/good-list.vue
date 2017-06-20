@@ -54,9 +54,9 @@
         </good-item-h>
       </div>
     </div>
-    <div class="list__more  list__more--load"><!--  класс list__more--load - вид загрузки карточек -->
-      <a href="#">
-        <span>показать ещё 9 товаров</span>
+    <div class="list__more" v-bind:class="{'list__more--load': loaded}"  v-if="showMoreBtn()"><!--  класс list__more--load - вид загрузки карточек -->
+      <a href="" @click.prevent="showMore">
+        <span>показать ещё</span>
         <img src="img/load-ic.png" alt="">
       </a>
     </div>
@@ -69,15 +69,15 @@
 </template>
 
 <script>
-import goodV from './good-v.vue';
-import goodh from './good-h.vue';
-
   module.exports = {
     data: function() {
       return {
-        goods: goods,
   	    viewBox: true,
+        toShowQuan: 3,
         fromWhat: '',
+        loaded: false,
+        goods: goods,
+        spliced: [],
       }
     },
 
@@ -131,7 +131,7 @@ import goodh from './good-h.vue';
         this.$http.post('https://jsonplaceholder.typicode.com/posts').then( //запрос на url
           function (response) { // Success.
             //this.goods = response.data; //данные из базы вставляем в data Vue
-            //console.log(response)
+            console.log(response)
           },
           function (response) { // Error.
             console.log('An error occurred.');
@@ -139,11 +139,43 @@ import goodh from './good-h.vue';
         );
       },
 
+      spliceGoods: function() {
+        var removed = this.goods.splice(this.toShowQuan, this.goods.length);
+        this.spliced = removed.concat();
+      },
+
+      showMore: function() {
+        this.loaded = true;
+        var added = this.spliced.splice(0, this.toShowQuan);
+        for (var i = 0; i < added.length; i++){
+          this.goods.push(added[i]);
+        }
+
+        if(this.fromWhat == "популярные") this.fromPopular();
+        if(this.fromWhat == "от дорогих к дешевым") this.fromExpensive();
+        if(this.fromWhat == "от дешевых к дорогим") this.fromCheap();
+        
+        this.loaded = false;
+      },
+
+      showMoreBtn: function() {
+        if(this.spliced.length){
+          return true
+        }else{
+          return false
+        }
+      }
+
     },
     
     created: function(){
       this.getGoods();
       this.fromPopular();
+      this.spliceGoods();
+    },
+
+    watch: {
+      spliced: "showMoreBtn"
     },
 
   }
@@ -230,6 +262,116 @@ var goods = [
 		flasks: 'Универсальный',
 		dimension: '340x145x440',
     popular: true,
+	},
+  { 
+    id: 1,
+    category: "фильтры",
+    categoryId: 10,
+		photo: "img/good2.jpg",
+		name: "Bluefilters New Line RO-9PAF",
+		description: "Популярный Фильтр обратного осмоса",
+		code: '03-39-11s',
+		garantee: "112 лет",
+		actualyPrice: "5770",
+		oldPrice: "6770",
+		new: true,
+		availability: true,
+		opt1: 20,
+		opt2: 40,
+		opt3: 40,
+		opt4: 100,
+		reviews: 10,
+		country: "ukraine",
+		filtration: "Обратный осмос",
+		placement: "Под мойкой",
+		numOfClean: 5,
+		performance: 285,
+		flasks: 'Универсальный',
+		dimension: '340x145x440',
+    popular: true,
+
+	},
+	{ 
+    id: 2,
+    category: "фильтры",
+    categoryId: 10,
+		photo: "img/good1.jpg",
+		name: "Bluefilters ",
+		description: " Фильтр еще какого нибуть осмоса",
+		code: '73-39-11s',
+		garantee: "2 лет",
+		actualyPrice: "15770",
+		oldPrice: "16770",
+		new: false,
+		availability: false,
+		opt1: 100,
+		opt2: 60,
+		opt3: 40,
+		opt4: 80,
+		reviews: 1,
+		country: "poland",
+		filtration: "Обратный братный осмос",
+		placement: "На стене",
+		numOfClean: 2,
+		performance: 1285,
+		flasks: 'Уменьшенные',
+		dimension: '1340x145x1440',
+    popular: false,
+	},
+  { 
+    id: 3,
+    category: "Насосы",
+    categoryId: 20,
+		photo: "img/good2.jpg",
+		name: "Bluefilters New Line RO-9PAF",
+		description: "Популярный Фильтр обратного осмоса",
+		code: '03-39-11s',
+		garantee: "5 лет",
+		actualyPrice: "12770",
+		oldPrice: "13770",
+		new: true,
+		availability: false,
+		opt1: 20,
+		opt2: 40,
+		opt3: 10,
+		opt4: 100,
+		reviews: 10,
+		country: "ukraine",
+		filtration: "Обратный осмос",
+		placement: "Под мойкой",
+		numOfClean: 5,
+		performance: 285,
+		flasks: 'Универсальный',
+		dimension: '340x145x440',
+    popular: true,
+	},
+  { 
+    id: 4,
+    category: "фильтры",
+    categoryId: 10,
+		photo: "img/good2.jpg",
+		name: "Bluefilters New Line RO-9PAF",
+		description: "Популярный Фильтр обратного осмоса",
+		code: '03-39-11s',
+		garantee: "112 лет",
+		actualyPrice: "5770",
+		oldPrice: "6770",
+		new: true,
+		availability: true,
+		opt1: 20,
+		opt2: 40,
+		opt3: 40,
+		opt4: 100,
+		reviews: 10,
+		country: "ukraine",
+		filtration: "Обратный осмос",
+		placement: "Под мойкой",
+		numOfClean: 5,
+		performance: 285,
+		flasks: 'Универсальный',
+		dimension: '340x145x440',
+    popular: true,
+
 	},
 ]
 </script>

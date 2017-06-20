@@ -458,6 +458,18 @@
 			width: 100%;
 		}
 
+		&__more{
+			background-color: $bluestyle;
+			
+			a{
+				color: #fff;
+			}
+			&:hover{
+				background-color: $bluestyle;
+				color: #fff;
+			}
+		}
+
 		&__btn-f{
 			display: block;
 			margin: 0 8px;
@@ -493,6 +505,7 @@
 	/* =================filter============== */
 	.filter{
 		width: 300px;
+		min-height: 100vh;
 		&__wrap{
 		/* 	&:after{
 				content: "";

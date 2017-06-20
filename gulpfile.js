@@ -109,7 +109,7 @@ if (vueifyFiles.length) {
 if (jsFiles.length) {
   gulp.task('js', () =>
     gulp.src(jsFiles)
-    //.pipe(babel({ presets: ['es2015'] }))
+    .pipe(babel({ presets: ['es2015'] }))
     .pipe(gulpif(MINIFY, uglify()))
     .pipe(gulp.dest('./build/js/'))
     .pipe(reload({stream: true}))

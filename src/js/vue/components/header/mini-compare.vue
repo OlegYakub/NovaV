@@ -63,7 +63,6 @@
           }
 
           self.showCompare();
-          console.log(toCompare)
         })
       },
 

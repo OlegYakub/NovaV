@@ -514,28 +514,11 @@ $('.footer__col').each(function(i, el){
 /*==============================================================*/
 /*====================Добавить отзыв на странице товара==================*/
 
-$('.c-reviews').each(function(i, el){
 
-  var btn = $(el).find("a.c-reviews__creat");
-  var drop = $(el).find(".create");
-  var close =  $(el).find(".create .create__cancel");
-
-  $(btn).click(function(e){
-    e.preventDefault();
-    $(drop).animate({ height: "toggle"}, 500);
-    $(this).toggleClass("c-reviews__creat--active");
-  });
-
-  $(close).click(function(e){
-    e.preventDefault();
-    $(drop).animate({ height: "hide"}, 500);
-    $(btn).removeClass("c-reviews__creat--active");
-  });
-});
 
 /*====================коментарии к товару==================*/
 
-$('.c-reviews__item').each(function(i, el){
+/*$('.c-reviews__item').each(function(i, el){
 
   var answersBtn = $(el).find("#review-answers");
   var answersDrop = $(el).find(".answers");
@@ -571,7 +554,7 @@ $('.c-reviews__item').each(function(i, el){
     $(replyBtn).removeClass("c-reviews__link--active");
   });
 
-});
+});*/
 
 $('.b-message').each(function(i, el){
   var replyBtn = $(el).find(".c-reviews__link");

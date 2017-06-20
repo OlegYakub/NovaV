@@ -122,7 +122,7 @@
         var self = this;
         if(ww > 1170){
           self.showEl = true;
-          //setTimeout(function(){self.showEl = false}, 2000)
+          setTimeout(function(){self.showEl = false}, 2000)
         }
       },
 
