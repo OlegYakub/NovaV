@@ -53,7 +53,7 @@ import filterItem from './filter-item.vue';
         // GET /users
         this.$http.post('https://jsonplaceholder.typicode.com/posts').then( //запрос на url
           function (response) { // Success.
-            //this.goods = response.data; //данные из базы вставляем в data Vue
+            //this.filters = response.data; //данные из базы вставляем в data Vue
             //console.log(response)
           },
           function (response) { // Error.

@@ -207,7 +207,7 @@ var goods = [
 		flasks: 'Универсальный',
 		dimension: '340x145x440',
     popular: true,
-
+    rating: 1,
 	},
 	{ 
     id: 2,
@@ -235,6 +235,7 @@ var goods = [
 		flasks: 'Уменьшенные',
 		dimension: '1340x145x1440',
     popular: false,
+    rating: 2,
 	},
   { 
     id: 3,
@@ -262,6 +263,7 @@ var goods = [
 		flasks: 'Универсальный',
 		dimension: '340x145x440',
     popular: true,
+    rating: 3,
 	},
   { 
     id: 1,
@@ -289,7 +291,7 @@ var goods = [
 		flasks: 'Универсальный',
 		dimension: '340x145x440',
     popular: true,
-
+    rating: 4,
 	},
 	{ 
     id: 2,
@@ -317,6 +319,7 @@ var goods = [
 		flasks: 'Уменьшенные',
 		dimension: '1340x145x1440',
     popular: false,
+    rating: 5,
 	},
   { 
     id: 3,
@@ -344,6 +347,7 @@ var goods = [
 		flasks: 'Универсальный',
 		dimension: '340x145x440',
     popular: true,
+    rating: 3,
 	},
   { 
     id: 4,
@@ -371,7 +375,7 @@ var goods = [
 		flasks: 'Универсальный',
 		dimension: '340x145x440',
     popular: true,
-
+    rating: 2,
 	},
 ]
 </script>

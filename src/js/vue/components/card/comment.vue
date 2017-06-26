@@ -132,7 +132,6 @@
 
 <script>
 import answer from './answer.vue';
-import StarRating from 'vue-star-rating';
 
   module.exports = {
     props: ["thisMessage"],
@@ -190,7 +189,6 @@ import StarRating from 'vue-star-rating';
 
     components: {
       "answer" : answer,
-      "star-rating": StarRating,
     },
   }
 

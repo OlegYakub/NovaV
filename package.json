@@ -33,6 +33,7 @@
     "jquery": "^2.2.4",
     "jquery-modal": "^0.8.0",
     "slick-carousel": "^1.6.0",
+    "vee-validate": "^2.0.0-rc.5",
     "vue-star-rating": "^1.4.0",
     "vue-validator": "^3.0.0-alpha.2"
   }

@@ -464,6 +464,12 @@
 		.rating-text{
 			display: none;
 		}
+
+		&__text{
+			padding-left: 15px;
+			padding-top: 5px;
+		}
+
 		&--mob{
 			display: none;
 		}
@@ -571,6 +577,17 @@
 	&__name{
 		font-family: "ProximaNovaBold";
 		color: $bluestyle;
+	}
+
+	span.is-danger{
+		color: #ff3860;
+	}
+	input.is-danger, textarea.is-danger {
+    border-color: #ff3860;
+
+		&:focus{
+			border-color: #ff3860;
+		}
 	}
 }
 
@@ -701,7 +718,13 @@
 	&__cancel{
 		text-transform: uppercase;
 		color: #b3b3b3;
-		padding-right: 30px;
+		padding: 7px 12px;
+		margin-right: 18px;
+		&:hover{
+			background-color:rgba(127, 171, 198, 0.1);
+			border-radius: 5px;
+			color: #222222;
+		}
 	}
 
 	&__btns{

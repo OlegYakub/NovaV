@@ -51,14 +51,12 @@
 		</div>
 		<div class="good-v__foot2">
 			<div class="review">
-				<div class="rate_row">
-					<span class="rate_star" data-value="1"></span> <!-- Single Star -->
-					<span class="rate_star" data-value="2"></span>
-					<span class="rate_star" data-value="3"></span>
-					<span class="rate_star" data-value="4"></span>
-					<span class="rate_star" data-value="5"></span>
-					<input type="hidden" class="get_star" value="">
-				</div> 
+				<star-rating 
+            :star-size="16" 
+            :read-only="true"
+            :rating="thisGood.rating"
+            active-color="#7fabc6">
+        </star-rating>
 				<div class="review__link">
 					<a href="#">Отзывы</a>
 					<span class="review__number">

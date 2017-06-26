@@ -342,7 +342,7 @@ $('#open-phones').click(function(){
 $('#close-phones').click(function(e){
   e.preventDefault();
   $('#phones').hide();
-  console.log(1);
+
 });
 
 /*=======список телефонов на прилипающем хедере*/
@@ -354,7 +354,7 @@ $('#open-phones-mini').click(function(e){
 $('#close-phones-mini').click(function(e){
   e.preventDefault();
   $('#phones-mini').hide();
-  console.log(1);
+
 });
 
 
@@ -602,7 +602,7 @@ $('.b-message').each(function(i, el){
   $('.filter__range--text2').text($(".filter__inputs input#maxCost").val());
 
   $(" input#minCost").change(function(){
-      console.log(1);
+
       var value1=$(".filter__inputs input#minCost").val();
       var value2=$(".filter__inputs input#maxCost").val();
       $('.filter__range--text1').text($(".filter__inputs input#minCost").val());

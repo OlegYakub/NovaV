@@ -9,10 +9,9 @@
         <span>Оставить отзыв</span>
       </a>
     </div>
-    <transition name="height">
+    
       <div class="create" v-show="visabilityForm" >
-      <!--<validator name="creatMessageForm"> -->
-        <form novalidate  v-on:submit.prevent="creatMessage" >
+        <form   v-on:submit.prevent="creatMessage" >
           <div class="create__head">
             <div class="c-reviews__title">
               Написать отзыв
@@ -21,54 +20,81 @@
             :star-size="20" 
             v-model="messageRating" 
             active-color="#7fabc6"></star-rating>
+            <div v-show="showRatingMessage" class="star-rating__text">
+              <span  class=" is-danger">Дайте оценку товару</span>
+            </div>
           </div>
           <div class="create__middle">
             
               <div class="reply__tarea">
-                <label for=""> Ваше сообщение
+                <label> Ваше сообщение
                   <textarea  
                     id="commenttext" 
+                    name="text"
                     cols="30" 
-                    rows="10" 
-                    
+                    rows="10"
+                    :class="{'is-danger': errors.has('text') }" 
+                    v-validate="'required'"
                     v-model="messageText"></textarea>
                 </label>
+                <div >
+                  <span v-show="errors.has('text')" class="help is-danger">{{ errors.first('text') }}</span>
+                </div>
               </div>
           <!--    <div><span v-if="$creatMessageForm.commenttext.required">{{ $creatMessageForm.commenttext.required }}</span></div> -->
               <div class="create__input">
-                <label for=""> Достоинства
+                <label > Достоинства
                   <input 
                     type="text" 
+                    name="advantages"
                     id="comment-advantages"
-                    
+                    :class="{'is-danger': errors.has('advantages') }" 
+                    v-validate="'required'"
                     v-model="messageAdvantages">
                 </label>
+                <div >
+                  <span v-show="errors.has('advantages')" class="help is-danger">{{ errors.first('advantages') }}</span>
+                </div>
               </div>
               <div class="create__input">
-                <label for=""> Недостатки
+                <label > Недостатки
                   <input 
                     type="text" 
+                    name="disadvantages"
+                    :class="{'is-danger': errors.has('disadvantages') }" 
                     id="comment-disadvantages"
-                    
+                    v-validate="'required'"
                     v-model="messageDisadvantages">
                 </label>
+                <div >
+                  <span v-show="errors.has('disadvantages')" class="help is-danger">{{ errors.first('disadvantages') }}</span>
+                </div>  
               </div>
               <div class="reply__inputs  create__input--two">
                 <div class="reply__half  reply__half--pd">
                   <input
                     type="text" 
+                    name="name"
+                    :class="{'is-danger': errors.has('name') }" 
                     id="comment-name"
-                    
+                    v-validate="'required|alpha'"
                     placeholder="Имя"  
                     v-model="messageName">
+                    <div >
+                     <span v-show="errors.has('name')" class="help is-danger">{{ errors.first('name') }}</span>
+                    </div>
                 </div>
                 <div class="reply__half">
                   <input 
                     type="text" 
                     placeholder="E-mail" 
-                    id="comment-email"
-                   
+                    :class="{'is-danger': errors.has('email') }" 
+                    name="email"
+                    v-validate="'required|email'"
                     v-model="messageEmail">
+                    <div >
+                      <span v-show="errors.has('email')" class="help is-danger">{{ errors.first('email') }}</span>
+                    </div>  
                 </div>
               </div>
               <div class="reply__btns  create__btns">
@@ -85,9 +111,8 @@
             
           </div>
         </form> 
-      <!--</validator>-->
       </div>
-    </transition>
+    
 
     <comment
       v-for="(messageItem, index) in messages"
@@ -101,17 +126,18 @@
 
 <script>
 import comment from './comment.vue';
-import StarRating from 'vue-star-rating';
 
   module.exports = {
     data: function() {
       return {
         messages: [
           {
-            name: "oleg",
-            text: 'hi I am Oleg hi I am Oleg hi I am Oleg hi I am Oleg hi I am Oleg hi I am Oleg',
+            name: "Дмитрий",
+            text: 'Фильтры сейчас это уж точно объективная необходимость…то ,что сейчас бежит из крана уже простым кипячением как раньше не очистить.  Всякие эти штуки под раковину не влазят, кувши|',
             rating: 4,
-            date: new Date().toLocaleString("ru", {year: 'numeric', month: 'long', day: 'numeric',})
+            date: "20 июня 2017г.",
+            advantages: "Цена",
+            disadvantages: "Слишком быстро засоряется",
           },
         ],
         visabilityForm: false,
@@ -121,6 +147,7 @@ import StarRating from 'vue-star-rating';
         messageDisadvantages: '',
         messageEmail: '',
         messageRating: 0,
+        showRatingMessage: false,
       }
     },
 
@@ -135,28 +162,61 @@ import StarRating from 'vue-star-rating';
           rating: this.messageRating,
           date: new Date().toLocaleString("ru", {year: 'numeric', month: 'long', day: 'numeric',}),
         };
+        this.$validator.updateDictionary({
+          'ru': {
+            attributes: {
+              name: '"Имя"',
+              text: '"Ваше сообщение"',
+              advantages: '"Достоинства"',
+              disadvantages: '"Недостатки"',
+              email: '"E-mail"',
+            },
+          }
+        });
+        
 
-        this.messages.push(message);
-        this.clearForm();
+        this.$validator.validateAll().then(() => {
+          if(this.messageRating == 0){
+            this.showRatingMessage = true;
+            console.log(this.showRatingMessage);
+          }else{
+            this.messages.push(message);
+            this.clearForm();
+            this.showRatingMessage = false;
+          }
+            //alert('From Submitted!');
+        }).catch(() => {
+            //alert('Correct them errors!');
+
+        });
+        
       },
 
       clearForm: function() {
+        this.showRatingMessage = false;
         this.messageName = "";
         this.messageText = "";
         this.messageAdvantages = '';
         this.messageDisadvantages = '';
         this.messageEmail = '';
+        this.messageRating= 0;
+        this.errors.clear();
         this.visabilityForm = false;
+        //console.log(this.errors);
       },
 
+      /*hideErrs: function() {
+        this.errors.clear();
+      },*/
+
       showForm: function() {
-        this.visabilityForm = !this.visabilityForm
+        this.visabilityForm = !this.visabilityForm;
+        this.errors.clear();
       },
     },
 
     components: {
       "comment" : comment,
-      "star-rating": StarRating,
     },
   }
 
@@ -169,7 +229,7 @@ import StarRating from 'vue-star-rating';
   }
 
   .height-enter-active{
-    height: 465px;
+    height: 469px;
     overflow: hidden;
   }
 
@@ -181,7 +241,7 @@ import StarRating from 'vue-star-rating';
 
 
   .height-leave {
-    height: 465px;
+    height: 469px;
   }
   @media screen and (max-width: 1170px){
 

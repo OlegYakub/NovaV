@@ -56,6 +56,12 @@
  		font-family: "ProximaNovaBold";
 	}
 
+	.star-rating{
+		.rating-text{
+			display: none;			
+		}
+	}
+
 	&__code{
 		font-size: 10px;
 		display: -webkit-flex;

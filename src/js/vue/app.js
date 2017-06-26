@@ -2,8 +2,9 @@
 //files and plagins
 var Vue = require('vue/dist/vue.js');
 var VueResource = require('../vue-resource');
-var VueValidator = require('vue-validator');
-//var starRating = require('vue-star-rating');
+var VeeValidate = require('vee-validate');
+var messagesRu  = require('vee-validate/dist/locale/ru');
+var starRating = require('vue-star-rating');
 var VueBar = require('../vuebar');
 /*========= Components requires=======*/
 
@@ -23,12 +24,24 @@ var goodList = require('./components/listing/good-list.vue');
 //card
 var comments = require('./components/card/comments.vue');
 
+//main
+var parametrList = require('./components/main/parametr-list.vue');
+var parametrChosen = require('./components/main/parametr-chosen.vue');
+
+
 
 Vue.use(VueResource);
-Vue.use(VueValidator);
 Vue.use(VueBar);
+Vue.use(VeeValidate, {
+  locale: 'ru',
+  dictionary: {
+    ru: messagesRu
+  }
+});
+
+
 /*==========  Components  =========*/
-//Vue.component('star-rating', starRating);
+Vue.component('star-rating', starRating.default);
 Vue.component('done-popup', donePopup);
 Vue.component('mini-compare', miniCompare);
 Vue.component('mini-basket', miniBasket);
@@ -37,12 +50,15 @@ Vue.component('filter-component', filter);
 Vue.component('good-list', goodList);
 Vue.component('good-item-v', goodV);
 Vue.component('good-item-h', goodH);
+Vue.component('parametr-list', parametrList);
+Vue.component('parametr-chosen', parametrChosen);
+
 
 /*==========  end components  =========*/
 /*==========  Main Vue Exemplar  =========*/
 
 // создание корневого экземпляра
-var ListComponent = new Vue({
+var App = new Vue({
   el: '#app',
 });
 
