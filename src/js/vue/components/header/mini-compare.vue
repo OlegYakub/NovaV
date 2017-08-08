@@ -67,12 +67,12 @@
       },
 
       removeEmit: function(item) {
-        this.$root.$emit('from-compare', item)
+        this.$root.$emit('from-mini-compare', item)
       },
 
       removeFromCompare: function() {
         var toCompare = this.toCompare;
-        this.$root.$on('from-compare', function(item){
+        this.$root.$on('from-mini-compare', function(item){
           var index = toCompare.indexOf(item)
           toCompare.splice(index, 1)
         });

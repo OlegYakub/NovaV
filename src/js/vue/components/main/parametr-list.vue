@@ -7,7 +7,8 @@
       <parametr-item
         v-for="(parametr, index) in parametrs"  
         v-bind:key="parametr" 
-         v-bind:this-parametr="parametr"
+        v-bind:this-parametr="parametr"
+				v-on:hide-opt="uniqueShowOpt"
       ></parametr-item>
       
     </ul>
@@ -42,12 +43,25 @@ module.exports = {
         }
       );
     },
+
+		addShowOpt: function() {
+			for (var i = 0; i < this.parametrs.length; i++){
+				this.$set(this.parametrs[i], 'showOpt', false);
+			}
+		},
+
+		uniqueShowOpt: function(item) {
+			for (var i = 0; i < this.parametrs.length; i++){
+				this.parametrs[i].showOpt = false; 
+			}
+			item.showOpt = true;
+		}
   },
 
   created: function(){
-    this.getParametrs()
+    this.getParametrs();
+		this.addShowOpt();
   },
-
 }
 
 var parametrs = [
@@ -145,5 +159,5 @@ var parametrs = [
 		]
 	},
 	
-] 
+]
 </script>

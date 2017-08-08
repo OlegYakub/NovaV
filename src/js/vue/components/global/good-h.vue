@@ -179,11 +179,11 @@
           купить в один клик
         </a>
         <div class="compare">
-          <a href="" class="compare__add" v-on:click.prevent="inCompare"  v-if="!toCompare">
+          <a href="" class="compare__add" v-on:click.prevent="inCompare"  v-if="!thisGood.toCompare">
             в сравнение
             <img src="img/balance.svg" alt="" width="20px" height="16px">
           </a>
-          <a href="" class="compare__open" v-if="toCompare">
+          <a href="" class="compare__open" v-if="thisGood.toCompare">
             сравнить
             <img src="img/balance-blue.svg" alt="" width="20px" height="16px">
           </a>
@@ -198,7 +198,7 @@
 		props: ["thisGood"],
     data: function(){
 			return {
-				toCompare: false
+
 			}
 		},
     methods: {
@@ -208,13 +208,13 @@
 
       inCompare: function() {
 				this.$root.$emit('in-compare', this.thisGood);
-				this.toCompare = true;
+        this.thisGood.toCompare = true;
 			},
 
 			unCompare: function() {
 				var self = this
-				this.$root.$on('from-compare', function(item){
-					if(item.categoryId == self.thisGood.categoryId) self.toCompare = false;	
+				this.$root.$on('from-mini-compare', function(item){
+					if(item.categoryId == self.thisGood.categoryId) self.thisGood.toCompare = false;	
 				})
 			}
 		},

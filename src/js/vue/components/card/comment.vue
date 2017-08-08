@@ -92,26 +92,42 @@
       <form action="" v-on:submit.prevent="creatAnswer">
         <div class="reply__tarea">
           <label for=""> Ваше сообщение
-            <textarea 
-              name=""
-              id="" 
+            <textarea   
+              :class="{'is-danger': errors.has('text') }" 
+              name="text"
               v-model="answerText"
+              v-validate="'required'"
               cols="30" 
               rows="10" ></textarea>
           </label>
+          <div >
+            <span v-show="errors.has('text')" class="help is-danger">{{ errors.first('text') }}</span>
+          </div>
         </div>
         <div class="reply__inputs">
           <div class="reply__half  reply__half--pd">
             <input 
               type="text" 
+              name="name"
+              :class="{'is-danger': errors.has('name') }"
+              v-validate="'required|alpha'"
               v-model="answerName"
               placeholder="Имя">
+              <div >
+                <span v-show="errors.has('name')" class="help is-danger">{{ errors.first('name') }}</span>
+              </div>
           </div>
           <div class="reply__half">
             <input 
               type="text" 
+              :class="{'is-danger': errors.has('email') }"
+              v-validate="'required|email'"
+              name="email"
               placeholder="E-mail"
               v-model="answerEmail">
+              <div >
+                <span v-show="errors.has('email')" class="help is-danger">{{ errors.first('email') }}</span>
+              </div>
           </div>
         </div>
         <div class="reply__btns">
@@ -157,8 +173,20 @@ import answer from './answer.vue';
           date: new Date().toLocaleString("ru", {year: 'numeric', month: 'long', day: 'numeric',}),
         }
 
-        this.answers.push(answer);
-        this.clearForm();
+        this.$validator.updateDictionary({
+          'ru': {
+            attributes: {
+              name: '"Имя"',
+              text: '"Ваше сообщение"',
+              email: '"E-mail"',
+            },
+          }
+        });
+
+        this.$validator.validateAll().then(() => {
+          this.answers.push(answer);
+          this.clearForm();
+        });
       },
 
       clearForm: function() {

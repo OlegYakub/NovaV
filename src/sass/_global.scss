@@ -5,6 +5,39 @@ a{text-decoration: none; -webkit-transition: .35s;
 -ms-transition: .35s;
 -o-transition: .35s;
 transition: .35s;}
+
+#page-preloader {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+		height: 101%;
+    //bottom: 0;
+    z-index: 100500;
+		.preloader__box{
+			position: fixed;
+			left: 0;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			background: #f0f0f0;
+		}
+		.spinner {
+			display: block;
+			width: 60px;
+			height: 60px;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			//background: url('../img/loader.gif')  no-repeat 50% 50%;
+			margin: -16px 0 0 -16px;
+			img{
+				width: 100%;
+			}
+	}
+}
+
+
 button{
 	-webkit-transition: .35s;
 	-moz-transition: .35s;

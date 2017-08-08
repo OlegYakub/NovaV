@@ -21,9 +21,10 @@
                     <img v-bind:src="item.data.photo" alt="">
                   </div>
                   <div class="trash-modal__cont">
-                    <p class="trash-modal__name">
-                      {{item.data.name}} {{item.data.description}}
-                    </p>
+                    <div class="trash-modal__name">
+                      <p>{{item.data.name}}</p>
+                      <p>{{item.data.description}}</p> 
+                    </div>
                     <p class="trash-modal__code">		
                       {{item.data.code}}
                     </p>
@@ -91,7 +92,6 @@
         var self = this;
         
         this.$root.$on('in-basket', function(prop){
-          
 
           var obj = {
             id: prop.id,
@@ -112,8 +112,6 @@
           }
 
           self.showBasket();
-          
-          
         });
       },
 

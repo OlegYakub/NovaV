@@ -28,6 +28,8 @@ var comments = require('./components/card/comments.vue');
 var parametrList = require('./components/main/parametr-list.vue');
 var parametrChosen = require('./components/main/parametr-chosen.vue');
 
+//compare
+var compare = require('./components/compare/compare-list.vue');
 
 
 Vue.use(VueResource);
@@ -52,6 +54,7 @@ Vue.component('good-item-v', goodV);
 Vue.component('good-item-h', goodH);
 Vue.component('parametr-list', parametrList);
 Vue.component('parametr-chosen', parametrChosen);
+Vue.component('compare-list', compare);
 
 
 /*==========  end components  =========*/

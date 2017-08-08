@@ -185,6 +185,10 @@
 		right: 10px;
 	}
 
+	.star-rating .rating-text {
+    display: none;
+	}
+
 	.good-v__foot2{
 		display: block;
 		padding: 20px 13px;
@@ -210,6 +214,16 @@
 		 overflow: hidden;
 		 height: 38px;
 		 padding-right: 10px
+	}
+
+	.good-v__basket{
+		a:hover{
+			background-color: #d1383e;
+			background-image: url(../img/shopping-cart-white.svg);
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: 59%;
+		}
 	}
 }
 

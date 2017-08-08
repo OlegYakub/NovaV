@@ -178,16 +178,12 @@ import comment from './comment.vue';
         this.$validator.validateAll().then(() => {
           if(this.messageRating == 0){
             this.showRatingMessage = true;
-            console.log(this.showRatingMessage);
           }else{
             this.messages.push(message);
             this.clearForm();
             this.showRatingMessage = false;
           }
             //alert('From Submitted!');
-        }).catch(() => {
-            //alert('Correct them errors!');
-
         });
         
       },
@@ -202,12 +198,7 @@ import comment from './comment.vue';
         this.messageRating= 0;
         this.errors.clear();
         this.visabilityForm = false;
-        //console.log(this.errors);
       },
-
-      /*hideErrs: function() {
-        this.errors.clear();
-      },*/
 
       showForm: function() {
         this.visabilityForm = !this.visabilityForm;

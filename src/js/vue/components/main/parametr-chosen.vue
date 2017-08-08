@@ -50,7 +50,7 @@
 
     mounted: function() {
 			var chosenParametrs = this.chosenParametrs;
-			
+      
 			this.$root.$on('to-сhose-parametr', function(prop){
 				chosenParametrs.push(prop);
 			});
@@ -62,6 +62,8 @@
 					}
 				}
 			});
+
+      
 		}
   }
 </script>
